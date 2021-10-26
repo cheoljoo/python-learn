@@ -28,6 +28,9 @@
   - [2.2. docker basic](#22-docker-basic)
   - [2.3. docker compose](#23-docker-compose)
 
+
+ -------------------
+
 # 1. Python Learning
 ## 1.1. python docker setup
 - https://realpython.com/tutorials/docker/
@@ -615,7 +618,17 @@ class Bulldog(Dog):
 - is the user logged in?
 
 ### 1.12.1. [Fancy Decorators](https://realpython.com/primer-on-python-decorators/#fancy-decorators) (later)
-
+- Decorating Classes
+- Nesting Decorators
+- Decorators With Arguments
+- Both Please, But Never Mind the Bread
+- Stateful Decorators
+- Classes as Decorators
+- Slowing Down Code, Revisited
+- Creating Singletons
+- Caching Return Values
+- Adding Information About Units
+- Validating JSON
 
 
 ## 1.13. Python and REST APIs: Interacting With Web Services (later)
