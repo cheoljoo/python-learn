@@ -4,3 +4,8 @@ init:
 	docker build -t rp .
 clean:
 	rm -f GEN*
+
+foo:
+	g
+	g
+	g

@@ -7,7 +7,9 @@ ENV PATH "$VIRTUAL_ENV/bin:$PATH"
 
 # Python commands run inside the virtual environment
 RUN pip install --upgrade pip
-RUN python -m pip install \
+RUN python3 -m pip install \
+        invoke \
+        tasks \
         parse \
         jira \
         realpython-reader

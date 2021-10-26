@@ -173,12 +173,77 @@ WORKDIR "/app"
 
 ## Object-Oriented Programming (OOP) in Python 3
 - https://realpython.com/python3-object-oriented-programming/
+- Class
+    - Conceptually, objects are like the components of a system. Think of a program as a factory assembly line of sorts. At each step of the assembly line a system component processes some material, ultimately transforming raw material into a finished product.
+```python
+class Dog:
+    # Class attribute
+    species = "Canis familiaris"
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    # Instance method
+    def description(self):
+        return f"{self.name} is {self.age} years old"
+
+    # Another instance method
+    def speak(self, sound):
+        return f"{self.name} barks {sound}"
+
+    # Replace .description() with __str__()
+    def __str__(self):
+        return f"{self.name} is {self.age} years old"
+```
+    - an instance method’s first parameter is always self.
+    - Methods like .__init__() and .__str__() are called dunder methods because they begin and end with double underscores.
+
+- Inherit From Other Classes in Python
+    - Child classes can override or extend the attributes and methods of parent classes. 
+```python
+class JackRussellTerrier(Dog):
+    def speak(self, sound="Arf"):
+        return f"{self.name} says {sound}"
+
+class Dachshund(Dog):
+    def speak(self, sound="Arf"):
+        return super().speak(sound)
+
+
+class Bulldog(Dog):
+    pass
+```
+    - What if you want to determine if miles is also an instance of the Dog class? You can do this with the built-in isinstance().
+    - You can access the parent class from inside a method of a child class by using super():
+
+
 
 ## Python Bindings: Calling C or C++ From Python
 - https://realpython.com/python-bindings-overview/
+- Marshalling Data Types
+    - marshalling : The process of transforming the memory representation of an object to a data format suitable for storage or transmission.
+- Understanding Mutable and Immutable Values
+- Managing Memory
+
+- ctypes is  built into the standard library.
+- [python and C binding example : from ctypes import cdll](https://hashcode.co.kr/questions/243/python%EC%97%90%EC%84%9C-cc%EB%B6%80%EB%A5%B4%EA%B8%B0)
+    - cd binding ; make      <- works well
+    - You’ll start with ctypes, which is a tool in the standard library for creating Python bindings. It provides a low-level toolset for loading shared libraries and marshalling data between Python and C.
+- materials : https://github.com/realpython/materials/tree/master/python-bindings
+    - need to export function name :  ``` extern "C" { }```
+    - [ctypes](https://docs.python.org/ko/3/library/ctypes.html)
+
+- [Test Source Code : pre-existing C and C++](https://github.com/realpython/materials/tree/master/python-bindings)
+
+
+
 
 ## Functional Programming in Python: When and How to Use It
 - https://realpython.com/python-functional-programming/
+- 
+
+
 
 ## Python and REST APIs: Interacting With Web Services
 - https://realpython.com/api-integration-in-python/
