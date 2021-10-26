@@ -68,10 +68,11 @@ WORKDIR "/app"
 - [CPython](https://realpython.com/products/cpython-internals-book/)
 
 - python is 40 times slower than pypy in case of below example
-- ```cd pypy```
-- ```time perl s.pl```
-- ```time python3 s.py```
-- ```time pypy s.py```
+- run
+    - ```cd pypy```
+    - ```time perl s.pl```
+    - ```time python3 s.py```
+    - ```time pypy s.py```
 
 
 
@@ -117,7 +118,7 @@ WORKDIR "/app"
         - The collections.ChainMap data structure groups multiple dictionaries into a single mapping.
     - types.MappingProxyType: A Wrapper for Making Read-Only Dictionaries
         - read_only = MappingProxyType(writable)
-        - >>> read_only["one"] = 23    ->>  Traceback (most recent call last):
+        - ```>>> read_only["one"] = 23```    ->>  Traceback (most recent call last):
 - Array Data Structures
     - list: Mutable Dynamic Arrays
     - tuple: Immutable Containers
@@ -147,11 +148,11 @@ WORKDIR "/app"
             ...         self.mileage = mileage
             ...         self.automatic = automatic
             ```
-        - __repr__ method : https://shoark7.github.io/programming/python/difference-between-__repr__-vs-__str__
+        - `__repr__` method : https://shoark7.github.io/programming/python/difference-between-__repr__-vs-__str__
             - change into human understandable repression
-        - str is internal class.   ```help(str)```  vs __str__ is method (function).
-            - >>> 3 + 5  # 내부적으로 밑 문장을 실행!
-            - >>> (3).__add__(5)  # '(3)'처럼 ()로 감싸야 한다. 소수와 구별해야 하기 때문이다.
+        - str is internal class.   ```help(str)```  vs `__str__` is method (function).
+            - ```>>> 3 + 5```  # 내부적으로 밑 문장을 실행!
+            - ```>>> (3).__add__(5)```  # '(3)'처럼 ()로 감싸야 한다. 소수와 구별해야 하기 때문이다.
     - dataclasses.dataclass: Python 3.7+ Data Classes
         - They provide an excellent alternative to defining your own data storage classes from scratch.
         
@@ -419,30 +420,30 @@ class Bulldog(Dog):
 ### 1.11.5. Selecting Elements From an Iterable With filter()
 - syntax --> filter(<f>, <iterable>)
   - filter(<f>, <iterable>) applies function <f> to each element of <iterable> and returns an iterator that yields all items for which <f> is truthy. Conversely, it filters out all items for which <f> is falsy.
-```python
->>> def greater_than_100(x):
-...     return x > 100
-...
+    ```python
+    >>> def greater_than_100(x):
+    ...     return x > 100
+    ...
 
->>> list(filter(greater_than_100, [1, 111, 2, 222, 3, 333]))
-[111, 222, 333]
+    >>> list(filter(greater_than_100, [1, 111, 2, 222, 3, 333]))
+    [111, 222, 333]
 
->>> list(filter(lambda x: x > 100, [1, 111, 2, 222, 3, 333]))
-[111, 222, 333]
+    >>> list(filter(lambda x: x > 100, [1, 111, 2, 222, 3, 333]))
+    [111, 222, 333]
 
 
 
->>> animals = ["cat", "Cat", "CAT", "dog", "Dog", "DOG", "emu", "Emu", "EMU"]
+    >>> animals = ["cat", "Cat", "CAT", "dog", "Dog", "DOG", "emu", "Emu", "EMU"]
 
->>> def all_caps(s):
-...     return s.isupper()
-...
->>> list(filter(all_caps, animals))
-['CAT', 'DOG', 'EMU']
+    >>> def all_caps(s):
+    ...     return s.isupper()
+    ...
+    >>> list(filter(all_caps, animals))
+    ['CAT', 'DOG', 'EMU']
 
->>> list(filter(lambda s: s.isupper(), animals))
-['CAT', 'DOG', 'EMU']
-```
+    >>> list(filter(lambda s: s.isupper(), animals))
+    ['CAT', 'DOG', 'EMU']
+    ```
 ### 1.11.6. reduce
 - syntax --> reduce(<f>, <iterable>)
     ```python
