@@ -241,14 +241,358 @@ class Bulldog(Dog):
 
 ## Functional Programming in Python: When and How to Use It
 - https://realpython.com/python-functional-programming/
-- 
+- Functional programming is a programming paradigm in which the primary method of computation is evaluation of functions. In this tutorial, you’ll explore functional programming in Python.
+    - What the functional programming paradigm entails
+    - hat it means to say that functions are first-class citizens in Python
+    - How to define anonymous functions with the lambda keyword
+    - How to implement functional code using map(), filter(), and reduce()
+
+### What Is Functional Programming?
+- In functional programming, a program consists entirely of evaluation of pure functions. Computation proceeds by nested or composed function calls, without changes to state or mutable data.
+
+### How Well Does Python Support Functional Programming?
+- two abilities:
+  1. To take another function as an argument
+  1. To return another function to its caller
+- you can assign a function to a variable. You can then use that variable the same as you would use the function itself:
+    ```python
+    >>> def func():
+    ...     print("I am function func()!")
+    ...
+
+    >>> func()
+    I am function func()!
+
+    >>> another_name = func
+    >>> another_name()
+    I am function func()!
+    ```
+- refer to https://realpython.com/primer-on-python-decorators/
+- When you pass a function to another function, the passed-in function sometimes is referred to as a callback because a call back to the inner function can modify the outer function’s behavior.
+    ```python
+    >>> animals = ["ferret", "vole", "dog", "gecko"]
+    >>> sorted(animals, key=len, reverse=True)
+    ['ferret', 'gecko', 'vole', 'dog']
+
+    >>> def reverse_len(s):
+    ...     return -len(s)
+    ...
+    >>> sorted(animals, key=reverse_len)
+    ['ferret', 'gecko', 'vole', 'dog']
+    ```
+    - You can check out [How to Use sorted() and sort() in Python](https://realpython.com/python-sort/) for more information on sorting data in Python.
+
+
+### Defining an Anonymous Function With lambda
+- syntax --> lambda <parameter_list>: <expression>
+    ```python
+    >>> lambda s: s[::-1]
+    <function <lambda> at 0x7fef8b452e18>
+
+    >>> callable(lambda s: s[::-1])
+    True
+
+    >>> reverse = lambda s: s[::-1]
+    >>> reverse("I am a string")
+    'gnirts a ma I'
+
+    >>> (lambda s: s[::-1])("I am a string")
+    'gnirts a ma I'
+
+    >>> (lambda x1, x2, x3: (x1 + x2 + x3) / 3)(9, 6, 6)
+    7.0
+    >>> (lambda x1, x2, x3: (x1 + x2 + x3) / 3)(1.4, 1.1, 0.5)
+    1.0
+    ```
+- The return value from a lambda expression can only be one single expression. A lambda expression can’t contain statements like assignment or return, nor can it contain control structures such as for, while, if, else, or def.
+- This implicit tuple packing doesn’t work with an anonymous lambda function
+    ```python
+    >>> (lambda x: x, x ** 2, x ** 3)(3)
+    <stdin>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    NameError: name 'x' is not defined
+
+    >>> (lambda x: (x, x ** 2, x ** 3))(3)
+    (3, 9, 27)
+    >>> (lambda x: [x, x ** 2, x ** 3])(3)
+    [3, 9, 27]
+    >>> (lambda x: {1: x, 2: x ** 2, 3: x ** 3})(3)
+    {1: 3, 2: 9, 3: 27}
+    ```
+- [How to Use Python Lambda Functions.](https://realpython.com/python-lambda/)
+- Python offers two built-in functions, map() and filter(), that fit the functional programming paradigm.
+
+### Applying a Function to an Iterable With map()
+#### Calling map() With a Single Iterable
+- syntax --> map(<f>, <iterable>)
+- remember, map() doesn’t return a list. It returns an iterator called a map object. To obtain the values from the iterator, you need to either iterate over it or use list():
+    ```python
+    >>> animals = ["cat", "dog", "hedgehog", "gecko"]
+    >>> iterator = map(reverse, animals)
+    >>> iterator
+    <map object at 0x7fd3558cbef0>
+
+    >>> iterator = map(reverse, animals)
+    >>> for i in iterator:
+    ...     print(i)
+    ...
+    tac
+    god
+    gohegdeh
+    okceg
+
+    >>> iterator = map(reverse, animals)
+    >>> list(iterator)
+    ['tac', 'god', 'gohegdeh', 'okceg']
+    ```
+- '1+2+3+4+5'
+    ```python
+    >>> "+".join([1, 2, 3, 4, 5])
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    TypeError: sequence item 0: expected str instance, int found
+
+    >>> strings = []
+    >>> for i in [1, 2, 3, 4, 5]:
+    ...     strings.append(str(i))
+    ...
+    >>> strings
+    ['1', '2', '3', '4', '5']
+    >>> "+".join(strings)
+    '1+2+3+4+5'
+
+    >>> "+".join(map(str, [1, 2, 3, 4, 5]))
+    '1+2+3+4+5'
+    ```
+#### Calling map() With Multiple Iterables
+- syntax --> map(<f>, <iterable₁>, <iterable₂>, ..., <iterableₙ>)
+    ```python
+    >>> def f(a, b, c):
+    ...     return a + b + c
+    ...
+
+    >>> list(map(f, [1, 2, 3], [10, 20, 30], [100, 200, 300]))
+    [111, 222, 333]
+    ```
+    - ![map with multiple iterables](https://files.realpython.com/media/t.130d7baf2cca.png)
+
+### Selecting Elements From an Iterable With filter()
+- syntax --> filter(<f>, <iterable>)
+  - filter(<f>, <iterable>) applies function <f> to each element of <iterable> and returns an iterator that yields all items for which <f> is truthy. Conversely, it filters out all items for which <f> is falsy.
+```python
+>>> def greater_than_100(x):
+...     return x > 100
+...
+
+>>> list(filter(greater_than_100, [1, 111, 2, 222, 3, 333]))
+[111, 222, 333]
+
+>>> list(filter(lambda x: x > 100, [1, 111, 2, 222, 3, 333]))
+[111, 222, 333]
 
 
 
-## Python and REST APIs: Interacting With Web Services
+>>> animals = ["cat", "Cat", "CAT", "dog", "Dog", "DOG", "emu", "Emu", "EMU"]
+
+>>> def all_caps(s):
+...     return s.isupper()
+...
+>>> list(filter(all_caps, animals))
+['CAT', 'DOG', 'EMU']
+
+>>> list(filter(lambda s: s.isupper(), animals))
+['CAT', 'DOG', 'EMU']
+```
+### reduce
+- syntax --> reduce(<f>, <iterable>)
+    ```python
+    >>> def f(x, y):
+    ...     return x + y
+    ...
+
+    >>> from functools import reduce
+    >>> reduce(f, [1, 2, 3, 4, 5])
+    15
+    ```
+    - ![reduce progress](https://files.realpython.com/media/t.5446e98a36c1.png)
+- implement filter() using reduce()
+    ```python
+    >>> numbers = list(range(10))
+    >>> numbers
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    >>> def is_even(x):
+    ...     return x % 2 == 0
+    ...
+
+    >>> list(filter(is_even, numbers))
+    [0, 2, 4, 6, 8]
+
+    >>> def custom_filter(function, iterable):
+    ...     from functools import reduce
+    ...
+    ...     return reduce(
+    ...         lambda items, value: items + [value] if function(value) else items,
+    ...         iterable,
+    ...         []
+    ...     )
+    ...
+    >>> list(custom_filter(is_even, numbers))
+    [0, 2, 4, 6, 8]
+    ```
+
+
+
+## Primer on Python Decorators
+- https://realpython.com/primer-on-python-decorators/
+- a higher-order function is a function that does at least one of the following:
+    - takes one or more functions as arguments (i.e. procedural parameters),
+    - returns a function as its result.
+- By definition, a decorator is a function that takes another function and extends the behavior of the latter function without explicitly modifying it.
+- functions
+  - generally functions are fist class objects.
+  - inner function : function can have inner function to use it and return it.
+  - return functions from functions
+- simple decorators
+    ```python
+    def my_decorator(func):
+        def wrapper():
+            print("Something is happening before the function is called.")
+            func()
+            print("Something is happening after the function is called.")
+        return wrapper
+
+    def say_whee():
+        print("Whee!")
+
+    say_whee = my_decorator(say_whee)
+    ```
+    - Syntactic Sugar!
+        - First of all, you end up typing the name say_whee three times.
+        ```python
+        def my_decorator(func):
+            def wrapper():
+                print("Something is happening before the function is called.")
+                func()
+                print("Something is happening after the function is called.")
+            return wrapper
+
+        @my_decorator
+        def say_whee():
+            print("Whee!")
+        ```
+        - So, @my_decorator is just an easier way of saying say_whee = my_decorator(say_whee). It’s how you apply a decorator to a function.
+    - Reusing Decorators
+        - Recall that a decorator is just a regular Python function. All the usual tools for easy reusability are available
+        ```python
+        def do_twice(func):
+            def wrapper_do_twice():
+                func()
+                func()
+            return wrapper_do_twice
+
+        from decorators import do_twice
+        @do_twice
+        def say_whee():
+            print("Whee!")
+
+        >>> say_whee()
+        Whee!
+        Whee!
+        ```
+    - Decorating Functions With Arguments
+        ```python
+        def do_twice(func):
+            def wrapper_do_twice(*args, **kwargs):
+                func(*args, **kwargs)
+                func(*args, **kwargs)
+            return wrapper_do_twice
+
+        from decorators import do_twice
+        @do_twice
+        def greet(name):
+            print(f"Hello {name}")
+
+        >>> greet("World")
+        Hello World
+        Hello World
+        ```
+- timing functions usingdecorator
+    ```python
+    import functools
+    import time
+
+    def timer(func):
+        """Print the runtime of the decorated function"""
+        @functools.wraps(func)
+        def wrapper_timer(*args, **kwargs):
+            start_time = time.perf_counter()    # 1
+            value = func(*args, **kwargs)
+            end_time = time.perf_counter()      # 2
+            run_time = end_time - start_time    # 3
+            print(f"Finished {func.__name__!r} in {run_time:.4f} secs")
+            return value
+        return wrapper_timer
+
+    @timer
+    def waste_some_time(num_times):
+        for _ in range(num_times):
+            sum([i**2 for i in range(10000)])
+
+
+    >>> waste_some_time(1)
+    Finished 'waste_some_time' in 0.0010 secs
+
+    >>> waste_some_time(999)
+    Finished 'waste_some_time' in 0.3260 secs
+    ```
+- debugging code
+    ```python
+    import functools
+
+    def debug(func):
+        """Print the function signature and return value"""
+        @functools.wraps(func)
+        def wrapper_debug(*args, **kwargs):
+            args_repr = [repr(a) for a in args]                      # 1
+            kwargs_repr = [f"{k}={v!r}" for k, v in kwargs.items()]  # 2
+            signature = ", ".join(args_repr + kwargs_repr)           # 3
+            print(f"Calling {func.__name__}({signature})")
+            value = func(*args, **kwargs)
+            print(f"{func.__name__!r} returned {value!r}")           # 4
+            return value
+        return wrapper_debug
+
+    @debug
+    def make_greeting(name, age=None):
+        if age is None:
+            return f"Howdy {name}!"
+        else:
+            return f"Whoa {name}! {age} already, you are growing up!"
+
+    >>> make_greeting("Benjamin")
+    Calling make_greeting('Benjamin')
+    'make_greeting' returned 'Howdy Benjamin!'
+    'Howdy Benjamin!'
+
+    >>> make_greeting("Richard", age=112)
+    Calling make_greeting('Richard', age=112)
+    'make_greeting' returned 'Whoa Richard! 112 already, you are growing up!'
+    'Whoa Richard! 112 already, you are growing up!'
+    ```
+- slowing down code
+- registering plugins
+- is the user logged in?
+
+### [Fancy Decorators](https://realpython.com/primer-on-python-decorators/#fancy-decorators) (later)
+
+
+
+## Python and REST APIs: Interacting With Web Services (later)
 - https://realpython.com/api-integration-in-python/
 
-## Brython: Python in Your Browser
+## Brython: Python in Your Browser (later)
 - https://realpython.com/brython-python-in-browser/
 
 
@@ -266,4 +610,4 @@ class Bulldog(Dog):
 ## docker compose
 - (korean link) https://junlab.tistory.com/219
 - 일반적인 시스템은 단일 애플리케이션으로 구동이 되지 않습니다. 여러 개의 애플리케이션이 서로 의존성 있게 구성되어 시스템이 이뤄져 있습니다. 그렇다면 흔히 하나의 컨테이너가 하나의 애플리케이션을 담당한다고 하면 여러 개의 컨테이너가 필요로 합니다. 이때 필요한 기술이 도커 컴포즈(Docker Compose)입니다. 도커 컴포즈는 yaml 포맷으로 작성되며 여러 개의 컨테이너의 실행을 한 번에 관리를 할 수 있게 해 줍니다.
-- 
+
