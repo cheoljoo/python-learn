@@ -1,5 +1,35 @@
-# Python Learning
-## python docker setup
+- [1. Python Learning](#1-python-learning)
+  - [1.1. python docker setup](#11-python-docker-setup)
+  - [1.2. PyPy: Faster Python With Minimal Effort](#12-pypy-faster-python-with-minimal-effort)
+    - [1.2.1. installation](#121-installation)
+  - [1.3. Develop Data Visualization Interfaces in Python With Dash (later)](#13-develop-data-visualization-interfaces-in-python-with-dash-later)
+  - [1.4. C for Python Programmers (easy for us : useless)](#14-c-for-python-programmers-easy-for-us--useless)
+  - [1.5. Common Python Data Structures (Guide)](#15-common-python-data-structures-guide)
+  - [1.6. Learn IP Address Concepts With Python's ipaddress Module (helpful info)](#16-learn-ip-address-concepts-with-pythons-ipaddress-module-helpful-info)
+  - [1.7. Regular Expressions: Regexes in Python (later)](#17-regular-expressions-regexes-in-python-later)
+  - [1.8. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud](#18-dockerizing-flask-with-compose-and-machine--from-localhost-to-the-cloud)
+  - [1.9. Object-Oriented Programming (OOP) in Python 3](#19-object-oriented-programming-oop-in-python-3)
+  - [1.10. Python Bindings: Calling C or C++ From Python](#110-python-bindings-calling-c-or-c-from-python)
+  - [1.11. Functional Programming in Python: When and How to Use It](#111-functional-programming-in-python-when-and-how-to-use-it)
+    - [1.11.1. What Is Functional Programming?](#1111-what-is-functional-programming)
+    - [1.11.2. How Well Does Python Support Functional Programming?](#1112-how-well-does-python-support-functional-programming)
+    - [1.11.3. Defining an Anonymous Function With lambda](#1113-defining-an-anonymous-function-with-lambda)
+    - [1.11.4. Applying a Function to an Iterable With map()](#1114-applying-a-function-to-an-iterable-with-map)
+      - [1.11.4.1. Calling map() With a Single Iterable](#11141-calling-map-with-a-single-iterable)
+      - [1.11.4.2. Calling map() With Multiple Iterables](#11142-calling-map-with-multiple-iterables)
+    - [1.11.5. Selecting Elements From an Iterable With filter()](#1115-selecting-elements-from-an-iterable-with-filter)
+    - [1.11.6. reduce](#1116-reduce)
+  - [1.12. Primer on Python Decorators](#112-primer-on-python-decorators)
+    - [1.12.1. Fancy Decorators (later)](#1121-fancy-decorators-later)
+  - [1.13. Python and REST APIs: Interacting With Web Services (later)](#113-python-and-rest-apis-interacting-with-web-services-later)
+  - [1.14. Brython: Python in Your Browser (later)](#114-brython-python-in-your-browser-later)
+- [2. Appendix for korean](#2-appendix-for-korean)
+  - [2.1. Python virtualenv : new developing environment for me](#21-python-virtualenv--new-developing-environment-for-me)
+  - [2.2. docker basic](#22-docker-basic)
+  - [2.3. docker compose](#23-docker-compose)
+
+# 1. Python Learning
+## 1.1. python docker setup
 - https://realpython.com/tutorials/docker/
 - https://realpython.com/python-versions-docker/
 - Dockerfile
@@ -27,7 +57,7 @@ WORKDIR "/app"
 
 
 
-## PyPy: Faster Python With Minimal Effort
+## 1.2. PyPy: Faster Python With Minimal Effort
 - https://realpython.com/pypy-faster-python/
 - PyPy is a very compliant Python interpreter that is a worthy alternative to CPython 2.7, 3.6, and soon 3.7.
 - The Python language specification is used in a number of implementations such as CPython (written in C), Jython (written in Java), IronPython (written for .NET), and PyPy (written in Python). 
@@ -35,13 +65,13 @@ WORKDIR "/app"
 
 - python is 40 times slower than pypy in case of below example
 
-### installation
+### 1.2.1. installation
 - https://www.pypy.org/download.html
     - tar -xf archive.tar.bz2
 
 
 
-## Develop Data Visualization Interfaces in Python With Dash (later)
+## 1.3. Develop Data Visualization Interfaces in Python With Dash (later)
 - https://realpython.com/python-dash/
 - Dash is an open source framework for building data visualization interfaces. Released in 2017 as a Python library, it’s grown to include implementations for R and Julia. Dash helps data scientists build analytical web applications without requiring advanced web development knowledge.
 - Three technologies constitute the core of Dash: 
@@ -53,13 +83,13 @@ WORKDIR "/app"
 
 
 
-## C for Python Programmers (easy for us : useless)
+## 1.4. C for Python Programmers (easy for us : useless)
 - https://realpython.com/c-for-python-programmers/
 - The purpose of this tutorial is to get an experienced Python programmer up to speed with the basics of the C language and how it’s used in the CPython source code. It assumes you already have an intermediate understanding of Python syntax.
 
 
 
-## Common Python Data Structures (Guide)
+## 1.5. Common Python Data Structures (Guide)
 - https://realpython.com/python-data-structures/
 - Dictionaries, Maps, and Hash Tables
     - collections.OrderedDict: Remember the Insertion Order of Keys
@@ -154,24 +184,24 @@ WORKDIR "/app"
 
 
 
-## Learn IP Address Concepts With Python's ipaddress Module (helpful info)
+## 1.6. Learn IP Address Concepts With Python's ipaddress Module (helpful info)
 - https://realpython.com/python-ipaddress-module/
 
 
 
-## Regular Expressions: Regexes in Python (later)
+## 1.7. Regular Expressions: Regexes in Python (later)
 - https://realpython.com/regex-python/
 - https://realpython.com/regex-python-part-2/
 
 
 
-## Dockerizing Flask With Compose and Machine – From Localhost to the Cloud
+## 1.8. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud
 - https://realpython.com/dockerizing-flask-with-compose-and-machine-from-localhost-to-the-cloud/
 - docker machine is deprecated.
 
 
 
-## Object-Oriented Programming (OOP) in Python 3
+## 1.9. Object-Oriented Programming (OOP) in Python 3
 - https://realpython.com/python3-object-oriented-programming/
 - Class
     - Conceptually, objects are like the components of a system. Think of a program as a factory assembly line of sorts. At each step of the assembly line a system component processes some material, ultimately transforming raw material into a finished product.
@@ -218,8 +248,7 @@ class Bulldog(Dog):
     - You can access the parent class from inside a method of a child class by using super():
 
 
-
-## Python Bindings: Calling C or C++ From Python
+## 1.10. Python Bindings: Calling C or C++ From Python
 - https://realpython.com/python-bindings-overview/
 - Marshalling Data Types
     - marshalling : The process of transforming the memory representation of an object to a data format suitable for storage or transmission.
@@ -239,7 +268,7 @@ class Bulldog(Dog):
 
 
 
-## Functional Programming in Python: When and How to Use It
+## 1.11. Functional Programming in Python: When and How to Use It
 - https://realpython.com/python-functional-programming/
 - Functional programming is a programming paradigm in which the primary method of computation is evaluation of functions. In this tutorial, you’ll explore functional programming in Python.
     - What the functional programming paradigm entails
@@ -247,10 +276,10 @@ class Bulldog(Dog):
     - How to define anonymous functions with the lambda keyword
     - How to implement functional code using map(), filter(), and reduce()
 
-### What Is Functional Programming?
+### 1.11.1. What Is Functional Programming?
 - In functional programming, a program consists entirely of evaluation of pure functions. Computation proceeds by nested or composed function calls, without changes to state or mutable data.
 
-### How Well Does Python Support Functional Programming?
+### 1.11.2. How Well Does Python Support Functional Programming?
 - two abilities:
   1. To take another function as an argument
   1. To return another function to its caller
@@ -283,7 +312,7 @@ class Bulldog(Dog):
     - You can check out [How to Use sorted() and sort() in Python](https://realpython.com/python-sort/) for more information on sorting data in Python.
 
 
-### Defining an Anonymous Function With lambda
+### 1.11.3. Defining an Anonymous Function With lambda
 - syntax --> lambda <parameter_list>: <expression>
     ```python
     >>> lambda s: s[::-1]
@@ -323,8 +352,8 @@ class Bulldog(Dog):
 - [How to Use Python Lambda Functions.](https://realpython.com/python-lambda/)
 - Python offers two built-in functions, map() and filter(), that fit the functional programming paradigm.
 
-### Applying a Function to an Iterable With map()
-#### Calling map() With a Single Iterable
+### 1.11.4. Applying a Function to an Iterable With map()
+#### 1.11.4.1. Calling map() With a Single Iterable
 - syntax --> map(<f>, <iterable>)
 - remember, map() doesn’t return a list. It returns an iterator called a map object. To obtain the values from the iterator, you need to either iterate over it or use list():
     ```python
@@ -365,7 +394,7 @@ class Bulldog(Dog):
     >>> "+".join(map(str, [1, 2, 3, 4, 5]))
     '1+2+3+4+5'
     ```
-#### Calling map() With Multiple Iterables
+#### 1.11.4.2. Calling map() With Multiple Iterables
 - syntax --> map(<f>, <iterable₁>, <iterable₂>, ..., <iterableₙ>)
     ```python
     >>> def f(a, b, c):
@@ -377,7 +406,7 @@ class Bulldog(Dog):
     ```
     - ![map with multiple iterables](https://files.realpython.com/media/t.130d7baf2cca.png)
 
-### Selecting Elements From an Iterable With filter()
+### 1.11.5. Selecting Elements From an Iterable With filter()
 - syntax --> filter(<f>, <iterable>)
   - filter(<f>, <iterable>) applies function <f> to each element of <iterable> and returns an iterator that yields all items for which <f> is truthy. Conversely, it filters out all items for which <f> is falsy.
 ```python
@@ -404,7 +433,7 @@ class Bulldog(Dog):
 >>> list(filter(lambda s: s.isupper(), animals))
 ['CAT', 'DOG', 'EMU']
 ```
-### reduce
+### 1.11.6. reduce
 - syntax --> reduce(<f>, <iterable>)
     ```python
     >>> def f(x, y):
@@ -444,7 +473,7 @@ class Bulldog(Dog):
 
 
 
-## Primer on Python Decorators
+## 1.12. Primer on Python Decorators
 - https://realpython.com/primer-on-python-decorators/
 - a higher-order function is a function that does at least one of the following:
     - takes one or more functions as arguments (i.e. procedural parameters),
@@ -585,29 +614,29 @@ class Bulldog(Dog):
 - registering plugins
 - is the user logged in?
 
-### [Fancy Decorators](https://realpython.com/primer-on-python-decorators/#fancy-decorators) (later)
+### 1.12.1. [Fancy Decorators](https://realpython.com/primer-on-python-decorators/#fancy-decorators) (later)
 
 
 
-## Python and REST APIs: Interacting With Web Services (later)
+## 1.13. Python and REST APIs: Interacting With Web Services (later)
 - https://realpython.com/api-integration-in-python/
 
-## Brython: Python in Your Browser (later)
+## 1.14. Brython: Python in Your Browser (later)
 - https://realpython.com/brython-python-in-browser/
 
 
-# Appendix for korean
+# 2. Appendix for korean
 
-## Python virtualenv : new developing environment for me
+## 2.1. Python virtualenv : new developing environment for me
 - when we use the docker , we do not need it. 
 - https://help.dreamhost.com/hc/en-us/articles/115000695551-Installing-and-using-virtualenv-with-Python-3
 - (korean link) https://dgkim5360.tistory.com/entry/python-virtualenv-on-linux-ubuntu-and-windows
 - (korean link) https://joonyon.tistory.com/135
 
-## docker basic
+## 2.2. docker basic
 - (korean link) https://junlab.tistory.com/216
 
-## docker compose
+## 2.3. docker compose
 - (korean link) https://junlab.tistory.com/219
 - 일반적인 시스템은 단일 애플리케이션으로 구동이 되지 않습니다. 여러 개의 애플리케이션이 서로 의존성 있게 구성되어 시스템이 이뤄져 있습니다. 그렇다면 흔히 하나의 컨테이너가 하나의 애플리케이션을 담당한다고 하면 여러 개의 컨테이너가 필요로 합니다. 이때 필요한 기술이 도커 컴포즈(Docker Compose)입니다. 도커 컴포즈는 yaml 포맷으로 작성되며 여러 개의 컨테이너의 실행을 한 번에 관리를 할 수 있게 해 줍니다.
 
