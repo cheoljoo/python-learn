@@ -55,8 +55,9 @@ WORKDIR "/app"
 ```
 
 - run
-    - docker build -t rp .
-    - docker run --rm -v `pwd`:/app rp python /app/example.py
+    - ```cd docker```
+    - ```docker build -t rp .```
+    - ```docker run --rm -v `pwd`:/app rp python /app/example.py```
 
 
 
@@ -67,6 +68,12 @@ WORKDIR "/app"
 - [CPython](https://realpython.com/products/cpython-internals-book/)
 
 - python is 40 times slower than pypy in case of below example
+- ```cd pypy```
+- ```time perl s.pl```
+- ```time python3 s.py```
+- ```time pypy s.py```
+
+
 
 ### 1.2.1. installation
 - https://www.pypy.org/download.html
