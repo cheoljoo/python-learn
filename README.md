@@ -647,8 +647,18 @@ class Bulldog(Dog):
 
 
 ## New
+### python
 - https://realpython.com/python-testing/
 - https://realpython.com/advanced-visual-studio-code-python/
+- https://realpython.com/python-code-quality/      <- linter
+- someip : 
+    - https://github.com/jamores/eth-scapy-someip
+    - https://pypi.org/project/someip/
+
+### c++
+- https://devblogs.microsoft.com/cppblog/visual-studio-code-c-extension-july-2020-update-doxygen-comments-and-logpoints/
+- https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
+    - https://github.com/cschlosser/doxdocgen       : we can find source code when we visit the URL in vscode extension.
 
 # 2. Appendix for korean
 
