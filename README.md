@@ -646,6 +646,10 @@ class Bulldog(Dog):
 - https://realpython.com/brython-python-in-browser/
 
 
+## New
+- https://realpython.com/python-testing/
+- https://realpython.com/advanced-visual-studio-code-python/
+
 # 2. Appendix for korean
 
 ## 2.1. Python virtualenv : new developing environment for me
