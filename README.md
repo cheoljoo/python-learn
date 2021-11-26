@@ -23,6 +23,10 @@
     - [1.12.1. Fancy Decorators (later)](#1121-fancy-decorators-later)
   - [1.13. Python and REST APIs: Interacting With Web Services (later)](#113-python-and-rest-apis-interacting-with-web-services-later)
   - [1.14. Brython: Python in Your Browser (later)](#114-brython-python-in-your-browser-later)
+  - [New](#new)
+    - [python](#python)
+    - [c++](#c)
+    - [browser](#browser)
 - [2. Appendix for korean](#2-appendix-for-korean)
   - [2.1. Python virtualenv : new developing environment for me](#21-python-virtualenv--new-developing-environment-for-me)
   - [2.2. docker basic](#22-docker-basic)
@@ -659,6 +663,9 @@ class Bulldog(Dog):
 - https://devblogs.microsoft.com/cppblog/visual-studio-code-c-extension-july-2020-update-doxygen-comments-and-logpoints/
 - https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
     - https://github.com/cschlosser/doxdocgen       : we can find source code when we visit the URL in vscode extension.
+
+### browser
+- https://realpython.com/brython-python-in-browser/
 
 # 2. Appendix for korean
 
