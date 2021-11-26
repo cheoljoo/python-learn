@@ -23,6 +23,11 @@
     - [1.12.1. Fancy Decorators (later)](#1121-fancy-decorators-later)
   - [1.13. Python and REST APIs: Interacting With Web Services (later)](#113-python-and-rest-apis-interacting-with-web-services-later)
   - [1.14. Brython: Python in Your Browser (later)](#114-brython-python-in-your-browser-later)
+    - [1.14.1. install on linux](#1141-install-on-linux)
+    - [1.14.2. Brython Core Components](#1142-brython-core-components)
+    - [1.14.3. Brython Standard Library](#1143-brython-standard-library)
+    - [1.14.4. my opinion](#1144-my-opinion)
+    - [1.14.5. MISC](#1145-misc)
   - [1.15. New](#115-new)
     - [1.15.1. python](#1151-python)
     - [1.15.2. c++](#1152-c)
@@ -656,7 +661,7 @@ class Bulldog(Dog):
 - https://realpython.com/brython-python-in-browser/
 - Python developers using Flask or Django can also apply the principles of isomorphism to Python, provided that they can run Python in the browser.
 - [Brython console](https://brython.info/tests/console.html)    ///  [interactive editor](https://brython.info/tests/editor.html)
-- install on linux
+###  1.14.1. install on linux
 ```txt
 $ python3 -m venv .venv --prompt brython
 $ source .venv/bin/activate
@@ -690,6 +695,25 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   ![Brower Connect to http.server](https://files.realpython.com/media/brython_index.743c41c96830.png)
     - http://lotto645.lge.com:8000/demo.html
 
+### 1.14.2. Brython Core Components
+- The core of Brython is contained in brython.js or in brython.min.js, the minimized version of the Brython engine. Both include the following key components:
+  - brython() is the main JavaScript function exposed in the JavaScript global namespace. You can’t execute any Python code without calling this function. This is the only JavaScript function that you should have to call explicitly.
+  - `__BRYTHON__` is a JavaScript global object that holds all internal objects needed to run Python scripts. This object isn’t used directly when you write Brython applications. If you look at the Brython code, both JavaScript and Python, then you’ll see regular occurrences of `__BRYTHON__`. You don’t need to use this object, but you should be aware of it when you see an error or when you want to debug your code in the browser console.
+  - Built-in types are implementations of the Python built-in types in JavaScript. For example, py_int.js, py_string.js and py_dicts.js are respective implementations of int, str and dict.
+  - browser is the browser module that exposes the JavaScript objects commonly used in a front-end web application, like the DOM interfaces using document and the browser window using the window object.
+
+### 1.14.3. Brython Standard Library
+- brython_stdlib.js exposes the Python standard library. As this file is generated, Brython compiles the Python standard library into JavaScript and concatenates the result into the bundle brython_stdlib.js.
+
+### 1.14.4. my opinion
+- ok. if you try the examples , it is good.  But , this is like specific web language. because it is different from pure python.  it is brython , but not python.
+  - To manipulate the DOM, Brython uses two operators:
+    - <= is a new operator, specific to Brython, that adds a child to a node. You can see a few examples of this usage in display_map(), defined on line 22.
+    - + is a substitute for Element.insertAdjacentHTML('afterend') and adds sibling nodes.
+
+### 1.14.5. MISC
+- Creating Google Chrome Extensions
+- Testing and Debugging Brython
 
 ## 1.15. New
 ### 1.15.1. python
