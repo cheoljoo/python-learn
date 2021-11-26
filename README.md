@@ -23,17 +23,21 @@
     - [1.12.1. Fancy Decorators (later)](#1121-fancy-decorators-later)
   - [1.13. Python and REST APIs: Interacting With Web Services (later)](#113-python-and-rest-apis-interacting-with-web-services-later)
   - [1.14. Brython: Python in Your Browser (later)](#114-brython-python-in-your-browser-later)
-  - [New](#new)
-    - [python](#python)
-    - [c++](#c)
-    - [browser](#browser)
+  - [1.15. New](#115-new)
+    - [1.15.1. python](#1151-python)
+    - [1.15.2. c++](#1152-c)
+    - [1.15.3. browser](#1153-browser)
 - [2. Appendix for korean](#2-appendix-for-korean)
   - [2.1. Python virtualenv : new developing environment for me](#21-python-virtualenv--new-developing-environment-for-me)
   - [2.2. docker basic](#22-docker-basic)
   - [2.3. docker compose](#23-docker-compose)
+  - [2.4. vscode](#24-vscode)
+    - [2.4.1. markdown TOC](#241-markdown-toc)
+    - [2.4.2. vscode updates](#242-vscode-updates)
 
 
  -------------------
+
 
 # 1. Python Learning
 ## 1.1. python docker setup
@@ -350,6 +354,7 @@ class Bulldog(Dog):
     ```
 - The return value from a lambda expression can only be one single expression. A lambda expression can’t contain statements like assignment or return, nor can it contain control structures such as for, while, if, else, or def.
 - This implicit tuple packing doesn’t work with an anonymous lambda function
+
     ```python
     >>> (lambda x: x, x ** 2, x ** 3)(3)
     <stdin>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
@@ -364,6 +369,7 @@ class Bulldog(Dog):
     >>> (lambda x: {1: x, 2: x ** 2, 3: x ** 3})(3)
     {1: 3, 2: 9, 3: 27}
     ```
+
 - [How to Use Python Lambda Functions.](https://realpython.com/python-lambda/)
 - Python offers two built-in functions, map() and filter(), that fit the functional programming paradigm.
 
@@ -648,10 +654,45 @@ class Bulldog(Dog):
 
 ## 1.14. Brython: Python in Your Browser (later)
 - https://realpython.com/brython-python-in-browser/
+- Python developers using Flask or Django can also apply the principles of isomorphism to Python, provided that they can run Python in the browser.
+- [Brython console](https://brython.info/tests/console.html)    ///  [interactive editor](https://brython.info/tests/editor.html)
+- install on linux
+```txt
+$ python3 -m venv .venv --prompt brython
+$ source .venv/bin/activate
+(brython) $ python -m pip install --upgrade pip
+Collecting pip
+  Downloading pip-20.2.4-py2.py3-none-any.whl (1.5 MB)
+     |████████████████████████████████| 1.5 MB 1.3 MB/s
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 20.2.3
+    Uninstalling pip-20.2.3:
+      Successfully uninstalled pip-20.2.3
+(brython) $ python -m pip install brython
+Collecting brython
+  Downloading brython-3.9.0.tar.gz (1.2 MB)
+     |████████████████████████████████| 1.2 MB 1.4 MB/s
+Using legacy 'setup.py install' for brython, since package 'wheel'
+is not installed.
+Installing collected packages: brython
+    Running setup.py install for brython ... done
+(brython) $ mkdir web
+(brython) $ cd web
+(brython) $ brython-cli --install
+Installing Brython 3.9.0
+done
+(brython) $ python -m http.server
+Serving HTTP on :: port 8000 (http://[::]:8000/) ...
+```
+
+- Browser Connect to http.server  (http://lotto645.lge.com:8000/)
+  ![Brower Connect to http.server](https://files.realpython.com/media/brython_index.743c41c96830.png)
+    - http://lotto645.lge.com:8000/demo.html
 
 
-## New
-### python
+## 1.15. New
+### 1.15.1. python
 - https://realpython.com/python-testing/
 - https://realpython.com/advanced-visual-studio-code-python/
 - https://realpython.com/python-code-quality/      <- linter
@@ -659,13 +700,14 @@ class Bulldog(Dog):
     - https://github.com/jamores/eth-scapy-someip
     - https://pypi.org/project/someip/
 
-### c++
+### 1.15.2. c++
 - https://devblogs.microsoft.com/cppblog/visual-studio-code-c-extension-july-2020-update-doxygen-comments-and-logpoints/
 - https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
     - https://github.com/cschlosser/doxdocgen       : we can find source code when we visit the URL in vscode extension.
 
-### browser
+### 1.15.3. browser
 - https://realpython.com/brython-python-in-browser/
+- https://realpython.com/python-vs-javascript/
 
 # 2. Appendix for korean
 
@@ -682,3 +724,30 @@ class Bulldog(Dog):
 - (korean link) https://junlab.tistory.com/219
 - 일반적인 시스템은 단일 애플리케이션으로 구동이 되지 않습니다. 여러 개의 애플리케이션이 서로 의존성 있게 구성되어 시스템이 이뤄져 있습니다. 그렇다면 흔히 하나의 컨테이너가 하나의 애플리케이션을 담당한다고 하면 여러 개의 컨테이너가 필요로 합니다. 이때 필요한 기술이 도커 컴포즈(Docker Compose)입니다. 도커 컴포즈는 yaml 포맷으로 작성되며 여러 개의 컨테이너의 실행을 한 번에 관리를 할 수 있게 해 줍니다.
 
+## 2.4. vscode
+### 2.4.1. markdown TOC
+
+- vscode extension install
+    - markdown TOC ->  markdown all in one
+      - ^+P : create TOC and update TOC
+    - markdown preview ->  markdown preview enhanced
+    - markdown lint
+
+### 2.4.2. vscode updates
+- 21.11.26 
+    - Bracket pair guides can be enabled by setting editor.guides.bracketPairs to true (defaults to false). We added a third option "active" to only show a bracket pair guide for the active bracket pair.
+    - Customizable bracket pairs
+      - You can now configure bracket pairs for a specific programming language through settings. editor.language.brackets can be used to configure which bracket characters should be matched. If set, editor.language.colorizedBracketPairs independently configures which bracket pairs are colorized when bracket pair colorization or bracket pair guides are enabled.
+      ```javascript
+"[javascript]": {
+    "editor.language.brackets": [
+        ["[", "]"],
+        ["(", ")"]
+    ],
+    "editor.language.colorizedBracketPairs": [
+        ["[", "]"]
+    ]
+},
+      ```
+
+- 
