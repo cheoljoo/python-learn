@@ -34,10 +34,11 @@
   - [1.18. Python Code Quality: Tools & Best Practices (2021.11.28) - linter](#118-python-code-quality-tools--best-practices-20211128---linter)
   - [1.19. Getting Started With Testing in Python (2021.11.28)](#119-getting-started-with-testing-in-python-20211128)
     - [1.19.1. Writing Your First Test](#1191-writing-your-first-test)
-  - [1.20. Effective Python Testing With Pytest](#120-effective-python-testing-with-pytest)
+  - [1.20. Effective Python Testing With Pytest (2021.11.28)](#120-effective-python-testing-with-pytest-20211128)
     - [1.20.1. What Makes pytest So Useful?](#1201-what-makes-pytest-so-useful)
     - [1.20.2. Parametrization: Combining Tests](#1202-parametrization-combining-tests)
     - [1.20.3. coverage : pytest-cov](#1203-coverage--pytest-cov)
+  - [1.21. Continuous Integration With Python: An Introduction (2021.11.28)](#121-continuous-integration-with-python-an-introduction-20211128)
 - [2. Appendix](#2-appendix)
   - [2.1. Python virtualenv : new developing environment for me](#21-python-virtualenv--new-developing-environment-for-me)
   - [2.2. docker basic](#22-docker-basic)
@@ -1000,7 +1001,8 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 - flake
   - ```$ python -m pip install flake8```
   - ```$ flake8 test.py```
-  - ```flake8 --ignore E305 --exclude .git,__pycache__ --max-line-length=90```
+  - ```$ flake8 --ignore E305 --exclude .git,__pycache__ --max-line-length=90```
+  - ```$ flake8 --statistics```   : The --statistics option gives you an overview of how many times a particular error happened. 
 
 - black
   - ```$ python -m pip install black```
@@ -1061,7 +1063,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   - discover automatically
 
 
-## 1.20. Effective Python Testing With Pytest
+## 1.20. Effective Python Testing With Pytest (2021.11.28)
 - https://realpython.com/pytest-python-testing/
 
 ### 1.20.1. What Makes pytest So Useful?
@@ -1136,19 +1138,92 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 
 ### 1.20.3. coverage : pytest-cov
 - [coverage.py](https://coverage.readthedocs.io/en/6.2/)
-- ```$ python -m pip install coverage```
-- ```C:\code\python-learn\pytest> coverage rum -m pytest -q .\test_expectation.py```
-- ```C:\code\python-learn\pytest> coverage report -m```
-  - ```txt
-    C:\code\python-learn\pytest> coverage report -m
-    Name                  Stmts   Miss  Cover   Missing
-    ---------------------------------------------------
-    test_expectation.py       8      0   100%
-    ---------------------------------------------------
-    TOTAL                     8      0   100%
+  - ```$ python -m pip install coverage```
+  - ```C:\code\python-learn\pytest> coverage rum -m pytest -q .\test_expectation.py```
+  - ```C:\code\python-learn\pytest> coverage report -m```
+    - ```txt
+      C:\code\python-learn\pytest> coverage report -m
+      Name                  Stmts   Miss  Cover   Missing
+      ---------------------------------------------------
+      test_expectation.py       8      0   100%
+      ---------------------------------------------------
+      TOTAL                     8      0   100%
+      ```
+  - ```C:\code\python-learn\pytest> coverage html```
+    - open htmlcov/index.html in your browser
+
+- pytest-cov
+  - ```C:\code\python-learn\pytest> python -m pip install pytest-cov```
+  - ```C:\code\python-learn\pytest> pytest -v --cov```
+    - ```txt
+        ---------- coverage: platform win32, python 3.10.0-final-0 -----------
+        Name                     Stmts   Miss  Cover
+        --------------------------------------------
+        test_expectation.py          8      0   100%
+        test_lessThan5.py            8      0   100%
+        test_with_unittest2.py       8      0   100%
+        test_with_unittest.py        6      0   100%
+        --------------------------------------------
+        TOTAL                       30      0   100%
+      ```
+
+
+## 1.21. Continuous Integration With Python: An Introduction (2021.11.28)
+- https://realpython.com/python-continuous-integration/
+
+- Continuous integration (CI) is the practice of frequently building and testing each change done to your code automatically and as early as possible. Prolific developer and author Martin Fowler defines CI as follows
+> “Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible.” [Source](https://martinfowler.com/articles/continuousIntegration.html)
+
+- Conversely, you’ll spend more time:
+    1. Solving interesting problems
+    1. Writing awesome code with your team
+    1. Co-creating amazing products that provide value to users
+
+- On a team level, it allows for a better engineering culture, where you deliver value early and often. Collaboration is encouraged, and bugs are caught much sooner. Continuous integration will:
+  - Make you and your team faster
+  - Give you confidence that you’re building stable software with fewer bugs
+  - Ensure that your product works on other machines, not just your laptop
+  - Eliminate a lot of tedious overhead and let you focus on what matters
+  - Reduce the time spent resolving conflicts (when different people modify the same code)
+
+- to get external package dependancy
+  - ```$ pip freeze > requirements.txt```
+
+- Connect to CircleCI
+  - It requires a .circleci folder within your repo and a configuration file inside it. A configuration file contains instructions for all the steps that the build server needs to execute. CircleCI expects this file to be called config.yml.
+  - In a YAML file, there are three basic ways to represent data:
+    - Mappings (key-value pairs)
+    - Sequences (lists)
+    - Scalars (strings or numbers)
+  - ```yaml
+    # Python CircleCI 2.0 configuration file
+    version: 2
+    jobs:
+    build:
+        docker:
+        - image: circleci/python:3.7
+
+        working_directory: ~/repo
+
+        steps:
+        # Step 1: obtain repo from GitHub
+        - checkout
+        # Step 2: create virtual env and install dependencies
+        - run:
+            name: install dependencies
+            command: |
+                python3 -m venv venv
+                . venv/bin/activate
+                pip install -r requirements.txt
+        # Step 3: run linter and tests
+        - run:
+            name: run tests
+            command: |
+                . venv/bin/activate
+                flake8 --exclude=venv* --statistics
+                pytest -v --cov=calculator
     ```
-- ```C:\code\python-learn\pytest> coverage html```
-  - open htmlcov/index.html in your browser
+  - CircleCI maintains [pre-built Docker images](https://circleci.com/docs/2.0/circleci-images/) for several programming languages. In the above configuration file, you have specified a Linux image that has Python already installed. That image will create a container in which everything else happens.
 
 
 
