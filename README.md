@@ -999,7 +999,33 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 - https://realpython.com/python-testing/
 
 - Testing Your Code
-  - ./test/test_sum.py
+  - [./test/test_sum.py](https://github.com/cheoljoo/python-learn/blob/main/test/test_sum.py)
+
+- Choosing a Test Runner
+  - unittest
+  - nose or nose2
+  - pytest
+
+- unittest
+  - unittest requires that:
+    - You put your tests into classes as methods
+    - You use a series of special assertion methods in the unittest.TestCase class instead of the built-in assert statement
+  - [./test/test_sum_unittest.py](https://github.com/cheoljoo/python-learn/blob/main/test/test_sum_unittest.py)
+    1. Import unittest from the standard library
+    2. Create a class called TestSum that inherits from the TestCase class
+    3. Convert the test functions into methods by adding self as the first argument
+    4. Change the assertions to use the self.assertEqual() method on the TestCase class
+    1. Change the command-line entry point to call unittest.main()
+
+- pytest
+  - pytest supports execution of unittest test cases. The real advantage of pytest comes by writing pytest test cases. pytest test cases are a series of functions in a Python file starting with the name test_.
+  - pytest has some other great features:
+    - Support for the built-in assert statement instead of using special self.assert*() methods
+    - Support for filtering for test cases
+    - Ability to rerun from the last failing test
+    - An ecosystem of hundreds of plugins to extend the functionality
+
+
 
 # 2. Appendix
 
