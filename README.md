@@ -34,6 +34,7 @@
   - [1.18. Python Code Quality: Tools & Best Practices (2021.11.28) - linter](#118-python-code-quality-tools--best-practices-20211128---linter)
   - [1.19. Getting Started With Testing in Python (2021.11.28)](#119-getting-started-with-testing-in-python-20211128)
     - [1.19.1. Writing Your First Test](#1191-writing-your-first-test)
+  - [Effective Python Testing With Pytest](#effective-python-testing-with-pytest)
 - [2. Appendix](#2-appendix)
   - [2.1. Python virtualenv : new developing environment for me](#21-python-virtualenv--new-developing-environment-for-me)
   - [2.2. docker basic](#22-docker-basic)
@@ -1057,7 +1058,59 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   - discover automatically
 
 
+## Effective Python Testing With Pytest
+- https://realpython.com/pytest-python-testing/
 
+### What Makes pytest So Useful?
+- Less Boilerplate
+  - Arrange, or set up, the conditions for the test
+  - Act by calling some function or method
+  - Assert that some end condition is true
+
+- [pytest](https://github.com/cheoljoo/python-learn/blob/main/pytest)
+  - ```C:\code\python-learn\pytest> python -m unittest discover```
+    - ```
+        F.
+        ======================================================================
+        FAIL: test_always_fails (test_with_unittest.TryTesting)
+        ----------------------------------------------------------------------
+        Traceback (most recent call last):
+        File "C:\code\python-learn\pytest\test_with_unittest.py", line 10, in test_always_fails
+            self.assertTrue(False)
+        AssertionError: False is not true
+
+        ----------------------------------------------------------------------
+        Ran 2 tests in 0.002s
+
+        FAILED (failures=1)
+      ```
+  - ```C:\code\python-learn\pytest> pytest```
+    - ```
+        ================================== test session starts ==================================
+        platform win32 -- Python 3.10.0, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+        rootdir: C:\code\python-learn\pytest
+        collected 2 items                                                                        
+
+        test_with_unittest.py F.                                                           [100%]
+
+        ======================================= FAILURES ========================================
+        _____________________________ TryTesting.test_always_fails ______________________________
+
+        self = <test_with_unittest.TryTesting testMethod=test_always_fails>
+
+            def test_always_fails(self):
+        >       self.assertTrue(False)
+        E       AssertionError: False is not true
+
+        test_with_unittest.py:10: AssertionError
+        ================================ short test summary info ================================
+        FAILED test_with_unittest.py::TryTesting::test_always_fails - AssertionError: False is ...
+        ============================== 1 failed, 1 passed in 0.46s ==============================
+      ```
+    - A dot (.) means that the test passed.
+    - An F means that the test has failed.
+    - An E means that the test raised an unexpected exception.
+- 
 
 # 2. Appendix
 
