@@ -998,7 +998,8 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 ## 1.19. Getting Started With Testing in Python (2021.11.28)
 - https://realpython.com/python-testing/
 
-- 
+- Testing Your Code
+  - ./test/test_sum.py
 
 # 2. Appendix
 
