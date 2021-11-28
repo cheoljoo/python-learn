@@ -6,49 +6,50 @@
     - [1.3.2. Documenting Your Python Code Base Using Docstrings](#132-documenting-your-python-code-base-using-docstrings)
     - [1.3.3. The Four Main Sections of the docs Folder](#133-the-four-main-sections-of-the-docs-folder)
     - [1.3.4. Documentation Tools and Resources](#134-documentation-tools-and-resources)
-  - [1.4. python docker setup](#14-python-docker-setup)
-  - [1.5. PyPy: Faster Python With Minimal Effort](#15-pypy-faster-python-with-minimal-effort)
-    - [1.5.1. installation](#151-installation)
-  - [1.6. Develop Data Visualization Interfaces in Python With Dash (later)](#16-develop-data-visualization-interfaces-in-python-with-dash-later)
-  - [1.7. C for Python Programmers (easy for us : useless)](#17-c-for-python-programmers-easy-for-us--useless)
-  - [1.8. Common Python Data Structures (Guide)](#18-common-python-data-structures-guide)
-  - [1.9. Using the Python defaultdict Type for Handling Missing Keys (2021.11.29)](#19-using-the-python-defaultdict-type-for-handling-missing-keys-20211129)
-    - [1.9.1. Handling Missing Keys in Dictionaries](#191-handling-missing-keys-in-dictionaries)
-    - [1.9.2. Understanding the Python defaultdict Type](#192-understanding-the-python-defaultdict-type)
-    - [1.9.3. Using the Python defaultdict Type](#193-using-the-python-defaultdict-type)
-    - [1.9.4. Diving Deeper Into defaultdict  (later)](#194-diving-deeper-into-defaultdict--later)
-  - [1.10. Learn IP Address Concepts With Python's ipaddress Module (helpful info)](#110-learn-ip-address-concepts-with-pythons-ipaddress-module-helpful-info)
-  - [1.11. Regular Expressions: Regexes in Python (later)](#111-regular-expressions-regexes-in-python-later)
-  - [1.12. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud](#112-dockerizing-flask-with-compose-and-machine--from-localhost-to-the-cloud)
-  - [1.13. Object-Oriented Programming (OOP) in Python 3](#113-object-oriented-programming-oop-in-python-3)
-  - [1.14. Python Bindings: Calling C or C++ From Python](#114-python-bindings-calling-c-or-c-from-python)
-  - [1.15. Functional Programming in Python: When and How to Use It](#115-functional-programming-in-python-when-and-how-to-use-it)
-    - [1.15.1. What Is Functional Programming?](#1151-what-is-functional-programming)
-    - [1.15.2. How Well Does Python Support Functional Programming?](#1152-how-well-does-python-support-functional-programming)
-    - [1.15.3. Defining an Anonymous Function With lambda](#1153-defining-an-anonymous-function-with-lambda)
-    - [1.15.4. Applying a Function to an Iterable With map()](#1154-applying-a-function-to-an-iterable-with-map)
-      - [1.15.4.1. Calling map() With a Single Iterable](#11541-calling-map-with-a-single-iterable)
-      - [1.15.4.2. Calling map() With Multiple Iterables](#11542-calling-map-with-multiple-iterables)
-    - [1.15.5. Selecting Elements From an Iterable With filter()](#1155-selecting-elements-from-an-iterable-with-filter)
-    - [1.15.6. reduce](#1156-reduce)
-  - [1.16. Primer on Python Decorators](#116-primer-on-python-decorators)
-    - [1.16.1. Fancy Decorators (later)](#1161-fancy-decorators-later)
-  - [1.17. Python and REST APIs: Interacting With Web Services (2021.11.28)](#117-python-and-rest-apis-interacting-with-web-services-20211128)
-  - [1.18. Python vs JavaScript for Pythonistas (2021.11.28)](#118-python-vs-javascript-for-pythonistas-20211128)
-  - [1.19. Brython: Python in Your Browser (2021.11.25)](#119-brython-python-in-your-browser-20211125)
-    - [1.19.1. install on linux](#1191-install-on-linux)
-    - [1.19.2. Brython Core Components](#1192-brython-core-components)
-    - [1.19.3. Brython Standard Library](#1193-brython-standard-library)
-    - [1.19.4. my opinion](#1194-my-opinion)
-    - [1.19.5. MISC](#1195-misc)
-  - [1.20. Python Code Quality: Tools & Best Practices (2021.11.28) - linter](#120-python-code-quality-tools--best-practices-20211128---linter)
-  - [1.21. Getting Started With Testing in Python (2021.11.28)](#121-getting-started-with-testing-in-python-20211128)
-    - [1.21.1. Writing Your First Test](#1211-writing-your-first-test)
-  - [1.22. Effective Python Testing With Pytest (2021.11.28)](#122-effective-python-testing-with-pytest-20211128)
-    - [1.22.1. What Makes pytest So Useful?](#1221-what-makes-pytest-so-useful)
-    - [1.22.2. Parametrization: Combining Tests](#1222-parametrization-combining-tests)
-    - [1.22.3. coverage : pytest-cov](#1223-coverage--pytest-cov)
-  - [1.23. Continuous Integration With Python: An Introduction (2021.11.28)](#123-continuous-integration-with-python-an-introduction-20211128)
+  - [1.4. Advanced Git Tips for Python Developers (2021.11.29) - later](#14-advanced-git-tips-for-python-developers-20211129---later)
+  - [1.5. python docker setup](#15-python-docker-setup)
+  - [1.6. PyPy: Faster Python With Minimal Effort](#16-pypy-faster-python-with-minimal-effort)
+    - [1.6.1. installation](#161-installation)
+  - [1.7. Develop Data Visualization Interfaces in Python With Dash (later)](#17-develop-data-visualization-interfaces-in-python-with-dash-later)
+  - [1.8. C for Python Programmers (easy for us : useless)](#18-c-for-python-programmers-easy-for-us--useless)
+  - [1.9. Common Python Data Structures (Guide)](#19-common-python-data-structures-guide)
+  - [1.10. Using the Python defaultdict Type for Handling Missing Keys (2021.11.29)](#110-using-the-python-defaultdict-type-for-handling-missing-keys-20211129)
+    - [1.10.1. Handling Missing Keys in Dictionaries](#1101-handling-missing-keys-in-dictionaries)
+    - [1.10.2. Understanding the Python defaultdict Type](#1102-understanding-the-python-defaultdict-type)
+    - [1.10.3. Using the Python defaultdict Type](#1103-using-the-python-defaultdict-type)
+    - [1.10.4. Diving Deeper Into defaultdict  (later)](#1104-diving-deeper-into-defaultdict--later)
+  - [1.11. Learn IP Address Concepts With Python's ipaddress Module (helpful info)](#111-learn-ip-address-concepts-with-pythons-ipaddress-module-helpful-info)
+  - [1.12. Regular Expressions: Regexes in Python (later)](#112-regular-expressions-regexes-in-python-later)
+  - [1.13. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud](#113-dockerizing-flask-with-compose-and-machine--from-localhost-to-the-cloud)
+  - [1.14. Object-Oriented Programming (OOP) in Python 3](#114-object-oriented-programming-oop-in-python-3)
+  - [1.15. Python Bindings: Calling C or C++ From Python](#115-python-bindings-calling-c-or-c-from-python)
+  - [1.16. Functional Programming in Python: When and How to Use It](#116-functional-programming-in-python-when-and-how-to-use-it)
+    - [1.16.1. What Is Functional Programming?](#1161-what-is-functional-programming)
+    - [1.16.2. How Well Does Python Support Functional Programming?](#1162-how-well-does-python-support-functional-programming)
+    - [1.16.3. Defining an Anonymous Function With lambda](#1163-defining-an-anonymous-function-with-lambda)
+    - [1.16.4. Applying a Function to an Iterable With map()](#1164-applying-a-function-to-an-iterable-with-map)
+      - [1.16.4.1. Calling map() With a Single Iterable](#11641-calling-map-with-a-single-iterable)
+      - [1.16.4.2. Calling map() With Multiple Iterables](#11642-calling-map-with-multiple-iterables)
+    - [1.16.5. Selecting Elements From an Iterable With filter()](#1165-selecting-elements-from-an-iterable-with-filter)
+    - [1.16.6. reduce](#1166-reduce)
+  - [1.17. Primer on Python Decorators](#117-primer-on-python-decorators)
+    - [1.17.1. Fancy Decorators (later)](#1171-fancy-decorators-later)
+  - [1.18. Python and REST APIs: Interacting With Web Services (2021.11.28)](#118-python-and-rest-apis-interacting-with-web-services-20211128)
+  - [1.19. Python vs JavaScript for Pythonistas (2021.11.28)](#119-python-vs-javascript-for-pythonistas-20211128)
+  - [1.20. Brython: Python in Your Browser (2021.11.25)](#120-brython-python-in-your-browser-20211125)
+    - [1.20.1. install on linux](#1201-install-on-linux)
+    - [1.20.2. Brython Core Components](#1202-brython-core-components)
+    - [1.20.3. Brython Standard Library](#1203-brython-standard-library)
+    - [1.20.4. my opinion](#1204-my-opinion)
+    - [1.20.5. MISC](#1205-misc)
+  - [1.21. Python Code Quality: Tools & Best Practices (2021.11.28) - linter](#121-python-code-quality-tools--best-practices-20211128---linter)
+  - [1.22. Getting Started With Testing in Python (2021.11.28)](#122-getting-started-with-testing-in-python-20211128)
+    - [1.22.1. Writing Your First Test](#1221-writing-your-first-test)
+  - [1.23. Effective Python Testing With Pytest (2021.11.28)](#123-effective-python-testing-with-pytest-20211128)
+    - [1.23.1. What Makes pytest So Useful?](#1231-what-makes-pytest-so-useful)
+    - [1.23.2. Parametrization: Combining Tests](#1232-parametrization-combining-tests)
+    - [1.23.3. coverage : pytest-cov](#1233-coverage--pytest-cov)
+  - [1.24. Continuous Integration With Python: An Introduction (2021.11.28)](#124-continuous-integration-with-python-an-introduction-20211128)
 - [2. Appendix](#2-appendix)
   - [2.1. Python virtualenv : new developing environment for me](#21-python-virtualenv--new-developing-environment-for-me)
   - [2.2. docker basic](#22-docker-basic)
@@ -486,7 +487,13 @@
 - [MkDocs](https://www.mkdocs.org/)	: A static site generator to help build project documentation using the Markdown language
 
 
-## 1.4. python docker setup
+## 1.4. Advanced Git Tips for Python Developers (2021.11.29) - later
+- https://realpython.com/advanced-git-for-pythonistas/
+
+- 
+
+
+## 1.5. python docker setup
 - https://realpython.com/tutorials/docker/
 - https://realpython.com/python-versions-docker/
 - Dockerfile
@@ -515,7 +522,7 @@ WORKDIR "/app"
 
 
 
-## 1.5. PyPy: Faster Python With Minimal Effort
+## 1.6. PyPy: Faster Python With Minimal Effort
 - https://realpython.com/pypy-faster-python/
 - PyPy is a very compliant Python interpreter that is a worthy alternative to CPython 2.7, 3.6, and soon 3.7.
 - The Python language specification is used in a number of implementations such as CPython (written in C), Jython (written in Java), IronPython (written for .NET), and PyPy (written in Python). 
@@ -530,13 +537,13 @@ WORKDIR "/app"
 
 
 
-### 1.5.1. installation
+### 1.6.1. installation
 - https://www.pypy.org/download.html
     - tar -xf archive.tar.bz2
 
 
 
-## 1.6. Develop Data Visualization Interfaces in Python With Dash (later)
+## 1.7. Develop Data Visualization Interfaces in Python With Dash (later)
 - https://realpython.com/python-dash/
 - Dash is an open source framework for building data visualization interfaces. Released in 2017 as a Python library, it’s grown to include implementations for R and Julia. Dash helps data scientists build analytical web applications without requiring advanced web development knowledge.
 - Three technologies constitute the core of Dash: 
@@ -548,13 +555,13 @@ WORKDIR "/app"
 
 
 
-## 1.7. C for Python Programmers (easy for us : useless)
+## 1.8. C for Python Programmers (easy for us : useless)
 - https://realpython.com/c-for-python-programmers/
 - The purpose of this tutorial is to get an experienced Python programmer up to speed with the basics of the C language and how it’s used in the CPython source code. It assumes you already have an intermediate understanding of Python syntax.
 
 
 
-## 1.8. Common Python Data Structures (Guide)
+## 1.9. Common Python Data Structures (Guide)
 - https://realpython.com/python-data-structures/
 - Dictionaries, Maps, and Hash Tables
     - collections.OrderedDict: Remember the Insertion Order of Keys
@@ -648,12 +655,12 @@ WORKDIR "/app"
     - **If you’d like to avoid the locking overhead of queue.PriorityQueue, then using the heapq module directly is also a good option.**
 
 
-## 1.9. Using the Python defaultdict Type for Handling Missing Keys (2021.11.29)
+## 1.10. Using the Python defaultdict Type for Handling Missing Keys (2021.11.29)
 - https://realpython.com/python-defaultdict/
 
 - A common problem that you can face when working with Python dictionaries is to try to access or modify keys that don’t exist in the dictionary. This will raise a KeyError and break up your code execution. To handle these kinds of situations, the standard library provides the Python defaultdict type, a dictionary-like class that’s available for you in collections.
 
-### 1.9.1. Handling Missing Keys in Dictionaries
+### 1.10.1. Handling Missing Keys in Dictionaries
 - Use .setdefault()
   - setdefault(key[, default])  :  If key is in the dictionary, return its value. If not, insert key with a value of default and return default. default defaults to None.
 - Use .get()
@@ -683,7 +690,7 @@ WORKDIR "/app"
     {'key': 'default value'}
     ```
 
-### 1.9.2. Understanding the Python defaultdict Type
+### 1.10.2. Understanding the Python defaultdict Type
 - it is like perl. when we only check the value , this value will be created.
 - Keep in mind that you must pass a valid Python callable object to .default_factory, so remember not to call it using the parentheses at initialization time.
 - 
@@ -707,7 +714,7 @@ Traceback (most recent call last):
 TypeError: first argument must be callable or None
 ```
 
-### 1.9.3. Using the Python defaultdict Type
+### 1.10.3. Using the Python defaultdict Type
 - Grouping Items
   - ```python
     dep = [('Sales', 'John Doe'),
@@ -762,27 +769,27 @@ TypeError: first argument must be callable or None
 - Accumulating Values
   - it is same as counting.
 
-### 1.9.4. Diving Deeper Into defaultdict  (later)
+### 1.10.4. Diving Deeper Into defaultdict  (later)
 - later : https://realpython.com/python-defaultdict/#diving-deeper-into-defaultdict
 
-## 1.10. Learn IP Address Concepts With Python's ipaddress Module (helpful info)
+## 1.11. Learn IP Address Concepts With Python's ipaddress Module (helpful info)
 - https://realpython.com/python-ipaddress-module/
 
 
 
-## 1.11. Regular Expressions: Regexes in Python (later)
+## 1.12. Regular Expressions: Regexes in Python (later)
 - https://realpython.com/regex-python/
 - https://realpython.com/regex-python-part-2/
 
 
 
-## 1.12. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud
+## 1.13. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud
 - https://realpython.com/dockerizing-flask-with-compose-and-machine-from-localhost-to-the-cloud/
 - docker machine is deprecated.
 
 
 
-## 1.13. Object-Oriented Programming (OOP) in Python 3
+## 1.14. Object-Oriented Programming (OOP) in Python 3
 - https://realpython.com/python3-object-oriented-programming/
 - Class
     - Conceptually, objects are like the components of a system. Think of a program as a factory assembly line of sorts. At each step of the assembly line a system component processes some material, ultimately transforming raw material into a finished product.
@@ -829,7 +836,7 @@ class Bulldog(Dog):
     - You can access the parent class from inside a method of a child class by using super():
 
 
-## 1.14. Python Bindings: Calling C or C++ From Python
+## 1.15. Python Bindings: Calling C or C++ From Python
 - https://realpython.com/python-bindings-overview/
 - Marshalling Data Types
     - marshalling : The process of transforming the memory representation of an object to a data format suitable for storage or transmission.
@@ -849,7 +856,7 @@ class Bulldog(Dog):
 
 
 
-## 1.15. Functional Programming in Python: When and How to Use It
+## 1.16. Functional Programming in Python: When and How to Use It
 - https://realpython.com/python-functional-programming/
 - Functional programming is a programming paradigm in which the primary method of computation is evaluation of functions. In this tutorial, you’ll explore functional programming in Python.
     - What the functional programming paradigm entails
@@ -857,10 +864,10 @@ class Bulldog(Dog):
     - How to define anonymous functions with the lambda keyword
     - How to implement functional code using map(), filter(), and reduce()
 
-### 1.15.1. What Is Functional Programming?
+### 1.16.1. What Is Functional Programming?
 - In functional programming, a program consists entirely of evaluation of pure functions. Computation proceeds by nested or composed function calls, without changes to state or mutable data.
 
-### 1.15.2. How Well Does Python Support Functional Programming?
+### 1.16.2. How Well Does Python Support Functional Programming?
 - two abilities:
   1. To take another function as an argument
   1. To return another function to its caller
@@ -893,7 +900,7 @@ class Bulldog(Dog):
     - You can check out [How to Use sorted() and sort() in Python](https://realpython.com/python-sort/) for more information on sorting data in Python.
 
 
-### 1.15.3. Defining an Anonymous Function With lambda
+### 1.16.3. Defining an Anonymous Function With lambda
 - syntax --> lambda <parameter_list>: <expression>
     ```python
     >>> lambda s: s[::-1]
@@ -935,8 +942,8 @@ class Bulldog(Dog):
 - [How to Use Python Lambda Functions.](https://realpython.com/python-lambda/)
 - Python offers two built-in functions, map() and filter(), that fit the functional programming paradigm.
 
-### 1.15.4. Applying a Function to an Iterable With map()
-#### 1.15.4.1. Calling map() With a Single Iterable
+### 1.16.4. Applying a Function to an Iterable With map()
+#### 1.16.4.1. Calling map() With a Single Iterable
 - syntax --> map(<f>, <iterable>)
 - remember, map() doesn’t return a list. It returns an iterator called a map object. To obtain the values from the iterator, you need to either iterate over it or use list():
     ```python
@@ -977,7 +984,7 @@ class Bulldog(Dog):
     >>> "+".join(map(str, [1, 2, 3, 4, 5]))
     '1+2+3+4+5'
     ```
-#### 1.15.4.2. Calling map() With Multiple Iterables
+#### 1.16.4.2. Calling map() With Multiple Iterables
 - syntax --> map(<f>, <iterable₁>, <iterable₂>, ..., <iterableₙ>)
     ```python
     >>> def f(a, b, c):
@@ -989,7 +996,7 @@ class Bulldog(Dog):
     ```
     - ![map with multiple iterables](https://files.realpython.com/media/t.130d7baf2cca.png)
 
-### 1.15.5. Selecting Elements From an Iterable With filter()
+### 1.16.5. Selecting Elements From an Iterable With filter()
 - syntax --> filter(<f>, <iterable>)
   - filter(<f>, <iterable>) applies function <f> to each element of <iterable> and returns an iterator that yields all items for which <f> is truthy. Conversely, it filters out all items for which <f> is falsy.
     ```python
@@ -1016,7 +1023,7 @@ class Bulldog(Dog):
     >>> list(filter(lambda s: s.isupper(), animals))
     ['CAT', 'DOG', 'EMU']
     ```
-### 1.15.6. reduce
+### 1.16.6. reduce
 - syntax --> reduce(<f>, <iterable>)
     ```python
     >>> def f(x, y):
@@ -1056,7 +1063,7 @@ class Bulldog(Dog):
 
 
 
-## 1.16. Primer on Python Decorators
+## 1.17. Primer on Python Decorators
 - https://realpython.com/primer-on-python-decorators/
 - a higher-order function is a function that does at least one of the following:
     - takes one or more functions as arguments (i.e. procedural parameters),
@@ -1197,7 +1204,7 @@ class Bulldog(Dog):
 - registering plugins
 - is the user logged in?
 
-### 1.16.1. [Fancy Decorators](https://realpython.com/primer-on-python-decorators/#fancy-decorators) (later)
+### 1.17.1. [Fancy Decorators](https://realpython.com/primer-on-python-decorators/#fancy-decorators) (later)
 - Decorating Classes
 - Nesting Decorators
 - Decorators With Arguments
@@ -1211,7 +1218,7 @@ class Bulldog(Dog):
 - Validating JSON
 
 
-## 1.17. Python and REST APIs: Interacting With Web Services (2021.11.28)
+## 1.18. Python and REST APIs: Interacting With Web Services (2021.11.28)
 - https://realpython.com/api-integration-in-python/
 
 - REST Architecture
@@ -1290,7 +1297,7 @@ class Bulldog(Dog):
   - FastAPI
 
 
-## 1.18. Python vs JavaScript for Pythonistas (2021.11.28)
+## 1.19. Python vs JavaScript for Pythonistas (2021.11.28)
 - https://realpython.com/python-vs-javascript/
 
 - skip javascript description : it emphasize advantages of python. but , it depends on your usage.  if you works on the web , javascript is good also.
@@ -1302,11 +1309,11 @@ class Bulldog(Dog):
   - Both languages take advantage of automatic heap memory management to eliminate human error and to reduce cognitive load. Nevertheless, this doesn’t completely free you from the risk of getting a memory leak, and it adds some performance overhead.
 
 
-## 1.19. Brython: Python in Your Browser (2021.11.25)
+## 1.20. Brython: Python in Your Browser (2021.11.25)
 - https://realpython.com/brython-python-in-browser/
 - Python developers using Flask or Django can also apply the principles of isomorphism to Python, provided that they can run Python in the browser.
 - [Brython console](https://brython.info/tests/console.html)    ///  [interactive editor](https://brython.info/tests/editor.html)
-###  1.19.1. install on linux
+###  1.20.1. install on linux
 ```txt
 $ python3 -m venv .venv --prompt brython
 $ source .venv/bin/activate
@@ -1340,27 +1347,27 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   ![Brower Connect to http.server](https://files.realpython.com/media/brython_index.743c41c96830.png)
     - http://lotto645.lge.com:8000/demo.html
 
-### 1.19.2. Brython Core Components
+### 1.20.2. Brython Core Components
 - The core of Brython is contained in brython.js or in brython.min.js, the minimized version of the Brython engine. Both include the following key components:
   - brython() is the main JavaScript function exposed in the JavaScript global namespace. You can’t execute any Python code without calling this function. This is the only JavaScript function that you should have to call explicitly.
   - `__BRYTHON__` is a JavaScript global object that holds all internal objects needed to run Python scripts. This object isn’t used directly when you write Brython applications. If you look at the Brython code, both JavaScript and Python, then you’ll see regular occurrences of `__BRYTHON__`. You don’t need to use this object, but you should be aware of it when you see an error or when you want to debug your code in the browser console.
   - Built-in types are implementations of the Python built-in types in JavaScript. For example, py_int.js, py_string.js and py_dicts.js are respective implementations of int, str and dict.
   - browser is the browser module that exposes the JavaScript objects commonly used in a front-end web application, like the DOM interfaces using document and the browser window using the window object.
 
-### 1.19.3. Brython Standard Library
+### 1.20.3. Brython Standard Library
 - brython_stdlib.js exposes the Python standard library. As this file is generated, Brython compiles the Python standard library into JavaScript and concatenates the result into the bundle brython_stdlib.js.
 
-### 1.19.4. my opinion
+### 1.20.4. my opinion
 - ok. if you try the examples , it is good.  But , this is like specific web language. because it is different from pure python.  it is brython , but not python.
   - To manipulate the DOM, Brython uses two operators:
     - <= is a new operator, specific to Brython, that adds a child to a node. You can see a few examples of this usage in display_map(), defined on line 22.
     - + is a substitute for Element.insertAdjacentHTML('afterend') and adds sibling nodes.
 
-### 1.19.5. MISC
+### 1.20.5. MISC
 - Creating Google Chrome Extensions
 - Testing and Debugging Brython
 
-## 1.20. Python Code Quality: Tools & Best Practices (2021.11.28) - linter
+## 1.21. Python Code Quality: Tools & Best Practices (2021.11.28) - linter
 - https://realpython.com/python-code-quality/
 
 - Why Does Code Quality Matter?
@@ -1405,7 +1412,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   - ```$ python -m pip install black```
   - ```$ black test.py```
 
-## 1.21. Getting Started With Testing in Python (2021.11.28)
+## 1.22. Getting Started With Testing in Python (2021.11.28)
 - https://realpython.com/python-testing/
 
 - Testing Your Code
@@ -1437,7 +1444,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 
 - Testing in Multiple Environments
   - pip install tox
-### 1.21.1. Writing Your First Test
+### 1.22.1. Writing Your First Test
 - [project](https://github.com/cheoljoo/python-learn/blob/main/project)
   - ```
     project/
@@ -1460,10 +1467,10 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   - discover automatically
 
 
-## 1.22. Effective Python Testing With Pytest (2021.11.28)
+## 1.23. Effective Python Testing With Pytest (2021.11.28)
 - https://realpython.com/pytest-python-testing/
 
-### 1.22.1. What Makes pytest So Useful?
+### 1.23.1. What Makes pytest So Useful?
 - Less Boilerplate
   - Arrange, or set up, the conditions for the test
   - Act by calling some function or method
@@ -1513,7 +1520,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
     - An F means that the test has failed.
     - An E means that the test raised an unexpected exception.
 
-### 1.22.2. Parametrization: Combining Tests 
+### 1.23.2. Parametrization: Combining Tests 
 - pytest.mark.parametrize
   - ```python
     # content of test_expectation.py
@@ -1533,7 +1540,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   - duration report : --durations
     - run : ```C:\code\python-learn\pytest> pytest -q .\test_expectation.py --durations=1 -vv```
 
-### 1.22.3. coverage : pytest-cov
+### 1.23.3. coverage : pytest-cov
 - [coverage.py](https://coverage.readthedocs.io/en/6.2/)
   - ```$ python -m pip install coverage```
   - ```C:\code\python-learn\pytest> coverage rum -m pytest -q .\test_expectation.py```
@@ -1565,7 +1572,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
       ```
 
 
-## 1.23. Continuous Integration With Python: An Introduction (2021.11.28)
+## 1.24. Continuous Integration With Python: An Introduction (2021.11.28)
 - https://realpython.com/python-continuous-integration/
 
 - Continuous integration (CI) is the practice of frequently building and testing each change done to your code automatically and as early as possible. Prolific developer and author Martin Fowler defines CI as follows
@@ -1692,7 +1699,8 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 ### 2.5.5. new on 2021
 - https://realpython.com/python-pass-by-reference/
 - https://realpython.com/django-diary-project-python/
-- 
+- https://realpython.com/python-traceback/
+- https://realpython.com/advanced-git-for-pythonistas/
 
 ## 2.6. Python 3.10: Cool New Features for You to Try
 ### 2.6.1. Structural Pattern Matching
