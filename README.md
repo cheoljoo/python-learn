@@ -31,8 +31,9 @@
     - [1.17.3. Brython Standard Library](#1173-brython-standard-library)
     - [1.17.4. my opinion](#1174-my-opinion)
     - [1.17.5. MISC](#1175-misc)
-  - [1.18. Python Code Quality: Tools & Best Practices (2021.11.28)](#118-python-code-quality-tools--best-practices-20211128)
+  - [1.18. Python Code Quality: Tools & Best Practices (2021.11.28) - linter](#118-python-code-quality-tools--best-practices-20211128---linter)
   - [1.19. Getting Started With Testing in Python (2021.11.28)](#119-getting-started-with-testing-in-python-20211128)
+    - [1.19.1. Writing Your First Test](#1191-writing-your-first-test)
 - [2. Appendix](#2-appendix)
   - [2.1. Python virtualenv : new developing environment for me](#21-python-virtualenv--new-developing-environment-for-me)
   - [2.2. docker basic](#22-docker-basic)
@@ -957,7 +958,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 - Creating Google Chrome Extensions
 - Testing and Debugging Brython
 
-## 1.18. Python Code Quality: Tools & Best Practices (2021.11.28)
+## 1.18. Python Code Quality: Tools & Best Practices (2021.11.28) - linter
 - https://realpython.com/python-code-quality/
 
 - Why Does Code Quality Matter?
@@ -992,8 +993,14 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 | Bandit	| Logical	| Analyzes code to find common security issues | 
 | MyPy	| Logical	| Checks for optionally-enforced static types | 
 
+- flake
+  - ```$ python -m pip install flake8```
+  - ```$ flake8 test.py```
+  - ```flake8 --ignore E305 --exclude .git,__pycache__ --max-line-length=90```
 
-
+- black
+  - ```$ python -m pip install black```
+  - ```$ black test.py```
 
 ## 1.19. Getting Started With Testing in Python (2021.11.28)
 - https://realpython.com/python-testing/
@@ -1024,6 +1031,31 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
     - Support for filtering for test cases
     - Ability to rerun from the last failing test
     - An ecosystem of hundreds of plugins to extend the functionality
+
+- Testing in Multiple Environments
+  - pip install tox
+### 1.19.1. Writing Your First Test
+- [project](https://github.com/cheoljoo/python-learn/blob/main/project)
+  - ```
+    project/
+        │
+        ├── my_sum/
+        │   └── __init__.py
+        |
+        └── test.py
+    ```
+  1. Imports sum() from the my_sum package you created
+  2. Defines a new test case class called TestSum, which inherits from unittest.TestCase
+  3. Defines a test method, .test_list_int(), to test a list of integers. The method .test_list_int() will:
+    - Declare a variable data with a list of numbers (1, 2, 3)
+    - Assign the result of my_sum.sum(data) to a result variable
+    - Assert that the value of result equals 6 by using the .assertEqual() method on the unittest.TestCase class
+  4. Defines a command-line entry point, which runs the unittest test-runner .main()
+
+- ```C:\code\python-learn> python -m unittest discover -s project```
+  - start  from project with -s option.
+  - discover automatically
+
 
 
 
