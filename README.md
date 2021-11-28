@@ -1,51 +1,205 @@
 - [1. Python Learning](#1-python-learning)
-  - [1.1. python docker setup](#11-python-docker-setup)
-  - [1.2. PyPy: Faster Python With Minimal Effort](#12-pypy-faster-python-with-minimal-effort)
-    - [1.2.1. installation](#121-installation)
-  - [1.3. Develop Data Visualization Interfaces in Python With Dash (later)](#13-develop-data-visualization-interfaces-in-python-with-dash-later)
-  - [1.4. C for Python Programmers (easy for us : useless)](#14-c-for-python-programmers-easy-for-us--useless)
-  - [1.5. Common Python Data Structures (Guide)](#15-common-python-data-structures-guide)
-  - [1.6. Learn IP Address Concepts With Python's ipaddress Module (helpful info)](#16-learn-ip-address-concepts-with-pythons-ipaddress-module-helpful-info)
-  - [1.7. Regular Expressions: Regexes in Python (later)](#17-regular-expressions-regexes-in-python-later)
-  - [1.8. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud](#18-dockerizing-flask-with-compose-and-machine--from-localhost-to-the-cloud)
-  - [1.9. Object-Oriented Programming (OOP) in Python 3](#19-object-oriented-programming-oop-in-python-3)
-  - [1.10. Python Bindings: Calling C or C++ From Python](#110-python-bindings-calling-c-or-c-from-python)
-  - [1.11. Functional Programming in Python: When and How to Use It](#111-functional-programming-in-python-when-and-how-to-use-it)
-    - [1.11.1. What Is Functional Programming?](#1111-what-is-functional-programming)
-    - [1.11.2. How Well Does Python Support Functional Programming?](#1112-how-well-does-python-support-functional-programming)
-    - [1.11.3. Defining an Anonymous Function With lambda](#1113-defining-an-anonymous-function-with-lambda)
-    - [1.11.4. Applying a Function to an Iterable With map()](#1114-applying-a-function-to-an-iterable-with-map)
-      - [1.11.4.1. Calling map() With a Single Iterable](#11141-calling-map-with-a-single-iterable)
-      - [1.11.4.2. Calling map() With Multiple Iterables](#11142-calling-map-with-multiple-iterables)
-    - [1.11.5. Selecting Elements From an Iterable With filter()](#1115-selecting-elements-from-an-iterable-with-filter)
-    - [1.11.6. reduce](#1116-reduce)
-  - [1.12. Primer on Python Decorators](#112-primer-on-python-decorators)
-    - [1.12.1. Fancy Decorators (later)](#1121-fancy-decorators-later)
-  - [1.13. Python and REST APIs: Interacting With Web Services (later)](#113-python-and-rest-apis-interacting-with-web-services-later)
-  - [1.14. Brython: Python in Your Browser (later)](#114-brython-python-in-your-browser-later)
-    - [1.14.1. install on linux](#1141-install-on-linux)
-    - [1.14.2. Brython Core Components](#1142-brython-core-components)
-    - [1.14.3. Brython Standard Library](#1143-brython-standard-library)
-    - [1.14.4. my opinion](#1144-my-opinion)
-    - [1.14.5. MISC](#1145-misc)
-  - [1.15. New](#115-new)
-    - [1.15.1. python](#1151-python)
-    - [1.15.2. c++](#1152-c)
-    - [1.15.3. browser](#1153-browser)
-- [2. Appendix for korean](#2-appendix-for-korean)
+  - [1.1. Advanced Visual Studio Code for Python Developers (2021.11.28)](#11-advanced-visual-studio-code-for-python-developers-20211128)
+  - [1.2. Python Virtual Environments: A Primer (2021.11.28)](#12-python-virtual-environments-a-primer-20211128)
+  - [1.3. python docker setup](#13-python-docker-setup)
+  - [1.4. PyPy: Faster Python With Minimal Effort](#14-pypy-faster-python-with-minimal-effort)
+    - [1.4.1. installation](#141-installation)
+  - [1.5. Develop Data Visualization Interfaces in Python With Dash (later)](#15-develop-data-visualization-interfaces-in-python-with-dash-later)
+  - [1.6. C for Python Programmers (easy for us : useless)](#16-c-for-python-programmers-easy-for-us--useless)
+  - [1.7. Common Python Data Structures (Guide)](#17-common-python-data-structures-guide)
+  - [1.8. Learn IP Address Concepts With Python's ipaddress Module (helpful info)](#18-learn-ip-address-concepts-with-pythons-ipaddress-module-helpful-info)
+  - [1.9. Regular Expressions: Regexes in Python (later)](#19-regular-expressions-regexes-in-python-later)
+  - [1.10. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud](#110-dockerizing-flask-with-compose-and-machine--from-localhost-to-the-cloud)
+  - [1.11. Object-Oriented Programming (OOP) in Python 3](#111-object-oriented-programming-oop-in-python-3)
+  - [1.12. Python Bindings: Calling C or C++ From Python](#112-python-bindings-calling-c-or-c-from-python)
+  - [1.13. Functional Programming in Python: When and How to Use It](#113-functional-programming-in-python-when-and-how-to-use-it)
+    - [1.13.1. What Is Functional Programming?](#1131-what-is-functional-programming)
+    - [1.13.2. How Well Does Python Support Functional Programming?](#1132-how-well-does-python-support-functional-programming)
+    - [1.13.3. Defining an Anonymous Function With lambda](#1133-defining-an-anonymous-function-with-lambda)
+    - [1.13.4. Applying a Function to an Iterable With map()](#1134-applying-a-function-to-an-iterable-with-map)
+      - [1.13.4.1. Calling map() With a Single Iterable](#11341-calling-map-with-a-single-iterable)
+      - [1.13.4.2. Calling map() With Multiple Iterables](#11342-calling-map-with-multiple-iterables)
+    - [1.13.5. Selecting Elements From an Iterable With filter()](#1135-selecting-elements-from-an-iterable-with-filter)
+    - [1.13.6. reduce](#1136-reduce)
+  - [1.14. Primer on Python Decorators](#114-primer-on-python-decorators)
+    - [1.14.1. Fancy Decorators (later)](#1141-fancy-decorators-later)
+  - [1.15. Python and REST APIs: Interacting With Web Services (2021.11.28)](#115-python-and-rest-apis-interacting-with-web-services-20211128)
+  - [1.16. Python vs JavaScript for Pythonistas (2021.11.28)](#116-python-vs-javascript-for-pythonistas-20211128)
+  - [1.17. Brython: Python in Your Browser (2021.11.25)](#117-brython-python-in-your-browser-20211125)
+    - [1.17.1. install on linux](#1171-install-on-linux)
+    - [1.17.2. Brython Core Components](#1172-brython-core-components)
+    - [1.17.3. Brython Standard Library](#1173-brython-standard-library)
+    - [1.17.4. my opinion](#1174-my-opinion)
+    - [1.17.5. MISC](#1175-misc)
+  - [1.18. Python Code Quality: Tools & Best Practices (2021.11.28)](#118-python-code-quality-tools--best-practices-20211128)
+  - [1.19. Getting Started With Testing in Python (2021.11.28)](#119-getting-started-with-testing-in-python-20211128)
+- [2. Appendix](#2-appendix)
   - [2.1. Python virtualenv : new developing environment for me](#21-python-virtualenv--new-developing-environment-for-me)
   - [2.2. docker basic](#22-docker-basic)
   - [2.3. docker compose](#23-docker-compose)
   - [2.4. vscode](#24-vscode)
     - [2.4.1. markdown TOC](#241-markdown-toc)
     - [2.4.2. vscode updates](#242-vscode-updates)
+  - [2.5. New](#25-new)
+    - [2.5.1. python](#251-python)
+    - [2.5.2. c++](#252-c)
+    - [2.5.3. browser](#253-browser)
 
 
  -------------------
 
 
 # 1. Python Learning
-## 1.1. python docker setup
+
+## 1.1. Advanced Visual Studio Code for Python Developers (2021.11.28)
+- https://realpython.com/advanced-visual-studio-code-python/
+
+- agenda
+  - Customize your user interface
+    Run and monitor Python tests
+    Lint and format your code automatically
+    Leverage type annotations and Pylance to write code faster with higher accuracy
+    Configure and utilize both local and remote debugging
+    Set up data science tools
+
+- [ Python development in Visual Studio Code ](https://realpython.com/python-development-visual-studio-code/)
+
+- Mastering the Visual Studio Code User Interface
+  - Keyboard Shortcuts : (menu) File → Preferences → Keyboard Shortcuts
+
+- Customizing the User Interface
+  - Using Zen Mode for Focused Work : (menu) View → Appearance → Zen Mode to show a full-screen window
+    - ![Zen Mod](https://files.realpython.com/media/vscode-zen-mode.39f6e34b9d84.png)
+  - Theming
+  - Installing a Better Programming Font
+
+- Setting Up Your Terminal
+  - Changing the Default Shell Provider
+  - [Virtual Environment](https://realpython.com/python-virtual-environments-a-primer/) Activation in the Terminal
+    - Virtual environments are very important for managing multiple dependencies across Python projects.
+    - Any commands you run inside the terminal, such as python -m pip install, will be for the activated virtual environment.
+  - Installing Oh My Posh : Oh My Posh is one of many libraries for customizing the command prompt of your terminal.
+    - ![Terminal](https://files.realpython.com/media/vscode-ohmyposh-terminal.4484c2cdff6d.png)
+
+- Using the Settings Sync Extension : If you use VS Code across multiple computers, you can enable the automatic synchronization of Settings, Keyboard Shortcuts, User Snippets, Extensions, and UI State. (it is not for me!)
+
+- Linting and Formatting
+  - Bandit is a linter for security bugs and Flake8 is a linter for style guide compliance.
+  - Pylance is an extension that works alongside Python in Visual Studio Code to provide deeper language support and introspection of Python code.
+
+- Testing Your Python Code in Visual Studio Code
+  - Python offers plenty of tools to test your code. The Python extension for VS Code supports the most popular test frameworks, unittest and __pytest__.
+  - TEST : https://realpython.com/python-testing/
+  - CI : https://realpython.com/python-continuous-integration/
+  - This wizard adds the configuration options to .vscode/settings.json:
+    ```
+        "python.testing.pytestEnabled": true,
+        "python.testing.pytestArgs": [
+            "tests"
+        ],
+    ```
+
+- Debugging Your Python Scripts in Visual Studio Code
+    - ![break point](https://files.realpython.com/media/vscode-debug-breakpoint.eafdcb77613d.png)
+    - ![debug menu](https://files.realpython.com/media/vscode-debug-controls.82b8a69e3b32.png)
+    - setting watches
+
+- Configuring a Launch File
+  - VS Code has a configuration file for launch profiles, .vscode/launch.json. The Python debugger for VS Code can start any launch configuration and attach the debugger to it.
+  - example) For an example of working with launch profiles in VS Code, you’ll explore how to use the ASGI server uvicorn to start a FastAPI application.
+    - ```$ python -m uvicorn example_app.main:app```
+    - launch.json
+        ```json
+        {
+        "configurations": [
+            {
+            "name": "Python: FastAPI",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "example_app.main:app"
+            ],
+            }
+        ]
+        }
+        ```
+    - If VS Code doesn’t automatically select the right Python environment for you, then you can also declare an explicit path to the appropriate Python interpreter as an option in your __.vscode/launch.json__ file:
+        ```json
+        {
+        "configurations": [
+            {
+            "name": "Python: FastAPI",
+            "type": "python",
+            "python": "${workspaceFolder}/venv/bin/python",
+            "request": "launch",
+            "module": "uvicorn",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "example_app.main:app"
+            ],
+            }
+        ]
+        }
+        ```
+
+
+- Mastering Remote Development
+  1. docker
+  1. Remote Development With SSH
+    - By running Remote-SSH: Open SSH Configuration File in the Command Palette, you can open up the local SSH configuration file. This is a standard SSH config file for you to list hosts, ports, and paths to private keys. The IdentityFile option defaults to ~/.ssh/id_rsa, so the best way to authenticate is a private and public key pair.
+    - ![SSH Terminal](https://files.realpython.com/media/vscode-ssh-select.c40298afd273.png)
+  3. Remote Development With WSL
+ 
+
+- Working With Data Science Tools
+  - Jupyter Notebooks
+  - Using the Rainbow CSV Extension
+    - ![Rainbow CSV extension](https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/vscode-rainbow-csv.c05a3d84ba99.png&w=1060&sig=1c4e7219d705715b03b98d804f7dc72abb2a69ca)
+
+- Adding Bonus Extensions to Visual Studio Code
+  - Code Spell Checker : ![Code Spell Checker](https://files.realpython.com/media/vscode-codespell.aec631031c71.png)
+  - Docker : ![Docker](https://files.realpython.com/media/vscode-docker-extension.3fea2e3a814e.png)
+  - Thunder Client : Thunder Client (rangav.vscode-thunder-client) is an HTTP client and UI for VS Code designed to aid testing of REST APIs.
+    - ![Thunder Client](https://files.realpython.com/media/vscode-thunder-client.a101cf598909.png)
+
+
+
+## 1.2. Python Virtual Environments: A Primer (2021.11.28)
+- https://realpython.com/python-virtual-environments-a-pri
+
+- At its core, the main purpose of Python virtual environments is to create an isolated environment for Python projects.
+
+- Using Virtual Environments
+  - ```
+    $ pip install virtualenv
+    $ mkdir python-virtual-environments && cd python-virtual-environments
+    # Python 3
+    $ python3 -m venv env
+    $ source .venv/bin/activate
+    (env) $
+    ...
+    # do something
+    ...
+    (env) $ deactivate
+    $
+    ```
+  - what is difference?
+    - ```
+        $ which python
+        /usr/bin/python
+
+
+        $ source .venv/bin/activate
+        (env) $ which python
+        /Users/michaelherman/python-virtual-environments/env/bin/python
+      ```
+
+- Using Different Versions of Python
+
+
+## 1.3. python docker setup
 - https://realpython.com/tutorials/docker/
 - https://realpython.com/python-versions-docker/
 - Dockerfile
@@ -74,7 +228,7 @@ WORKDIR "/app"
 
 
 
-## 1.2. PyPy: Faster Python With Minimal Effort
+## 1.4. PyPy: Faster Python With Minimal Effort
 - https://realpython.com/pypy-faster-python/
 - PyPy is a very compliant Python interpreter that is a worthy alternative to CPython 2.7, 3.6, and soon 3.7.
 - The Python language specification is used in a number of implementations such as CPython (written in C), Jython (written in Java), IronPython (written for .NET), and PyPy (written in Python). 
@@ -89,13 +243,13 @@ WORKDIR "/app"
 
 
 
-### 1.2.1. installation
+### 1.4.1. installation
 - https://www.pypy.org/download.html
     - tar -xf archive.tar.bz2
 
 
 
-## 1.3. Develop Data Visualization Interfaces in Python With Dash (later)
+## 1.5. Develop Data Visualization Interfaces in Python With Dash (later)
 - https://realpython.com/python-dash/
 - Dash is an open source framework for building data visualization interfaces. Released in 2017 as a Python library, it’s grown to include implementations for R and Julia. Dash helps data scientists build analytical web applications without requiring advanced web development knowledge.
 - Three technologies constitute the core of Dash: 
@@ -107,13 +261,13 @@ WORKDIR "/app"
 
 
 
-## 1.4. C for Python Programmers (easy for us : useless)
+## 1.6. C for Python Programmers (easy for us : useless)
 - https://realpython.com/c-for-python-programmers/
 - The purpose of this tutorial is to get an experienced Python programmer up to speed with the basics of the C language and how it’s used in the CPython source code. It assumes you already have an intermediate understanding of Python syntax.
 
 
 
-## 1.5. Common Python Data Structures (Guide)
+## 1.7. Common Python Data Structures (Guide)
 - https://realpython.com/python-data-structures/
 - Dictionaries, Maps, and Hash Tables
     - collections.OrderedDict: Remember the Insertion Order of Keys
@@ -208,24 +362,24 @@ WORKDIR "/app"
 
 
 
-## 1.6. Learn IP Address Concepts With Python's ipaddress Module (helpful info)
+## 1.8. Learn IP Address Concepts With Python's ipaddress Module (helpful info)
 - https://realpython.com/python-ipaddress-module/
 
 
 
-## 1.7. Regular Expressions: Regexes in Python (later)
+## 1.9. Regular Expressions: Regexes in Python (later)
 - https://realpython.com/regex-python/
 - https://realpython.com/regex-python-part-2/
 
 
 
-## 1.8. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud
+## 1.10. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud
 - https://realpython.com/dockerizing-flask-with-compose-and-machine-from-localhost-to-the-cloud/
 - docker machine is deprecated.
 
 
 
-## 1.9. Object-Oriented Programming (OOP) in Python 3
+## 1.11. Object-Oriented Programming (OOP) in Python 3
 - https://realpython.com/python3-object-oriented-programming/
 - Class
     - Conceptually, objects are like the components of a system. Think of a program as a factory assembly line of sorts. At each step of the assembly line a system component processes some material, ultimately transforming raw material into a finished product.
@@ -272,7 +426,7 @@ class Bulldog(Dog):
     - You can access the parent class from inside a method of a child class by using super():
 
 
-## 1.10. Python Bindings: Calling C or C++ From Python
+## 1.12. Python Bindings: Calling C or C++ From Python
 - https://realpython.com/python-bindings-overview/
 - Marshalling Data Types
     - marshalling : The process of transforming the memory representation of an object to a data format suitable for storage or transmission.
@@ -292,7 +446,7 @@ class Bulldog(Dog):
 
 
 
-## 1.11. Functional Programming in Python: When and How to Use It
+## 1.13. Functional Programming in Python: When and How to Use It
 - https://realpython.com/python-functional-programming/
 - Functional programming is a programming paradigm in which the primary method of computation is evaluation of functions. In this tutorial, you’ll explore functional programming in Python.
     - What the functional programming paradigm entails
@@ -300,10 +454,10 @@ class Bulldog(Dog):
     - How to define anonymous functions with the lambda keyword
     - How to implement functional code using map(), filter(), and reduce()
 
-### 1.11.1. What Is Functional Programming?
+### 1.13.1. What Is Functional Programming?
 - In functional programming, a program consists entirely of evaluation of pure functions. Computation proceeds by nested or composed function calls, without changes to state or mutable data.
 
-### 1.11.2. How Well Does Python Support Functional Programming?
+### 1.13.2. How Well Does Python Support Functional Programming?
 - two abilities:
   1. To take another function as an argument
   1. To return another function to its caller
@@ -336,7 +490,7 @@ class Bulldog(Dog):
     - You can check out [How to Use sorted() and sort() in Python](https://realpython.com/python-sort/) for more information on sorting data in Python.
 
 
-### 1.11.3. Defining an Anonymous Function With lambda
+### 1.13.3. Defining an Anonymous Function With lambda
 - syntax --> lambda <parameter_list>: <expression>
     ```python
     >>> lambda s: s[::-1]
@@ -378,8 +532,8 @@ class Bulldog(Dog):
 - [How to Use Python Lambda Functions.](https://realpython.com/python-lambda/)
 - Python offers two built-in functions, map() and filter(), that fit the functional programming paradigm.
 
-### 1.11.4. Applying a Function to an Iterable With map()
-#### 1.11.4.1. Calling map() With a Single Iterable
+### 1.13.4. Applying a Function to an Iterable With map()
+#### 1.13.4.1. Calling map() With a Single Iterable
 - syntax --> map(<f>, <iterable>)
 - remember, map() doesn’t return a list. It returns an iterator called a map object. To obtain the values from the iterator, you need to either iterate over it or use list():
     ```python
@@ -420,7 +574,7 @@ class Bulldog(Dog):
     >>> "+".join(map(str, [1, 2, 3, 4, 5]))
     '1+2+3+4+5'
     ```
-#### 1.11.4.2. Calling map() With Multiple Iterables
+#### 1.13.4.2. Calling map() With Multiple Iterables
 - syntax --> map(<f>, <iterable₁>, <iterable₂>, ..., <iterableₙ>)
     ```python
     >>> def f(a, b, c):
@@ -432,7 +586,7 @@ class Bulldog(Dog):
     ```
     - ![map with multiple iterables](https://files.realpython.com/media/t.130d7baf2cca.png)
 
-### 1.11.5. Selecting Elements From an Iterable With filter()
+### 1.13.5. Selecting Elements From an Iterable With filter()
 - syntax --> filter(<f>, <iterable>)
   - filter(<f>, <iterable>) applies function <f> to each element of <iterable> and returns an iterator that yields all items for which <f> is truthy. Conversely, it filters out all items for which <f> is falsy.
     ```python
@@ -459,7 +613,7 @@ class Bulldog(Dog):
     >>> list(filter(lambda s: s.isupper(), animals))
     ['CAT', 'DOG', 'EMU']
     ```
-### 1.11.6. reduce
+### 1.13.6. reduce
 - syntax --> reduce(<f>, <iterable>)
     ```python
     >>> def f(x, y):
@@ -499,7 +653,7 @@ class Bulldog(Dog):
 
 
 
-## 1.12. Primer on Python Decorators
+## 1.14. Primer on Python Decorators
 - https://realpython.com/primer-on-python-decorators/
 - a higher-order function is a function that does at least one of the following:
     - takes one or more functions as arguments (i.e. procedural parameters),
@@ -640,7 +794,7 @@ class Bulldog(Dog):
 - registering plugins
 - is the user logged in?
 
-### 1.12.1. [Fancy Decorators](https://realpython.com/primer-on-python-decorators/#fancy-decorators) (later)
+### 1.14.1. [Fancy Decorators](https://realpython.com/primer-on-python-decorators/#fancy-decorators) (later)
 - Decorating Classes
 - Nesting Decorators
 - Decorators With Arguments
@@ -654,14 +808,102 @@ class Bulldog(Dog):
 - Validating JSON
 
 
-## 1.13. Python and REST APIs: Interacting With Web Services (later)
+## 1.15. Python and REST APIs: Interacting With Web Services (2021.11.28)
 - https://realpython.com/api-integration-in-python/
 
-## 1.14. Brython: Python in Your Browser (later)
+- REST Architecture
+  - REST stands for representational state transfer and is a software architecture style that defines a pattern for client and server communications over a network. REST provides a set of constraints for software architecture to promote performance, scalability, simplicity, and reliability in the system.
+  - REST defines the following architectural constraints:
+    - Stateless: The server won’t maintain any state between requests from the client.
+    - Client-server: The client and server must be decoupled from each other, allowing each to develop independently.
+    - Cacheable: The data retrieved from the server should be cacheable either by the client or by the server.
+    - Uniform interface: The server will provide a uniform interface for accessing resources without defining their representation.
+    - Layered system: The client may access the resources on the server indirectly through other layers such as a proxy or load balancer.
+    - Code on demand (optional): The server may transfer code to the client that it can run, such as JavaScript for a single-page application.
+
+
+- HTTP Methods
+    | HTTP | method	Description |
+    |---|---|
+    |GET	| Retrieve an existing resource.
+    |POST	| Create a new resource.
+    |PUT	| Update an existing resource.
+    |PATCH	| Partially update an existing resource.
+    |DELETE	| Delete a resource.
+
+- install python package
+    - ```$ python -m pip install requests```
+
+- GET : read-only
+```
+>>> import requests
+>>> api_url = "https://jsonplaceholder.typicode.com/todos/1"
+>>> response = requests.get(api_url)
+>>> response.json()
+{'userId': 1, 'id': 1, 'title': 'delectus aut autem', 'completed': False}
+>>> response.status_code
+200
+
+>>> response.headers["Content-Type"]
+'application/json; charset=utf-8'
+```
+
+- POST : 
+```
+>>> import requests
+>>> import json
+>>> api_url = "https://jsonplaceholder.typicode.com/todos"
+>>> todo = {"userId": 1, "title": "Buy milk", "completed": False}
+>>> headers =  {"Content-Type":"application/json"}
+>>> response = requests.post(api_url, data=json.dumps(todo), headers=headers)
+>>> response.json()
+{'userId': 1, 'title': 'Buy milk', 'completed': False, 'id': 201}
+
+>>> response.status_code
+201
+```
+    > Note: json.dumps() comes from the json package in the standard library. This package provides useful methods for working with JSON in Python.
+
+- Define Your Endpoints
+    | HTTP method	| API endpoint	| Description |
+    |---|---|---|
+    | GET	| /events/<event_id>/guests	| Get a list of guests.
+    | GET	| /events/<event_id>/guests/<guest_id>	| Get a single guest.
+    | POST	| /events/<event_id>/guests	| Create a new guest.
+    | PUT	| /events/<event_id>/guests/<guest_id>	| Update a guest.
+    | PATCH	| /events/<event_id>/guests/<guest_id>	| Partially update a guest.
+    | DELETE	| /events/<event_id>/guests/<guest_id>	| Delete a guest.
+
+    > Note: An endpoint shouldn’t contain verbs. Instead, you should select the appropriate HTTP methods to convey the endpoint’s action. For example, the endpoint below contains an unneeded verb:
+    - GET /getTransactions
+        - Here, get is included in the endpoint when it isn’t needed. The HTTP method GET already provides the semantic meaning for the endpoint by indicating the action. You can remove get from the endpoint:
+    - GET /transactions
+        - This endpoint contains only a plural noun, and the HTTP method GET communicates the action.
+
+
+- REST and Python: Tools of the Trade
+  - flask
+  - django
+  - FastAPI
+
+
+## 1.16. Python vs JavaScript for Pythonistas (2021.11.28)
+- https://realpython.com/python-vs-javascript/
+
+- skip javascript description : it emphasize advantages of python. but , it depends on your usage.  if you works on the web , javascript is good also.
+
+- JavaScript vs Python
+  - python is general purpose.  but , javascript is used on html of client.
+
+- Memory Model
+  - Both languages take advantage of automatic heap memory management to eliminate human error and to reduce cognitive load. Nevertheless, this doesn’t completely free you from the risk of getting a memory leak, and it adds some performance overhead.
+
+
+## 1.17. Brython: Python in Your Browser (2021.11.25)
 - https://realpython.com/brython-python-in-browser/
 - Python developers using Flask or Django can also apply the principles of isomorphism to Python, provided that they can run Python in the browser.
 - [Brython console](https://brython.info/tests/console.html)    ///  [interactive editor](https://brython.info/tests/editor.html)
-###  1.14.1. install on linux
+###  1.17.1. install on linux
 ```txt
 $ python3 -m venv .venv --prompt brython
 $ source .venv/bin/activate
@@ -695,45 +937,70 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   ![Brower Connect to http.server](https://files.realpython.com/media/brython_index.743c41c96830.png)
     - http://lotto645.lge.com:8000/demo.html
 
-### 1.14.2. Brython Core Components
+### 1.17.2. Brython Core Components
 - The core of Brython is contained in brython.js or in brython.min.js, the minimized version of the Brython engine. Both include the following key components:
   - brython() is the main JavaScript function exposed in the JavaScript global namespace. You can’t execute any Python code without calling this function. This is the only JavaScript function that you should have to call explicitly.
   - `__BRYTHON__` is a JavaScript global object that holds all internal objects needed to run Python scripts. This object isn’t used directly when you write Brython applications. If you look at the Brython code, both JavaScript and Python, then you’ll see regular occurrences of `__BRYTHON__`. You don’t need to use this object, but you should be aware of it when you see an error or when you want to debug your code in the browser console.
   - Built-in types are implementations of the Python built-in types in JavaScript. For example, py_int.js, py_string.js and py_dicts.js are respective implementations of int, str and dict.
   - browser is the browser module that exposes the JavaScript objects commonly used in a front-end web application, like the DOM interfaces using document and the browser window using the window object.
 
-### 1.14.3. Brython Standard Library
+### 1.17.3. Brython Standard Library
 - brython_stdlib.js exposes the Python standard library. As this file is generated, Brython compiles the Python standard library into JavaScript and concatenates the result into the bundle brython_stdlib.js.
 
-### 1.14.4. my opinion
+### 1.17.4. my opinion
 - ok. if you try the examples , it is good.  But , this is like specific web language. because it is different from pure python.  it is brython , but not python.
   - To manipulate the DOM, Brython uses two operators:
     - <= is a new operator, specific to Brython, that adds a child to a node. You can see a few examples of this usage in display_map(), defined on line 22.
     - + is a substitute for Element.insertAdjacentHTML('afterend') and adds sibling nodes.
 
-### 1.14.5. MISC
+### 1.17.5. MISC
 - Creating Google Chrome Extensions
 - Testing and Debugging Brython
 
-## 1.15. New
-### 1.15.1. python
+## 1.18. Python Code Quality: Tools & Best Practices (2021.11.28)
+- https://realpython.com/python-code-quality/
+
+- Why Does Code Quality Matter?
+  - It does not do what it is supposed to do
+  - It does contain defects and problems
+  - It is difficult to read, maintain, or extend
+
+- How to Improve Python Code Quality
+  - Style Guides
+    - __PEP 8__ provides coding conventions for Python code. It is fairly common for Python code to follow this style guide. It’s a great place to start since it’s already well-defined.
+    - A sister Python Enhancement Proposal, __PEP 257__ describes conventions for Python’s docstrings, which are strings intended to document modules, classes, functions, and methods. As an added bonus, if docstrings are consistent, there are tools capable of generating documentation directly from the code.
+  - Linters
+    - Linters analyze code to detect various categories of lint. 
+      - Logical Lint
+        - Code errors
+        - Code with potentially unintended results
+        - Dangerous code patterns
+      - Stylistic Lint
+        - Code not conforming to defined conventions
+    - What Are My Linter Options For Python?
+      - Flake8: Capable of detecting both logical and stylistic lint.
+        - PyFlakes / pycodestyle (formerly pep8) / Mccabe
+      - Pylama: A code audit tool composed of a large number of linters and other tools for analyzing code.
+        - pycodestyle (formerly pep8) / pydocstyle (formerly pep257) / PyFlakes / Mccabe / Pylint / Radon / gjslint
+
+| Linter	| Category	| Description | Time |
+|----|----|----|----|
+| Pylint	| Logical & Stylistic	| Checks for errors, tries to enforce a coding standard, looks for code smells | 1.16s
+| PyFlakes	| Logical	| Analyzes programs and detects various errors | 0.15s
+| pycodestyle	| Stylistic	| Checks against some of the style conventions in PEP 8 | 0.14s
+| pydocstyle	| Stylistic	| Checks compliance with Python docstring conventions | 0.21s
+| Bandit	| Logical	| Analyzes code to find common security issues | 
+| MyPy	| Logical	| Checks for optionally-enforced static types | 
+
+
+
+
+## 1.19. Getting Started With Testing in Python (2021.11.28)
 - https://realpython.com/python-testing/
-- https://realpython.com/advanced-visual-studio-code-python/
-- https://realpython.com/python-code-quality/      <- linter
-- someip : 
-    - https://github.com/jamores/eth-scapy-someip
-    - https://pypi.org/project/someip/
 
-### 1.15.2. c++
-- https://devblogs.microsoft.com/cppblog/visual-studio-code-c-extension-july-2020-update-doxygen-comments-and-logpoints/
-- https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
-    - https://github.com/cschlosser/doxdocgen       : we can find source code when we visit the URL in vscode extension.
+- 
 
-### 1.15.3. browser
-- https://realpython.com/brython-python-in-browser/
-- https://realpython.com/python-vs-javascript/
-
-# 2. Appendix for korean
+# 2. Appendix
 
 ## 2.1. Python virtualenv : new developing environment for me
 - when we use the docker , we do not need it. 
@@ -753,7 +1020,9 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 
 - vscode extension install
     - markdown TOC ->  markdown all in one
-      - ^+P : create TOC and update TOC
+      - ^+P -> Markdown All in One : create TOC and update TOC
+      - ^+P -> Markdown All in One : add/update section numners
+      - ^+P -> Markdown All in One : Update Table of Contents
     - markdown preview ->  markdown preview enhanced
     - markdown lint
 
@@ -774,4 +1043,21 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 },
       ```
 
-- 
+## 2.5. New
+### 2.5.1. python
+- https://realpython.com/python-testing/
+- https://realpython.com/python-continuous-integration/
+- https://realpython.com/advanced-visual-studio-code-python/
+- https://realpython.com/python-code-quality/      <- linter
+- someip : 
+    - https://github.com/jamores/eth-scapy-someip
+    - https://pypi.org/project/someip/
+
+### 2.5.2. c++
+- https://devblogs.microsoft.com/cppblog/visual-studio-code-c-extension-july-2020-update-doxygen-comments-and-logpoints/
+- https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
+    - https://github.com/cschlosser/doxdocgen       : we can find source code when we visit the URL in vscode extension.
+
+### 2.5.3. browser
+- https://realpython.com/brython-python-in-browser/
+- https://realpython.com/python-vs-javascript
