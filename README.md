@@ -1,44 +1,49 @@
 - [1. Python Learning](#1-python-learning)
   - [1.1. Advanced Visual Studio Code for Python Developers (2021.11.28)](#11-advanced-visual-studio-code-for-python-developers-20211128)
   - [1.2. Python Virtual Environments: A Primer (2021.11.28)](#12-python-virtual-environments-a-primer-20211128)
-  - [1.3. python docker setup](#13-python-docker-setup)
-  - [1.4. PyPy: Faster Python With Minimal Effort](#14-pypy-faster-python-with-minimal-effort)
-    - [1.4.1. installation](#141-installation)
-  - [1.5. Develop Data Visualization Interfaces in Python With Dash (later)](#15-develop-data-visualization-interfaces-in-python-with-dash-later)
-  - [1.6. C for Python Programmers (easy for us : useless)](#16-c-for-python-programmers-easy-for-us--useless)
-  - [1.7. Common Python Data Structures (Guide)](#17-common-python-data-structures-guide)
-  - [1.8. Learn IP Address Concepts With Python's ipaddress Module (helpful info)](#18-learn-ip-address-concepts-with-pythons-ipaddress-module-helpful-info)
-  - [1.9. Regular Expressions: Regexes in Python (later)](#19-regular-expressions-regexes-in-python-later)
-  - [1.10. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud](#110-dockerizing-flask-with-compose-and-machine--from-localhost-to-the-cloud)
-  - [1.11. Object-Oriented Programming (OOP) in Python 3](#111-object-oriented-programming-oop-in-python-3)
-  - [1.12. Python Bindings: Calling C or C++ From Python](#112-python-bindings-calling-c-or-c-from-python)
-  - [1.13. Functional Programming in Python: When and How to Use It](#113-functional-programming-in-python-when-and-how-to-use-it)
-    - [1.13.1. What Is Functional Programming?](#1131-what-is-functional-programming)
-    - [1.13.2. How Well Does Python Support Functional Programming?](#1132-how-well-does-python-support-functional-programming)
-    - [1.13.3. Defining an Anonymous Function With lambda](#1133-defining-an-anonymous-function-with-lambda)
-    - [1.13.4. Applying a Function to an Iterable With map()](#1134-applying-a-function-to-an-iterable-with-map)
-      - [1.13.4.1. Calling map() With a Single Iterable](#11341-calling-map-with-a-single-iterable)
-      - [1.13.4.2. Calling map() With Multiple Iterables](#11342-calling-map-with-multiple-iterables)
-    - [1.13.5. Selecting Elements From an Iterable With filter()](#1135-selecting-elements-from-an-iterable-with-filter)
-    - [1.13.6. reduce](#1136-reduce)
-  - [1.14. Primer on Python Decorators](#114-primer-on-python-decorators)
-    - [1.14.1. Fancy Decorators (later)](#1141-fancy-decorators-later)
-  - [1.15. Python and REST APIs: Interacting With Web Services (2021.11.28)](#115-python-and-rest-apis-interacting-with-web-services-20211128)
-  - [1.16. Python vs JavaScript for Pythonistas (2021.11.28)](#116-python-vs-javascript-for-pythonistas-20211128)
-  - [1.17. Brython: Python in Your Browser (2021.11.25)](#117-brython-python-in-your-browser-20211125)
-    - [1.17.1. install on linux](#1171-install-on-linux)
-    - [1.17.2. Brython Core Components](#1172-brython-core-components)
-    - [1.17.3. Brython Standard Library](#1173-brython-standard-library)
-    - [1.17.4. my opinion](#1174-my-opinion)
-    - [1.17.5. MISC](#1175-misc)
-  - [1.18. Python Code Quality: Tools & Best Practices (2021.11.28) - linter](#118-python-code-quality-tools--best-practices-20211128---linter)
-  - [1.19. Getting Started With Testing in Python (2021.11.28)](#119-getting-started-with-testing-in-python-20211128)
-    - [1.19.1. Writing Your First Test](#1191-writing-your-first-test)
-  - [1.20. Effective Python Testing With Pytest (2021.11.28)](#120-effective-python-testing-with-pytest-20211128)
-    - [1.20.1. What Makes pytest So Useful?](#1201-what-makes-pytest-so-useful)
-    - [1.20.2. Parametrization: Combining Tests](#1202-parametrization-combining-tests)
-    - [1.20.3. coverage : pytest-cov](#1203-coverage--pytest-cov)
-  - [1.21. Continuous Integration With Python: An Introduction (2021.11.28)](#121-continuous-integration-with-python-an-introduction-20211128)
+  - [1.3. Documenting Python Code: A Complete Guide (2021.11.28) - docstring](#13-documenting-python-code-a-complete-guide-20211128---docstring)
+    - [1.3.1. Basics of Commenting Code](#131-basics-of-commenting-code)
+    - [1.3.2. Documenting Your Python Code Base Using Docstrings](#132-documenting-your-python-code-base-using-docstrings)
+    - [1.3.3. The Four Main Sections of the docs Folder](#133-the-four-main-sections-of-the-docs-folder)
+    - [1.3.4. Documentation Tools and Resources](#134-documentation-tools-and-resources)
+  - [1.4. python docker setup](#14-python-docker-setup)
+  - [1.5. PyPy: Faster Python With Minimal Effort](#15-pypy-faster-python-with-minimal-effort)
+    - [1.5.1. installation](#151-installation)
+  - [1.6. Develop Data Visualization Interfaces in Python With Dash (later)](#16-develop-data-visualization-interfaces-in-python-with-dash-later)
+  - [1.7. C for Python Programmers (easy for us : useless)](#17-c-for-python-programmers-easy-for-us--useless)
+  - [1.8. Common Python Data Structures (Guide)](#18-common-python-data-structures-guide)
+  - [1.9. Learn IP Address Concepts With Python's ipaddress Module (helpful info)](#19-learn-ip-address-concepts-with-pythons-ipaddress-module-helpful-info)
+  - [1.10. Regular Expressions: Regexes in Python (later)](#110-regular-expressions-regexes-in-python-later)
+  - [1.11. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud](#111-dockerizing-flask-with-compose-and-machine--from-localhost-to-the-cloud)
+  - [1.12. Object-Oriented Programming (OOP) in Python 3](#112-object-oriented-programming-oop-in-python-3)
+  - [1.13. Python Bindings: Calling C or C++ From Python](#113-python-bindings-calling-c-or-c-from-python)
+  - [1.14. Functional Programming in Python: When and How to Use It](#114-functional-programming-in-python-when-and-how-to-use-it)
+    - [1.14.1. What Is Functional Programming?](#1141-what-is-functional-programming)
+    - [1.14.2. How Well Does Python Support Functional Programming?](#1142-how-well-does-python-support-functional-programming)
+    - [1.14.3. Defining an Anonymous Function With lambda](#1143-defining-an-anonymous-function-with-lambda)
+    - [1.14.4. Applying a Function to an Iterable With map()](#1144-applying-a-function-to-an-iterable-with-map)
+      - [1.14.4.1. Calling map() With a Single Iterable](#11441-calling-map-with-a-single-iterable)
+      - [1.14.4.2. Calling map() With Multiple Iterables](#11442-calling-map-with-multiple-iterables)
+    - [1.14.5. Selecting Elements From an Iterable With filter()](#1145-selecting-elements-from-an-iterable-with-filter)
+    - [1.14.6. reduce](#1146-reduce)
+  - [1.15. Primer on Python Decorators](#115-primer-on-python-decorators)
+    - [1.15.1. Fancy Decorators (later)](#1151-fancy-decorators-later)
+  - [1.16. Python and REST APIs: Interacting With Web Services (2021.11.28)](#116-python-and-rest-apis-interacting-with-web-services-20211128)
+  - [1.17. Python vs JavaScript for Pythonistas (2021.11.28)](#117-python-vs-javascript-for-pythonistas-20211128)
+  - [1.18. Brython: Python in Your Browser (2021.11.25)](#118-brython-python-in-your-browser-20211125)
+    - [1.18.1. install on linux](#1181-install-on-linux)
+    - [1.18.2. Brython Core Components](#1182-brython-core-components)
+    - [1.18.3. Brython Standard Library](#1183-brython-standard-library)
+    - [1.18.4. my opinion](#1184-my-opinion)
+    - [1.18.5. MISC](#1185-misc)
+  - [1.19. Python Code Quality: Tools & Best Practices (2021.11.28) - linter](#119-python-code-quality-tools--best-practices-20211128---linter)
+  - [1.20. Getting Started With Testing in Python (2021.11.28)](#120-getting-started-with-testing-in-python-20211128)
+    - [1.20.1. Writing Your First Test](#1201-writing-your-first-test)
+  - [1.21. Effective Python Testing With Pytest (2021.11.28)](#121-effective-python-testing-with-pytest-20211128)
+    - [1.21.1. What Makes pytest So Useful?](#1211-what-makes-pytest-so-useful)
+    - [1.21.2. Parametrization: Combining Tests](#1212-parametrization-combining-tests)
+    - [1.21.3. coverage : pytest-cov](#1213-coverage--pytest-cov)
+  - [1.22. Continuous Integration With Python: An Introduction (2021.11.28)](#122-continuous-integration-with-python-an-introduction-20211128)
 - [2. Appendix](#2-appendix)
   - [2.1. Python virtualenv : new developing environment for me](#21-python-virtualenv--new-developing-environment-for-me)
   - [2.2. docker basic](#22-docker-basic)
@@ -50,6 +55,7 @@
     - [2.5.1. python](#251-python)
     - [2.5.2. c++](#252-c)
     - [2.5.3. browser](#253-browser)
+    - [2.5.4. interfaces](#254-interfaces)
 
 
  -------------------
@@ -204,8 +210,273 @@
 
 - Using Different Versions of Python
 
+## 1.3. Documenting Python Code: A Complete Guide (2021.11.28) - docstring
+- https://realpython.com/documenting-python-code/
 
-## 1.3. python docker setup
+> “Code is more often read than written.”
+  — Guido van Rossum 
+
+> “It doesn’t matter how good your software is, because if the documentation is not good enough, people will not use it.“
+  — Daniele Procida
+
+> “Code tells you how; Comments tell you why.”
+  — Jeff Atwood (aka Coding Horror)
+
+### 1.3.1. Basics of Commenting Code
+- According to PEP 8, comments should have a maximum length of 72 characters.
+- Comments to your code should be kept brief and focused. Avoid using long comments when possible. Additionally, you should use the following four essential rules as suggested by Jeff Atwood:
+    - Keep comments as close to the code being described as possible. Comments that aren’t near their describing code are frustrating to the reader and easily missed when updates are made.
+    - Don’t use complex formatting (such as tables or ASCII figures). Complex formatting leads to distracting content and can be difficult to maintain over time.
+    - Don’t include redundant information. Assume the reader of the code has a basic understanding of programming principles and language syntax.
+    - Design your code to comment itself. The easiest way to understand code is by reading it. When you design your code using clear, easy-to-understand concepts, the reader will be able to quickly conceptualize your intent.
+- Commenting Code via Type Hinting (Python 3.5+)
+  - ```python
+    def hello_name(name: str) -> str:
+        return(f"Hello {name}")
+    ```
+
+### 1.3.2. Documenting Your Python Code Base Using Docstrings
+- Docstrings Background
+  - Python also has the built-in function help() that prints out the objects docstring to the console.
+  - ```python
+    def say_hello(name):
+        print(f"Hello {name}, is it me you're looking for?")
+
+    say_hello.__doc__ = "A simple function that says hello... Richie style"
+
+    --------------------------
+
+    def say_hello(name):
+        """A simple function that says hello... Richie style"""
+        print(f"Hello {name}, is it me you're looking for?")
+
+    --------------------------
+
+    >>> help(say_hello)
+    Help on function say_hello in module __main__:
+
+    say_hello(name)
+        A simple function that says hello... Richie style
+    ```
+
+- Docstring Types
+  - Docstring conventions are described within [PEP 257](https://www.python.org/dev/peps/pep-0257/).
+  - ```python
+    """This is a quick summary line used as a description of the object."""
+
+    """This is the summary line
+
+    This is the further elaboration of the docstring. Within this section,
+    you can elaborate further on details as appropriate for the situation.
+    Notice that the summary and the elaboration is separated by a blank new
+    line.
+    """
+
+    # Notice the blank line above. Code should continue on this line.
+    ```
+
+  - Class Docstrings: Class and class methods
+    - ```python
+        class SimpleClass:
+            """Class docstrings go here."""
+
+            def say_hello(self, name: str):
+                """Class method docstrings go here."""
+
+                print(f'Hello {name}')
+      ```        
+    - The class constructor parameters should be documented within the __init__ class method docstring. Individual methods should be documented using their individual docstrings. Class method docstrings should contain the following:
+      - A brief description of what the method is and what it’s used for
+      - Any arguments (both required and optional) that are passed including keyword arguments
+      - Label any arguments that are considered optional or have a default value
+      - Any side effects that occur when executing the method
+      - Any exceptions that are raised
+      - Any restrictions on when the method can be called
+    - ```python
+        class Animal:
+            """
+            A class used to represent an Animal
+
+            ...
+
+            Attributes
+            ----------
+            says_str : str
+                a formatted string to print out what the animal says
+            name : str
+                the name of the animal
+            sound : str
+                the sound that the animal makes
+            num_legs : int
+                the number of legs the animal has (default 4)
+
+            Methods
+            -------
+            says(sound=None)
+                Prints the animals name and what sound it makes
+            """
+
+            says_str = "A {name} says {sound}"
+
+            def __init__(self, name, sound, num_legs=4):
+                """
+                Parameters
+                ----------
+                name : str
+                    The name of the animal
+                sound : str
+                    The sound the animal makes
+                num_legs : int, optional
+                    The number of legs the animal (default is 4)
+                """
+
+                self.name = name
+                self.sound = sound
+                self.num_legs = num_legs
+
+            def says(self, sound=None):
+                """Prints what the animals name is and what sound it makes.
+
+                If the argument `sound` isn't passed in, the default Animal
+                sound is used.
+
+                Parameters
+                ----------
+                sound : str, optional
+                    The sound the animal makes (default is None)
+
+                Raises
+                ------
+                NotImplementedError
+                    If no sound is set for the animal or passed in as a
+                    parameter.
+                """
+
+                if self.sound is None and sound is None:
+                    raise NotImplementedError("Silent Animals are not supported!")
+
+                out_sound = self.sound if sound is None else sound
+                print(self.says_str.format(name=self.name, sound=out_sound))
+      ```
+  - Package and Module Docstrings: Package, modules, and functions
+    - Package docstrings should be placed at the top of the package’s __init__.py file. 
+    - Module docstrings are similar to class docstrings.
+  - Script Docstrings: Script and functions
+    - Docstrings for scripts are placed at the top of the file and should be documented well enough for users to be able to have a sufficient understanding of how to use the script. 
+    - If you use __argparse__, then you can omit parameter-specific documentation, assuming it’s correctly been documented within the help parameter of the argparser.parser.add_argument function.
+    - ```python
+        """Spreadsheet Column Printer
+
+        This script allows the user to print to the console all columns in the
+        spreadsheet. It is assumed that the first row of the spreadsheet is the
+        location of the columns.
+
+        This tool accepts comma separated value files (.csv) as well as excel
+        (.xls, .xlsx) files.
+
+        This script requires that `pandas` be installed within the Python
+        environment you are running this script in.
+
+        This file can also be imported as a module and contains the following
+        functions:
+
+            * get_spreadsheet_cols - returns the column headers of the file
+            * main - the main function of the script
+        """
+
+        import argparse
+
+        import pandas as pd
+
+
+        def get_spreadsheet_cols(file_loc, print_cols=False):
+            """Gets and prints the spreadsheet's header columns
+
+            Parameters
+            ----------
+            file_loc : str
+                The file location of the spreadsheet
+            print_cols : bool, optional
+                A flag used to print the columns to the console (default is
+                False)
+
+            Returns
+            -------
+            list
+                a list of strings used that are the header columns
+            """
+
+            file_data = pd.read_excel(file_loc)
+            col_headers = list(file_data.columns.values)
+
+            if print_cols:
+                print("\n".join(col_headers))
+
+            return col_headers
+
+
+        def main():
+            parser = argparse.ArgumentParser(description=__doc__)
+            parser.add_argument(
+                'input_file',
+                type=str,
+                help="The spreadsheet file to pring the columns of"
+            )
+            args = parser.parse_args()
+            get_spreadsheet_cols(args.input_file, print_cols=True)
+
+
+        if __name__ == "__main__":
+            main()
+      ```
+
+- Docstring Formats
+  - reStructured Text : Official Python documentation standard; Not beginner friendly but feature rich
+    - ```python
+        """Gets and prints the spreadsheet's header columns
+
+        :param file_loc: The file location of the spreadsheet
+        :type file_loc: str
+        :param print_cols: A flag used to print the columns to the console
+            (default is False)
+        :type print_cols: bool
+        :returns: a list of strings representing the header columns
+        :rtype: list
+        """
+      ```
+  - NumPy/SciPy docstrings : NumPy’s combination of reStructured and Google Docstrings
+    - ```python
+        """Gets and prints the spreadsheet's header columns
+
+        Parameters
+        ----------
+        file_loc : str
+            The file location of the spreadsheet
+        print_cols : bool, optional
+            A flag used to print the columns to the console (default is False)
+
+        Returns
+        -------
+        list
+            a list of strings representing the header columns
+        """
+      ```
+### 1.3.3. The Four Main Sections of the docs Folder
+- Tutorials: Lessons that take the reader by the hand through a series of steps to complete a project (or meaningful exercise). Geared towards the user’s learning.
+- How-To Guides: Guides that take the reader through the steps required to solve a common problem (problem-oriented recipes).
+- References: Explanations that clarify and illuminate a particular topic. Geared towards understanding.
+- Explanations: Technical descriptions of the machinery and how to operate it (key classes, functions, APIs, and so forth). Think Encyclopedia article.
+
+|	| Most Useful When We’re Studying	| Most Useful When We’re Coding |
+|---|----|---|
+| Practical Step	| Tutorials	| How-To Guides
+| Theoretical Knowledge	| Explanation	| Reference
+
+### 1.3.4. Documentation Tools and Resources
+- [MkDocs](https://www.mkdocs.org/)	: A static site generator to help build project documentation using the Markdown language
+
+
+## 1.4. python docker setup
 - https://realpython.com/tutorials/docker/
 - https://realpython.com/python-versions-docker/
 - Dockerfile
@@ -234,7 +505,7 @@ WORKDIR "/app"
 
 
 
-## 1.4. PyPy: Faster Python With Minimal Effort
+## 1.5. PyPy: Faster Python With Minimal Effort
 - https://realpython.com/pypy-faster-python/
 - PyPy is a very compliant Python interpreter that is a worthy alternative to CPython 2.7, 3.6, and soon 3.7.
 - The Python language specification is used in a number of implementations such as CPython (written in C), Jython (written in Java), IronPython (written for .NET), and PyPy (written in Python). 
@@ -249,13 +520,13 @@ WORKDIR "/app"
 
 
 
-### 1.4.1. installation
+### 1.5.1. installation
 - https://www.pypy.org/download.html
     - tar -xf archive.tar.bz2
 
 
 
-## 1.5. Develop Data Visualization Interfaces in Python With Dash (later)
+## 1.6. Develop Data Visualization Interfaces in Python With Dash (later)
 - https://realpython.com/python-dash/
 - Dash is an open source framework for building data visualization interfaces. Released in 2017 as a Python library, it’s grown to include implementations for R and Julia. Dash helps data scientists build analytical web applications without requiring advanced web development knowledge.
 - Three technologies constitute the core of Dash: 
@@ -267,13 +538,13 @@ WORKDIR "/app"
 
 
 
-## 1.6. C for Python Programmers (easy for us : useless)
+## 1.7. C for Python Programmers (easy for us : useless)
 - https://realpython.com/c-for-python-programmers/
 - The purpose of this tutorial is to get an experienced Python programmer up to speed with the basics of the C language and how it’s used in the CPython source code. It assumes you already have an intermediate understanding of Python syntax.
 
 
 
-## 1.7. Common Python Data Structures (Guide)
+## 1.8. Common Python Data Structures (Guide)
 - https://realpython.com/python-data-structures/
 - Dictionaries, Maps, and Hash Tables
     - collections.OrderedDict: Remember the Insertion Order of Keys
@@ -368,24 +639,24 @@ WORKDIR "/app"
 
 
 
-## 1.8. Learn IP Address Concepts With Python's ipaddress Module (helpful info)
+## 1.9. Learn IP Address Concepts With Python's ipaddress Module (helpful info)
 - https://realpython.com/python-ipaddress-module/
 
 
 
-## 1.9. Regular Expressions: Regexes in Python (later)
+## 1.10. Regular Expressions: Regexes in Python (later)
 - https://realpython.com/regex-python/
 - https://realpython.com/regex-python-part-2/
 
 
 
-## 1.10. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud
+## 1.11. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud
 - https://realpython.com/dockerizing-flask-with-compose-and-machine-from-localhost-to-the-cloud/
 - docker machine is deprecated.
 
 
 
-## 1.11. Object-Oriented Programming (OOP) in Python 3
+## 1.12. Object-Oriented Programming (OOP) in Python 3
 - https://realpython.com/python3-object-oriented-programming/
 - Class
     - Conceptually, objects are like the components of a system. Think of a program as a factory assembly line of sorts. At each step of the assembly line a system component processes some material, ultimately transforming raw material into a finished product.
@@ -432,7 +703,7 @@ class Bulldog(Dog):
     - You can access the parent class from inside a method of a child class by using super():
 
 
-## 1.12. Python Bindings: Calling C or C++ From Python
+## 1.13. Python Bindings: Calling C or C++ From Python
 - https://realpython.com/python-bindings-overview/
 - Marshalling Data Types
     - marshalling : The process of transforming the memory representation of an object to a data format suitable for storage or transmission.
@@ -452,7 +723,7 @@ class Bulldog(Dog):
 
 
 
-## 1.13. Functional Programming in Python: When and How to Use It
+## 1.14. Functional Programming in Python: When and How to Use It
 - https://realpython.com/python-functional-programming/
 - Functional programming is a programming paradigm in which the primary method of computation is evaluation of functions. In this tutorial, you’ll explore functional programming in Python.
     - What the functional programming paradigm entails
@@ -460,10 +731,10 @@ class Bulldog(Dog):
     - How to define anonymous functions with the lambda keyword
     - How to implement functional code using map(), filter(), and reduce()
 
-### 1.13.1. What Is Functional Programming?
+### 1.14.1. What Is Functional Programming?
 - In functional programming, a program consists entirely of evaluation of pure functions. Computation proceeds by nested or composed function calls, without changes to state or mutable data.
 
-### 1.13.2. How Well Does Python Support Functional Programming?
+### 1.14.2. How Well Does Python Support Functional Programming?
 - two abilities:
   1. To take another function as an argument
   1. To return another function to its caller
@@ -496,7 +767,7 @@ class Bulldog(Dog):
     - You can check out [How to Use sorted() and sort() in Python](https://realpython.com/python-sort/) for more information on sorting data in Python.
 
 
-### 1.13.3. Defining an Anonymous Function With lambda
+### 1.14.3. Defining an Anonymous Function With lambda
 - syntax --> lambda <parameter_list>: <expression>
     ```python
     >>> lambda s: s[::-1]
@@ -538,8 +809,8 @@ class Bulldog(Dog):
 - [How to Use Python Lambda Functions.](https://realpython.com/python-lambda/)
 - Python offers two built-in functions, map() and filter(), that fit the functional programming paradigm.
 
-### 1.13.4. Applying a Function to an Iterable With map()
-#### 1.13.4.1. Calling map() With a Single Iterable
+### 1.14.4. Applying a Function to an Iterable With map()
+#### 1.14.4.1. Calling map() With a Single Iterable
 - syntax --> map(<f>, <iterable>)
 - remember, map() doesn’t return a list. It returns an iterator called a map object. To obtain the values from the iterator, you need to either iterate over it or use list():
     ```python
@@ -580,7 +851,7 @@ class Bulldog(Dog):
     >>> "+".join(map(str, [1, 2, 3, 4, 5]))
     '1+2+3+4+5'
     ```
-#### 1.13.4.2. Calling map() With Multiple Iterables
+#### 1.14.4.2. Calling map() With Multiple Iterables
 - syntax --> map(<f>, <iterable₁>, <iterable₂>, ..., <iterableₙ>)
     ```python
     >>> def f(a, b, c):
@@ -592,7 +863,7 @@ class Bulldog(Dog):
     ```
     - ![map with multiple iterables](https://files.realpython.com/media/t.130d7baf2cca.png)
 
-### 1.13.5. Selecting Elements From an Iterable With filter()
+### 1.14.5. Selecting Elements From an Iterable With filter()
 - syntax --> filter(<f>, <iterable>)
   - filter(<f>, <iterable>) applies function <f> to each element of <iterable> and returns an iterator that yields all items for which <f> is truthy. Conversely, it filters out all items for which <f> is falsy.
     ```python
@@ -619,7 +890,7 @@ class Bulldog(Dog):
     >>> list(filter(lambda s: s.isupper(), animals))
     ['CAT', 'DOG', 'EMU']
     ```
-### 1.13.6. reduce
+### 1.14.6. reduce
 - syntax --> reduce(<f>, <iterable>)
     ```python
     >>> def f(x, y):
@@ -659,7 +930,7 @@ class Bulldog(Dog):
 
 
 
-## 1.14. Primer on Python Decorators
+## 1.15. Primer on Python Decorators
 - https://realpython.com/primer-on-python-decorators/
 - a higher-order function is a function that does at least one of the following:
     - takes one or more functions as arguments (i.e. procedural parameters),
@@ -800,7 +1071,7 @@ class Bulldog(Dog):
 - registering plugins
 - is the user logged in?
 
-### 1.14.1. [Fancy Decorators](https://realpython.com/primer-on-python-decorators/#fancy-decorators) (later)
+### 1.15.1. [Fancy Decorators](https://realpython.com/primer-on-python-decorators/#fancy-decorators) (later)
 - Decorating Classes
 - Nesting Decorators
 - Decorators With Arguments
@@ -814,7 +1085,7 @@ class Bulldog(Dog):
 - Validating JSON
 
 
-## 1.15. Python and REST APIs: Interacting With Web Services (2021.11.28)
+## 1.16. Python and REST APIs: Interacting With Web Services (2021.11.28)
 - https://realpython.com/api-integration-in-python/
 
 - REST Architecture
@@ -893,7 +1164,7 @@ class Bulldog(Dog):
   - FastAPI
 
 
-## 1.16. Python vs JavaScript for Pythonistas (2021.11.28)
+## 1.17. Python vs JavaScript for Pythonistas (2021.11.28)
 - https://realpython.com/python-vs-javascript/
 
 - skip javascript description : it emphasize advantages of python. but , it depends on your usage.  if you works on the web , javascript is good also.
@@ -905,11 +1176,11 @@ class Bulldog(Dog):
   - Both languages take advantage of automatic heap memory management to eliminate human error and to reduce cognitive load. Nevertheless, this doesn’t completely free you from the risk of getting a memory leak, and it adds some performance overhead.
 
 
-## 1.17. Brython: Python in Your Browser (2021.11.25)
+## 1.18. Brython: Python in Your Browser (2021.11.25)
 - https://realpython.com/brython-python-in-browser/
 - Python developers using Flask or Django can also apply the principles of isomorphism to Python, provided that they can run Python in the browser.
 - [Brython console](https://brython.info/tests/console.html)    ///  [interactive editor](https://brython.info/tests/editor.html)
-###  1.17.1. install on linux
+###  1.18.1. install on linux
 ```txt
 $ python3 -m venv .venv --prompt brython
 $ source .venv/bin/activate
@@ -943,27 +1214,27 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   ![Brower Connect to http.server](https://files.realpython.com/media/brython_index.743c41c96830.png)
     - http://lotto645.lge.com:8000/demo.html
 
-### 1.17.2. Brython Core Components
+### 1.18.2. Brython Core Components
 - The core of Brython is contained in brython.js or in brython.min.js, the minimized version of the Brython engine. Both include the following key components:
   - brython() is the main JavaScript function exposed in the JavaScript global namespace. You can’t execute any Python code without calling this function. This is the only JavaScript function that you should have to call explicitly.
   - `__BRYTHON__` is a JavaScript global object that holds all internal objects needed to run Python scripts. This object isn’t used directly when you write Brython applications. If you look at the Brython code, both JavaScript and Python, then you’ll see regular occurrences of `__BRYTHON__`. You don’t need to use this object, but you should be aware of it when you see an error or when you want to debug your code in the browser console.
   - Built-in types are implementations of the Python built-in types in JavaScript. For example, py_int.js, py_string.js and py_dicts.js are respective implementations of int, str and dict.
   - browser is the browser module that exposes the JavaScript objects commonly used in a front-end web application, like the DOM interfaces using document and the browser window using the window object.
 
-### 1.17.3. Brython Standard Library
+### 1.18.3. Brython Standard Library
 - brython_stdlib.js exposes the Python standard library. As this file is generated, Brython compiles the Python standard library into JavaScript and concatenates the result into the bundle brython_stdlib.js.
 
-### 1.17.4. my opinion
+### 1.18.4. my opinion
 - ok. if you try the examples , it is good.  But , this is like specific web language. because it is different from pure python.  it is brython , but not python.
   - To manipulate the DOM, Brython uses two operators:
     - <= is a new operator, specific to Brython, that adds a child to a node. You can see a few examples of this usage in display_map(), defined on line 22.
     - + is a substitute for Element.insertAdjacentHTML('afterend') and adds sibling nodes.
 
-### 1.17.5. MISC
+### 1.18.5. MISC
 - Creating Google Chrome Extensions
 - Testing and Debugging Brython
 
-## 1.18. Python Code Quality: Tools & Best Practices (2021.11.28) - linter
+## 1.19. Python Code Quality: Tools & Best Practices (2021.11.28) - linter
 - https://realpython.com/python-code-quality/
 
 - Why Does Code Quality Matter?
@@ -1008,7 +1279,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   - ```$ python -m pip install black```
   - ```$ black test.py```
 
-## 1.19. Getting Started With Testing in Python (2021.11.28)
+## 1.20. Getting Started With Testing in Python (2021.11.28)
 - https://realpython.com/python-testing/
 
 - Testing Your Code
@@ -1040,7 +1311,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 
 - Testing in Multiple Environments
   - pip install tox
-### 1.19.1. Writing Your First Test
+### 1.20.1. Writing Your First Test
 - [project](https://github.com/cheoljoo/python-learn/blob/main/project)
   - ```
     project/
@@ -1063,10 +1334,10 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   - discover automatically
 
 
-## 1.20. Effective Python Testing With Pytest (2021.11.28)
+## 1.21. Effective Python Testing With Pytest (2021.11.28)
 - https://realpython.com/pytest-python-testing/
 
-### 1.20.1. What Makes pytest So Useful?
+### 1.21.1. What Makes pytest So Useful?
 - Less Boilerplate
   - Arrange, or set up, the conditions for the test
   - Act by calling some function or method
@@ -1116,7 +1387,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
     - An F means that the test has failed.
     - An E means that the test raised an unexpected exception.
 
-### 1.20.2. Parametrization: Combining Tests 
+### 1.21.2. Parametrization: Combining Tests 
 - pytest.mark.parametrize
   - ```python
     # content of test_expectation.py
@@ -1136,7 +1407,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   - duration report : --durations
     - run : ```C:\code\python-learn\pytest> pytest -q .\test_expectation.py --durations=1 -vv```
 
-### 1.20.3. coverage : pytest-cov
+### 1.21.3. coverage : pytest-cov
 - [coverage.py](https://coverage.readthedocs.io/en/6.2/)
   - ```$ python -m pip install coverage```
   - ```C:\code\python-learn\pytest> coverage rum -m pytest -q .\test_expectation.py```
@@ -1168,7 +1439,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
       ```
 
 
-## 1.21. Continuous Integration With Python: An Introduction (2021.11.28)
+## 1.22. Continuous Integration With Python: An Introduction (2021.11.28)
 - https://realpython.com/python-continuous-integration/
 
 - Continuous integration (CI) is the practice of frequently building and testing each change done to your code automatically and as early as possible. Prolific developer and author Martin Fowler defines CI as follows
@@ -1288,3 +1559,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 ### 2.5.3. browser
 - https://realpython.com/brython-python-in-browser/
 - https://realpython.com/python-vs-javascript
+
+### 2.5.4. interfaces
+- https://realpython.com/python-interface/
+
