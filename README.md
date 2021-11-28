@@ -34,7 +34,10 @@
   - [1.18. Python Code Quality: Tools & Best Practices (2021.11.28) - linter](#118-python-code-quality-tools--best-practices-20211128---linter)
   - [1.19. Getting Started With Testing in Python (2021.11.28)](#119-getting-started-with-testing-in-python-20211128)
     - [1.19.1. Writing Your First Test](#1191-writing-your-first-test)
-  - [Effective Python Testing With Pytest](#effective-python-testing-with-pytest)
+  - [1.20. Effective Python Testing With Pytest](#120-effective-python-testing-with-pytest)
+    - [1.20.1. What Makes pytest So Useful?](#1201-what-makes-pytest-so-useful)
+    - [1.20.2. Parametrization: Combining Tests](#1202-parametrization-combining-tests)
+    - [1.20.3. coverage : pytest-cov](#1203-coverage--pytest-cov)
 - [2. Appendix](#2-appendix)
   - [2.1. Python virtualenv : new developing environment for me](#21-python-virtualenv--new-developing-environment-for-me)
   - [2.2. docker basic](#22-docker-basic)
@@ -1058,10 +1061,10 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   - discover automatically
 
 
-## Effective Python Testing With Pytest
+## 1.20. Effective Python Testing With Pytest
 - https://realpython.com/pytest-python-testing/
 
-### What Makes pytest So Useful?
+### 1.20.1. What Makes pytest So Useful?
 - Less Boilerplate
   - Arrange, or set up, the conditions for the test
   - Act by calling some function or method
@@ -1110,7 +1113,44 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
     - A dot (.) means that the test passed.
     - An F means that the test has failed.
     - An E means that the test raised an unexpected exception.
-- 
+
+### 1.20.2. Parametrization: Combining Tests 
+- pytest.mark.parametrize
+  - ```python
+    # content of test_expectation.py
+    import pytest
+
+    # @pytest.mark.parametrize는 이거 선언한 바로 아래 test에만 적용되는 것으로 보인다.
+    @pytest.mark.parametrize("x", [0, 1])
+    @pytest.mark.parametrize("y", [2, 3, 4])
+    def test_foo(x, y):
+        #pass
+        assert x*y == x*2
+
+    @pytest.mark.parametrize("test_input,expected", [("3+5", 8), ("2+4", 6), ("6*9", 42)])
+    def test_eval(test_input, expected):
+        assert eval(test_input) == expected
+    ```
+  - duration report : --durations
+    - run : ```C:\code\python-learn\pytest> pytest -q .\test_expectation.py --durations=1 -vv```
+
+### 1.20.3. coverage : pytest-cov
+- [coverage.py](https://coverage.readthedocs.io/en/6.2/)
+- ```$ python -m pip install coverage```
+- ```C:\code\python-learn\pytest> coverage rum -m pytest -q .\test_expectation.py```
+- ```C:\code\python-learn\pytest> coverage report -m```
+  - ```txt
+    C:\code\python-learn\pytest> coverage report -m
+    Name                  Stmts   Miss  Cover   Missing
+    ---------------------------------------------------
+    test_expectation.py       8      0   100%
+    ---------------------------------------------------
+    TOTAL                     8      0   100%
+    ```
+- ```C:\code\python-learn\pytest> coverage html```
+  - open htmlcov/index.html in your browser
+
+
 
 # 2. Appendix
 
