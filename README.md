@@ -56,6 +56,10 @@
     - [2.5.2. c++](#252-c)
     - [2.5.3. browser](#253-browser)
     - [2.5.4. interfaces](#254-interfaces)
+  - [2.6. Python 3.10: Cool New Features for You to Try](#26-python-310-cool-new-features-for-you-to-try)
+    - [2.6.1. Structural Pattern Matching](#261-structural-pattern-matching)
+    - [2.6.2. Type Unions, Aliases, and Guards](#262-type-unions-aliases-and-guards)
+    - [2.6.3. Cool Features](#263-cool-features)
 
 
  -------------------
@@ -1562,4 +1566,86 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 
 ### 2.5.4. interfaces
 - https://realpython.com/python-interface/
+
+
+## 2.6. Python 3.10: Cool New Features for You to Try
+### 2.6.1. Structural Pattern Matching
+- Patterns are at the center of structural pattern matching. In this section, you’ll learn about some of the different kinds of patterns that exist:
+    - Mapping patterns match mapping structures like dictionaries.
+    - Sequence patterns match sequence structures like tuples and lists.
+    - Capture patterns bind values to names.
+      - ```python
+            def sum_list(numbers):
+                match numbers:
+                    case []:
+                        return 0
+                    case [int(first) | float(first), *rest]:   # OR  (|)  
+                        # sequence pattern [ first , *rest ] 
+                        # class pattern int(first) :  pattern only matches if the value is an integer. 
+                        return first + sum_list(rest)
+                    case _:      # wildcard pattern
+                        raise ValueError(f"Can only sum lists of numbers")
+        ```
+    - AS patterns bind the value of subpatterns to names.
+    - OR patterns match one of several different subpatterns.
+    - Wildcard patterns match anything.
+    - Class patterns match class structures.
+    - Value patterns match values stored in attributes.
+    - Literal patterns match literal values.
+      - ```python
+            def greet(name):
+                match name:
+                    case "Guido":    # literal pattern
+                        print("Hi, Guido!")
+                    case _:
+                        print("Howdy, stranger!")
+        ```
+- example : if elif else -> match
+  - ```python
+        def fizzbuzz(number):
+            mod_3 = number % 3
+            mod_5 = number % 5
+
+            if mod_3 == 0 and mod_5 == 0:
+                return "fizzbuzz"
+            elif mod_3 == 0:
+                return "fizz"
+            elif mod_5 == 0:
+                return "buzz"
+            else:
+                return str(number)
+        #---------  if elif else -> match  ------------
+        def fizzbuzz(number):
+            mod_3 = number % 3
+            mod_5 = number % 5
+
+            match (mod_3, mod_5):
+                case (0, 0):
+                    return "fizzbuzz"
+                case (0, _):
+                    return "fizz"
+                case (_, 0):
+                    return "buzz"
+                case _:
+                    return str(number)
+        ```
+
+### 2.6.2. Type Unions, Aliases, and Guards
+- static typing system
+    ```python
+    def mean(numbers: list[float | int]) -> float:
+        return sum(numbers) / len(numbers)
+    ```
+- type aliases
+    ```python
+    from typing import TypeAlias
+
+    Card: TypeAlias = tuple[str, str]
+    Deck: TypeAlias = list[Card]
+    ```
+
+### 2.6.3. Cool Features
+- Python 3.10, you can activate a warning that will tell you when a text file is opened without a specified encoding.
+  - utf-8
+
 
