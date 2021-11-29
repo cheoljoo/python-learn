@@ -7,6 +7,10 @@
     - [1.3.3. The Four Main Sections of the docs Folder](#133-the-four-main-sections-of-the-docs-folder)
     - [1.3.4. Documentation Tools and Resources](#134-documentation-tools-and-resources)
   - [1.4. Advanced Git Tips for Python Developers (2021.11.29) - later](#14-advanced-git-tips-for-python-developers-20211129---later)
+    - [1.4.1. Revision Selection](#141-revision-selection)
+    - [1.4.2. Handling Interruptions: git stash](#142-handling-interruptions-git-stash)
+    - [1.4.3. Comparing Revisions: git diff](#143-comparing-revisions-git-diff)
+    - [1.4.4. Changing History](#144-changing-history)
   - [1.5. python docker setup](#15-python-docker-setup)
   - [1.6. PyPy: Faster Python With Minimal Effort](#16-pypy-faster-python-with-minimal-effort)
     - [1.6.1. installation](#161-installation)
@@ -490,7 +494,51 @@
 ## 1.4. Advanced Git Tips for Python Developers (2021.11.29) - later
 - https://realpython.com/advanced-git-for-pythonistas/
 
-- 
+### 1.4.1. Revision Selection
+- Relative Referencing
+  - The first of these is the tilde (~) operator. Git uses tilde to point to a parent of a commit, so HEAD~ indicates the revision before the last one committed. To move back further, you use a number after the tilde: HEAD~3 takes you back three levels.
+  - The ^ operator moves to a specific parent of the specified revision. You use a number to indicate which parent. So HEAD^2 tells Git to select the second parent of the last one committed, not the “grandparent.” It can be repeated to move back further: HEAD^2^^ takes you back three levels, selecting the second parent on the first step. If you don’t give a number, Git assumes 1.
+
+- Revision Ranges
+  - double dot notation : reversed order is ok.  ex) F..D
+  - ```txt
+    $ git log --oneline D..F
+    E "Commit message for E"
+    F "Commit message for F"
+    ```
+  - triple dot shows all commits that are in either revision that are not included in both revisions.
+
+- Branches vs. HEAD vs. SHA
+  - git __rebase__ temp , replay C' and D'
+  - ![before](https://files.realpython.com/media/drawio-git-branch-step5-big.29af45f4ac7c.png) to  ![after](https://files.realpython.com/media/drawio-git-branch-step6-big1.b74a8ab128c4.png)
+
+### 1.4.2. Handling Interruptions: git stash
+- One of the Git features I use frequently and find quite handy is the stash. It provides a simple mechanism to save the files you’re working on but are not ready to commit so you can switch to a different task.
+- ```git stash list```
+- ```git stash```  or ```git stash save {name}```
+- ```git stash pop```   or ```git stash pop stash@{1}```
+- ```git stash show```
+- ```git stash show -p```
+- ```git stash show -p stash@{2}```
+- ```git stash apply stash@{1}``` : It’s also possible to put a stash onto your working directory but leave it in the stack as well.
+- ```git stash drop stash@{1}```
+
+### 1.4.3. Comparing Revisions: git diff
+- my favorite `git diff` 
+  - git config --global diff.tool vimdiff
+  - git config --global difftool.prompt true
+  - git config --global alias.d difftool
+  - usage :   git d [return or filenames]
+  - ```$ git difftool stash@{1}```
+
+### 1.4.4. Changing History
+- ```git commit --amend``` : let’s talk about how you can modify commits and change history!
+  - That would be a mess, so only use this for commits that are local-only.
+- ```git rebase``` : i do not know it.
+- ```git reset --soft HEAD^```
+- ```git revert HEAD```
+
+
 
 
 ## 1.5. python docker setup
