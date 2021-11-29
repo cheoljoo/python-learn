@@ -28,6 +28,7 @@
   - [3.4. Learn IP Address Concepts With Python's ipaddress Module (helpful info)](#34-learn-ip-address-concepts-with-pythons-ipaddress-module-helpful-info)
   - [3.5. Regular Expressions: Regexes in Python (later)](#35-regular-expressions-regexes-in-python-later)
   - [3.6. Python Bindings: Calling C or C++ From Python](#36-python-bindings-calling-c-or-c-from-python)
+    - [3.6.1. practice : python call C function](#361-practice--python-call-c-function)
   - [3.7. Python and REST APIs: Interacting With Web Services (2021.11.28)](#37-python-and-rest-apis-interacting-with-web-services-20211128)
 - [4. advanced python](#4-advanced-python)
   - [4.1. Object-Oriented Programming (OOP) in Python 3](#41-object-oriented-programming-oop-in-python-3)
@@ -876,6 +877,56 @@ TypeError: first argument must be callable or None
     - [ctypes](https://docs.python.org/ko/3/library/ctypes.html)
 
 - [Test Source Code : pre-existing C and C++](https://github.com/realpython/materials/tree/master/python-bindings)
+
+### 3.6.1. practice : python call C function
+- [cmult.py](https://github.com/cheoljoo/python-learn/blob/main/binding/cmult.py) : cmult() is C function. it invokes in python.
+```python
+#!/usr/bin/env python
+""" Simple examples of calling C functions through ctypes module. """
+import ctypes
+import sys
+import pathlib
+
+if __name__ == "__main__":
+    libname = pathlib.Path().absolute()
+    print("libname: ", libname)
+
+    # Load the shared library into c types.
+    if sys.platform.startswith("win"):
+        c_lib = ctypes.CDLL(libname/"cmult.dll")
+    else:
+        c_lib = ctypes.CDLL("./libcmult.so")
+
+    # Sample data for our call:
+    x, y = 6, 2.3
+
+    # This will not work:
+    # answer = c_lib.cmult(x, y)
+
+    # This produces a bad answer:
+    answer = c_lib.cmult(x, ctypes.c_float(y))
+    print(f"    In Python: int: {x} * float {y:.1f} return val {answer:.1f}")
+    print()
+```
+- [cmult.c](https://github.com/cheoljoo/python-learn/blob/main/binding/cmult.c)
+```c
+#include <stdio.h>
+#include "cmult.h"
+
+float cmult(int int_param, float float_param) {
+    float return_value = int_param * float_param;
+    printf("    In cmult : int %d float %.1f returning  %.1f\n", int_param,
+            float_param, return_value);
+    return return_value;
+}
+```
+- [Makefile](https://github.com/cheoljoo/python-learn/blob/main/binding/Makefile)
+```Makefile
+all:
+	g++ -c -fPIC cmult.c -o cmult.o
+	g++ -shared -Wl,-soname,libcmult.so -o libcmult.so  cmult.o 
+	python3 cmult.py
+```
 
 
 
