@@ -1,80 +1,121 @@
-- [1. Python Learning](#1-python-learning)
-  - [1.1. Advanced Visual Studio Code for Python Developers (2021.11.28)](#11-advanced-visual-studio-code-for-python-developers-20211128)
-  - [1.2. Python Virtual Environments: A Primer (2021.11.28)](#12-python-virtual-environments-a-primer-20211128)
-  - [1.3. Documenting Python Code: A Complete Guide (2021.11.28) - docstring](#13-documenting-python-code-a-complete-guide-20211128---docstring)
-    - [1.3.1. Basics of Commenting Code](#131-basics-of-commenting-code)
-    - [1.3.2. Documenting Your Python Code Base Using Docstrings](#132-documenting-your-python-code-base-using-docstrings)
-    - [1.3.3. The Four Main Sections of the docs Folder](#133-the-four-main-sections-of-the-docs-folder)
-    - [1.3.4. Documentation Tools and Resources](#134-documentation-tools-and-resources)
+- [1. IDE](#1-ide)
+  - [1.1. vscode my setting](#11-vscode-my-setting)
+    - [1.1.1. markdown TOC](#111-markdown-toc)
+    - [1.1.2. vscode updates](#112-vscode-updates)
+  - [1.2. Advanced Visual Studio Code for Python Developers (2021.11.28)](#12-advanced-visual-studio-code-for-python-developers-20211128)
+  - [1.3. Python Virtual Environments: A Primer (2021.11.28)](#13-python-virtual-environments-a-primer-20211128)
   - [1.4. Advanced Git Tips for Python Developers (2021.11.29) - later](#14-advanced-git-tips-for-python-developers-20211129---later)
+    - [1.4.1. Revision Selection](#141-revision-selection)
+    - [1.4.2. Handling Interruptions: git stash](#142-handling-interruptions-git-stash)
+    - [1.4.3. Comparing Revisions: git diff](#143-comparing-revisions-git-diff)
+    - [1.4.4. Changing History](#144-changing-history)
   - [1.5. python docker setup](#15-python-docker-setup)
-  - [1.6. PyPy: Faster Python With Minimal Effort](#16-pypy-faster-python-with-minimal-effort)
-    - [1.6.1. installation](#161-installation)
-  - [1.7. Develop Data Visualization Interfaces in Python With Dash (later)](#17-develop-data-visualization-interfaces-in-python-with-dash-later)
-  - [1.8. C for Python Programmers (easy for us : useless)](#18-c-for-python-programmers-easy-for-us--useless)
-  - [1.9. Common Python Data Structures (Guide)](#19-common-python-data-structures-guide)
-  - [1.10. Using the Python defaultdict Type for Handling Missing Keys (2021.11.29)](#110-using-the-python-defaultdict-type-for-handling-missing-keys-20211129)
-    - [1.10.1. Handling Missing Keys in Dictionaries](#1101-handling-missing-keys-in-dictionaries)
-    - [1.10.2. Understanding the Python defaultdict Type](#1102-understanding-the-python-defaultdict-type)
-    - [1.10.3. Using the Python defaultdict Type](#1103-using-the-python-defaultdict-type)
-    - [1.10.4. Diving Deeper Into defaultdict  (later)](#1104-diving-deeper-into-defaultdict--later)
-  - [1.11. Learn IP Address Concepts With Python's ipaddress Module (helpful info)](#111-learn-ip-address-concepts-with-pythons-ipaddress-module-helpful-info)
-  - [1.12. Regular Expressions: Regexes in Python (later)](#112-regular-expressions-regexes-in-python-later)
-  - [1.13. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud](#113-dockerizing-flask-with-compose-and-machine--from-localhost-to-the-cloud)
-  - [1.14. Object-Oriented Programming (OOP) in Python 3](#114-object-oriented-programming-oop-in-python-3)
-  - [1.15. Python Bindings: Calling C or C++ From Python](#115-python-bindings-calling-c-or-c-from-python)
-  - [1.16. Functional Programming in Python: When and How to Use It](#116-functional-programming-in-python-when-and-how-to-use-it)
-    - [1.16.1. What Is Functional Programming?](#1161-what-is-functional-programming)
-    - [1.16.2. How Well Does Python Support Functional Programming?](#1162-how-well-does-python-support-functional-programming)
-    - [1.16.3. Defining an Anonymous Function With lambda](#1163-defining-an-anonymous-function-with-lambda)
-    - [1.16.4. Applying a Function to an Iterable With map()](#1164-applying-a-function-to-an-iterable-with-map)
-      - [1.16.4.1. Calling map() With a Single Iterable](#11641-calling-map-with-a-single-iterable)
-      - [1.16.4.2. Calling map() With Multiple Iterables](#11642-calling-map-with-multiple-iterables)
-    - [1.16.5. Selecting Elements From an Iterable With filter()](#1165-selecting-elements-from-an-iterable-with-filter)
-    - [1.16.6. reduce](#1166-reduce)
-  - [1.17. Primer on Python Decorators](#117-primer-on-python-decorators)
-    - [1.17.1. Fancy Decorators (later)](#1171-fancy-decorators-later)
-  - [1.18. Python and REST APIs: Interacting With Web Services (2021.11.28)](#118-python-and-rest-apis-interacting-with-web-services-20211128)
-  - [1.19. Python vs JavaScript for Pythonistas (2021.11.28)](#119-python-vs-javascript-for-pythonistas-20211128)
-  - [1.20. Brython: Python in Your Browser (2021.11.25)](#120-brython-python-in-your-browser-20211125)
-    - [1.20.1. install on linux](#1201-install-on-linux)
-    - [1.20.2. Brython Core Components](#1202-brython-core-components)
-    - [1.20.3. Brython Standard Library](#1203-brython-standard-library)
-    - [1.20.4. my opinion](#1204-my-opinion)
-    - [1.20.5. MISC](#1205-misc)
-  - [1.21. Python Code Quality: Tools & Best Practices (2021.11.28) - linter](#121-python-code-quality-tools--best-practices-20211128---linter)
-  - [1.22. Getting Started With Testing in Python (2021.11.28)](#122-getting-started-with-testing-in-python-20211128)
-    - [1.22.1. Writing Your First Test](#1221-writing-your-first-test)
-  - [1.23. Effective Python Testing With Pytest (2021.11.28)](#123-effective-python-testing-with-pytest-20211128)
-    - [1.23.1. What Makes pytest So Useful?](#1231-what-makes-pytest-so-useful)
-    - [1.23.2. Parametrization: Combining Tests](#1232-parametrization-combining-tests)
-    - [1.23.3. coverage : pytest-cov](#1233-coverage--pytest-cov)
-  - [1.24. Continuous Integration With Python: An Introduction (2021.11.28)](#124-continuous-integration-with-python-an-introduction-20211128)
-- [2. Appendix](#2-appendix)
-  - [2.1. Python virtualenv : new developing environment for me](#21-python-virtualenv--new-developing-environment-for-me)
-  - [2.2. docker basic](#22-docker-basic)
-  - [2.3. docker compose](#23-docker-compose)
-  - [2.4. vscode](#24-vscode)
-    - [2.4.1. markdown TOC](#241-markdown-toc)
-    - [2.4.2. vscode updates](#242-vscode-updates)
-  - [2.5. New](#25-new)
-    - [2.5.1. python](#251-python)
-    - [2.5.2. c++](#252-c)
-    - [2.5.3. browser](#253-browser)
-    - [2.5.4. interfaces](#254-interfaces)
-    - [2.5.5. new on 2021](#255-new-on-2021)
-  - [2.6. Python 3.10: Cool New Features for You to Try](#26-python-310-cool-new-features-for-you-to-try)
-    - [2.6.1. Structural Pattern Matching](#261-structural-pattern-matching)
-    - [2.6.2. Type Unions, Aliases, and Guards](#262-type-unions-aliases-and-guards)
-    - [2.6.3. Cool Features](#263-cool-features)
+  - [1.6. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud](#16-dockerizing-flask-with-compose-and-machine--from-localhost-to-the-cloud)
+- [2. Document](#2-document)
+  - [2.1. Documenting Python Code: A Complete Guide (2021.11.28) - docstring](#21-documenting-python-code-a-complete-guide-20211128---docstring)
+    - [2.1.1. Basics of Commenting Code](#211-basics-of-commenting-code)
+    - [2.1.2. Documenting Your Python Code Base Using Docstrings](#212-documenting-your-python-code-base-using-docstrings)
+    - [2.1.3. The Four Main Sections of the docs Folder](#213-the-four-main-sections-of-the-docs-folder)
+    - [2.1.4. Documentation Tools and Resources](#214-documentation-tools-and-resources)
+- [3. basic python](#3-basic-python)
+  - [3.1. Develop Data Visualization Interfaces in Python With Dash (later)](#31-develop-data-visualization-interfaces-in-python-with-dash-later)
+  - [3.2. Common Python Data Structures (Guide)](#32-common-python-data-structures-guide)
+  - [3.3. Using the Python defaultdict Type for Handling Missing Keys (2021.11.29)](#33-using-the-python-defaultdict-type-for-handling-missing-keys-20211129)
+    - [3.3.1. Handling Missing Keys in Dictionaries](#331-handling-missing-keys-in-dictionaries)
+    - [3.3.2. Understanding the Python defaultdict Type](#332-understanding-the-python-defaultdict-type)
+    - [3.3.3. Using the Python defaultdict Type](#333-using-the-python-defaultdict-type)
+    - [3.3.4. Diving Deeper Into defaultdict  (later)](#334-diving-deeper-into-defaultdict--later)
+  - [3.4. Learn IP Address Concepts With Python's ipaddress Module (helpful info)](#34-learn-ip-address-concepts-with-pythons-ipaddress-module-helpful-info)
+  - [3.5. Regular Expressions: Regexes in Python (later)](#35-regular-expressions-regexes-in-python-later)
+  - [3.6. Python Bindings: Calling C or C++ From Python](#36-python-bindings-calling-c-or-c-from-python)
+  - [3.7. Python and REST APIs: Interacting With Web Services (2021.11.28)](#37-python-and-rest-apis-interacting-with-web-services-20211128)
+- [4. advanced python](#4-advanced-python)
+  - [4.1. Object-Oriented Programming (OOP) in Python 3](#41-object-oriented-programming-oop-in-python-3)
+  - [4.2. Functional Programming in Python: When and How to Use It](#42-functional-programming-in-python-when-and-how-to-use-it)
+    - [4.2.1. What Is Functional Programming?](#421-what-is-functional-programming)
+    - [4.2.2. How Well Does Python Support Functional Programming?](#422-how-well-does-python-support-functional-programming)
+    - [4.2.3. Defining an Anonymous Function With lambda](#423-defining-an-anonymous-function-with-lambda)
+    - [4.2.4. Applying a Function to an Iterable With map()](#424-applying-a-function-to-an-iterable-with-map)
+      - [4.2.4.1. Calling map() With a Single Iterable](#4241-calling-map-with-a-single-iterable)
+      - [4.2.4.2. Calling map() With Multiple Iterables](#4242-calling-map-with-multiple-iterables)
+    - [4.2.5. Selecting Elements From an Iterable With filter()](#425-selecting-elements-from-an-iterable-with-filter)
+    - [4.2.6. reduce](#426-reduce)
+  - [4.3. Primer on Python Decorators](#43-primer-on-python-decorators)
+    - [4.3.1. Fancy Decorators (later)](#431-fancy-decorators-later)
+- [5. python alternatives](#5-python-alternatives)
+  - [5.1. PyPy: Faster Python With Minimal Effort](#51-pypy-faster-python-with-minimal-effort)
+    - [5.1.1. installation](#511-installation)
+  - [5.2. C for Python Programmers (easy for us : useless)](#52-c-for-python-programmers-easy-for-us--useless)
+  - [5.3. Python vs JavaScript for Pythonistas (2021.11.28)](#53-python-vs-javascript-for-pythonistas-20211128)
+  - [5.4. Brython: Python in Your Browser (2021.11.25)](#54-brython-python-in-your-browser-20211125)
+    - [5.4.1. install on linux](#541-install-on-linux)
+    - [5.4.2. Brython Core Components](#542-brython-core-components)
+    - [5.4.3. Brython Standard Library](#543-brython-standard-library)
+    - [5.4.4. my opinion](#544-my-opinion)
+    - [5.4.5. MISC](#545-misc)
+- [6. python quality & test](#6-python-quality--test)
+  - [6.1. Python Code Quality: Tools & Best Practices (2021.11.28) - linter](#61-python-code-quality-tools--best-practices-20211128---linter)
+  - [6.2. Getting Started With Testing in Python (2021.11.28)](#62-getting-started-with-testing-in-python-20211128)
+    - [6.2.1. Writing Your First Test](#621-writing-your-first-test)
+  - [6.3. Effective Python Testing With Pytest (2021.11.28)](#63-effective-python-testing-with-pytest-20211128)
+    - [6.3.1. What Makes pytest So Useful?](#631-what-makes-pytest-so-useful)
+    - [6.3.2. Parametrization: Combining Tests](#632-parametrization-combining-tests)
+    - [6.3.3. coverage : pytest-cov](#633-coverage--pytest-cov)
+  - [6.4. Continuous Integration With Python: An Introduction (2021.11.28)](#64-continuous-integration-with-python-an-introduction-20211128)
+- [7. Appendix](#7-appendix)
+  - [7.1. Python virtualenv : new developing environment for me](#71-python-virtualenv--new-developing-environment-for-me)
+  - [7.2. docker basic](#72-docker-basic)
+  - [7.3. docker compose](#73-docker-compose)
+  - [7.4. Python 3.10: Cool New Features for You to Try](#74-python-310-cool-new-features-for-you-to-try)
+    - [7.4.1. Structural Pattern Matching](#741-structural-pattern-matching)
+    - [7.4.2. Type Unions, Aliases, and Guards](#742-type-unions-aliases-and-guards)
+    - [7.4.3. Cool Features](#743-cool-features)
+  - [7.5. Reference](#75-reference)
+    - [7.5.1. python](#751-python)
+    - [7.5.2. c++](#752-c)
+    - [7.5.3. browser](#753-browser)
+    - [7.5.4. interfaces](#754-interfaces)
+    - [7.5.5. new on 2021](#755-new-on-2021)
 
 
  -------------------
 
 
-# 1. Python Learning
 
-## 1.1. Advanced Visual Studio Code for Python Developers (2021.11.28)
+Python Learning
+
+# 1. IDE
+
+## 1.1. vscode my setting
+
+### 1.1.1. markdown TOC
+
+- vscode extension install
+    - markdown TOC ->  markdown all in one
+      - ^+P -> Markdown All in One : create TOC and update TOC
+      - ^+P -> Markdown All in One : add/update section numners
+      - ^+P -> Markdown All in One : Update Table of Contents
+    - markdown preview ->  markdown preview enhanced
+    - markdown lint
+
+### 1.1.2. vscode updates
+- 21.11.26 
+    - Bracket pair guides can be enabled by setting editor.guides.bracketPairs to true (defaults to false). We added a third option "active" to only show a bracket pair guide for the active bracket pair.
+    - Customizable bracket pairs
+      - You can now configure bracket pairs for a specific programming language through settings. editor.language.brackets can be used to configure which bracket characters should be matched. If set, editor.language.colorizedBracketPairs independently configures which bracket pairs are colorized when bracket pair colorization or bracket pair guides are enabled.
+      ```javascript
+"[javascript]": {
+    "editor.language.brackets": [
+        ["[", "]"],
+        ["(", ")"]
+    ],
+    "editor.language.colorizedBracketPairs": [
+        ["[", "]"]
+    ]
+},
+      ```
+
+## 1.2. Advanced Visual Studio Code for Python Developers (2021.11.28)
 - https://realpython.com/advanced-visual-studio-code-python/
 
 - agenda
@@ -189,7 +230,7 @@
 
 
 
-## 1.2. Python Virtual Environments: A Primer (2021.11.28)
+## 1.3. Python Virtual Environments: A Primer (2021.11.28)
 - https://realpython.com/python-virtual-environments-a-pri
 
 - At its core, the main purpose of Python virtual environments is to create an isolated environment for Python projects.
@@ -221,7 +262,93 @@
 
 - Using Different Versions of Python
 
-## 1.3. Documenting Python Code: A Complete Guide (2021.11.28) - docstring
+## 1.4. Advanced Git Tips for Python Developers (2021.11.29) - later
+- https://realpython.com/advanced-git-for-pythonistas/
+
+### 1.4.1. Revision Selection
+- Relative Referencing
+  - The first of these is the tilde (~) operator. Git uses tilde to point to a parent of a commit, so HEAD~ indicates the revision before the last one committed. To move back further, you use a number after the tilde: HEAD~3 takes you back three levels.
+  - The ^ operator moves to a specific parent of the specified revision. You use a number to indicate which parent. So HEAD^2 tells Git to select the second parent of the last one committed, not the “grandparent.” It can be repeated to move back further: HEAD^2^^ takes you back three levels, selecting the second parent on the first step. If you don’t give a number, Git assumes 1.
+
+- Revision Ranges
+  - double dot notation : reversed order is ok.  ex) F..D
+  - ```txt
+    $ git log --oneline D..F
+    E "Commit message for E"
+    F "Commit message for F"
+    ```
+  - triple dot shows all commits that are in either revision that are not included in both revisions.
+
+- Branches vs. HEAD vs. SHA
+  - git __rebase__ temp , replay C' and D'
+  - ![before](https://files.realpython.com/media/drawio-git-branch-step5-big.29af45f4ac7c.png) to  ![after](https://files.realpython.com/media/drawio-git-branch-step6-big1.b74a8ab128c4.png)
+
+### 1.4.2. Handling Interruptions: git stash
+- One of the Git features I use frequently and find quite handy is the stash. It provides a simple mechanism to save the files you’re working on but are not ready to commit so you can switch to a different task.
+- ```git stash list```
+- ```git stash```  or ```git stash save {name}```
+- ```git stash pop```   or ```git stash pop stash@{1}```
+- ```git stash show```
+- ```git stash show -p```
+- ```git stash show -p stash@{2}```
+- ```git stash apply stash@{1}``` : It’s also possible to put a stash onto your working directory but leave it in the stack as well.
+- ```git stash drop stash@{1}```
+
+### 1.4.3. Comparing Revisions: git diff
+- my favorite `git diff` 
+  - git config --global diff.tool vimdiff
+  - git config --global difftool.prompt true
+  - git config --global alias.d difftool
+  - usage :   git d [return or filenames]
+  - ```$ git difftool stash@{1}```
+
+### 1.4.4. Changing History
+- ```git commit --amend``` : let’s talk about how you can modify commits and change history!
+  - That would be a mess, so only use this for commits that are local-only.
+- ```git rebase``` : i do not know it.
+- ```git reset --soft HEAD^```
+- ```git revert HEAD```
+
+
+
+
+## 1.5. python docker setup
+- https://realpython.com/tutorials/docker/
+- https://realpython.com/python-versions-docker/
+- Dockerfile
+```dockerfile
+FROM python:3.7.5-slim
+
+# Set up and activate virtual environment
+ENV VIRTUAL_ENV "/venv"
+RUN python -m venv $VIRTUAL_ENV
+ENV PATH "$VIRTUAL_ENV/bin:$PATH"
+
+# Python commands run inside the virtual environment
+RUN pip install --upgrade pip
+RUN python -m pip install \
+        parse \
+        jira \
+        realpython-reader
+# RUN python example.py
+WORKDIR "/app"
+```
+
+- run
+    - ```cd docker```
+    - ```docker build -t rp .```
+    - ```docker run --rm -v `pwd`:/app rp python /app/example.py```
+
+
+## 1.6. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud
+- https://realpython.com/dockerizing-flask-with-compose-and-machine-from-localhost-to-the-cloud/
+- docker machine is deprecated.
+
+
+
+# 2. Document
+
+## 2.1. Documenting Python Code: A Complete Guide (2021.11.28) - docstring
 - https://realpython.com/documenting-python-code/
 
 > “Code is more often read than written.”
@@ -233,7 +360,7 @@
 > “Code tells you how; Comments tell you why.”
   — Jeff Atwood (aka Coding Horror)
 
-### 1.3.1. Basics of Commenting Code
+### 2.1.1. Basics of Commenting Code
 - According to PEP 8, comments should have a maximum length of 72 characters.
 - Comments to your code should be kept brief and focused. Avoid using long comments when possible. Additionally, you should use the following four essential rules as suggested by Jeff Atwood:
     - Keep comments as close to the code being described as possible. Comments that aren’t near their describing code are frustrating to the reader and easily missed when updates are made.
@@ -246,7 +373,7 @@
         return(f"Hello {name}")
     ```
 
-### 1.3.2. Documenting Your Python Code Base Using Docstrings
+### 2.1.2. Documenting Your Python Code Base Using Docstrings
 - Docstrings Background
   - Python also has the built-in function help() that prints out the objects docstring to the console.
   - ```python
@@ -472,7 +599,7 @@
             a list of strings representing the header columns
         """
       ```
-### 1.3.3. The Four Main Sections of the docs Folder
+### 2.1.3. The Four Main Sections of the docs Folder
 - Tutorials: Lessons that take the reader by the hand through a series of steps to complete a project (or meaningful exercise). Geared towards the user’s learning.
 - How-To Guides: Guides that take the reader through the steps required to solve a common problem (problem-oriented recipes).
 - References: Explanations that clarify and illuminate a particular topic. Geared towards understanding.
@@ -483,67 +610,22 @@
 | Practical Step	| Tutorials	| How-To Guides
 | Theoretical Knowledge	| Explanation	| Reference
 
-### 1.3.4. Documentation Tools and Resources
+### 2.1.4. Documentation Tools and Resources
 - [MkDocs](https://www.mkdocs.org/)	: A static site generator to help build project documentation using the Markdown language
 
 
-## 1.4. Advanced Git Tips for Python Developers (2021.11.29) - later
-- https://realpython.com/advanced-git-for-pythonistas/
-
-- 
-
-
-## 1.5. python docker setup
-- https://realpython.com/tutorials/docker/
-- https://realpython.com/python-versions-docker/
-- Dockerfile
-```dockerfile
-FROM python:3.7.5-slim
-
-# Set up and activate virtual environment
-ENV VIRTUAL_ENV "/venv"
-RUN python -m venv $VIRTUAL_ENV
-ENV PATH "$VIRTUAL_ENV/bin:$PATH"
-
-# Python commands run inside the virtual environment
-RUN pip install --upgrade pip
-RUN python -m pip install \
-        parse \
-        jira \
-        realpython-reader
-# RUN python example.py
-WORKDIR "/app"
-```
-
-- run
-    - ```cd docker```
-    - ```docker build -t rp .```
-    - ```docker run --rm -v `pwd`:/app rp python /app/example.py```
 
 
 
-## 1.6. PyPy: Faster Python With Minimal Effort
-- https://realpython.com/pypy-faster-python/
-- PyPy is a very compliant Python interpreter that is a worthy alternative to CPython 2.7, 3.6, and soon 3.7.
-- The Python language specification is used in a number of implementations such as CPython (written in C), Jython (written in Java), IronPython (written for .NET), and PyPy (written in Python). 
-- [CPython](https://realpython.com/products/cpython-internals-book/)
-
-- python is 40 times slower than pypy in case of below example
-- run
-    - ```cd pypy```
-    - ```time perl s.pl```
-    - ```time python3 s.py```
-    - ```time pypy s.py```
 
 
 
-### 1.6.1. installation
-- https://www.pypy.org/download.html
-    - tar -xf archive.tar.bz2
 
 
+# 3. basic python
 
-## 1.7. Develop Data Visualization Interfaces in Python With Dash (later)
+
+## 3.1. Develop Data Visualization Interfaces in Python With Dash (later)
 - https://realpython.com/python-dash/
 - Dash is an open source framework for building data visualization interfaces. Released in 2017 as a Python library, it’s grown to include implementations for R and Julia. Dash helps data scientists build analytical web applications without requiring advanced web development knowledge.
 - Three technologies constitute the core of Dash: 
@@ -555,13 +637,9 @@ WORKDIR "/app"
 
 
 
-## 1.8. C for Python Programmers (easy for us : useless)
-- https://realpython.com/c-for-python-programmers/
-- The purpose of this tutorial is to get an experienced Python programmer up to speed with the basics of the C language and how it’s used in the CPython source code. It assumes you already have an intermediate understanding of Python syntax.
 
 
-
-## 1.9. Common Python Data Structures (Guide)
+## 3.2. Common Python Data Structures (Guide)
 - https://realpython.com/python-data-structures/
 - Dictionaries, Maps, and Hash Tables
     - collections.OrderedDict: Remember the Insertion Order of Keys
@@ -655,12 +733,12 @@ WORKDIR "/app"
     - **If you’d like to avoid the locking overhead of queue.PriorityQueue, then using the heapq module directly is also a good option.**
 
 
-## 1.10. Using the Python defaultdict Type for Handling Missing Keys (2021.11.29)
+## 3.3. Using the Python defaultdict Type for Handling Missing Keys (2021.11.29)
 - https://realpython.com/python-defaultdict/
 
 - A common problem that you can face when working with Python dictionaries is to try to access or modify keys that don’t exist in the dictionary. This will raise a KeyError and break up your code execution. To handle these kinds of situations, the standard library provides the Python defaultdict type, a dictionary-like class that’s available for you in collections.
 
-### 1.10.1. Handling Missing Keys in Dictionaries
+### 3.3.1. Handling Missing Keys in Dictionaries
 - Use .setdefault()
   - setdefault(key[, default])  :  If key is in the dictionary, return its value. If not, insert key with a value of default and return default. default defaults to None.
 - Use .get()
@@ -690,7 +768,7 @@ WORKDIR "/app"
     {'key': 'default value'}
     ```
 
-### 1.10.2. Understanding the Python defaultdict Type
+### 3.3.2. Understanding the Python defaultdict Type
 - it is like perl. when we only check the value , this value will be created.
 - Keep in mind that you must pass a valid Python callable object to .default_factory, so remember not to call it using the parentheses at initialization time.
 - 
@@ -714,7 +792,7 @@ Traceback (most recent call last):
 TypeError: first argument must be callable or None
 ```
 
-### 1.10.3. Using the Python defaultdict Type
+### 3.3.3. Using the Python defaultdict Type
 - Grouping Items
   - ```python
     dep = [('Sales', 'John Doe'),
@@ -769,27 +847,125 @@ TypeError: first argument must be callable or None
 - Accumulating Values
   - it is same as counting.
 
-### 1.10.4. Diving Deeper Into defaultdict  (later)
+### 3.3.4. Diving Deeper Into defaultdict  (later)
 - later : https://realpython.com/python-defaultdict/#diving-deeper-into-defaultdict
 
-## 1.11. Learn IP Address Concepts With Python's ipaddress Module (helpful info)
+## 3.4. Learn IP Address Concepts With Python's ipaddress Module (helpful info)
 - https://realpython.com/python-ipaddress-module/
 
 
 
-## 1.12. Regular Expressions: Regexes in Python (later)
+## 3.5. Regular Expressions: Regexes in Python (later)
 - https://realpython.com/regex-python/
 - https://realpython.com/regex-python-part-2/
 
 
+## 3.6. Python Bindings: Calling C or C++ From Python
+- https://realpython.com/python-bindings-overview/
+- Marshalling Data Types
+    - marshalling : The process of transforming the memory representation of an object to a data format suitable for storage or transmission.
+- Understanding Mutable and Immutable Values
+- Managing Memory
 
-## 1.13. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud
-- https://realpython.com/dockerizing-flask-with-compose-and-machine-from-localhost-to-the-cloud/
-- docker machine is deprecated.
+- ctypes is  built into the standard library.
+- [python and C binding example : from ctypes import cdll](https://hashcode.co.kr/questions/243/python%EC%97%90%EC%84%9C-cc%EB%B6%80%EB%A5%B4%EA%B8%B0)
+    - cd binding ; make      <- works well
+    - You’ll start with ctypes, which is a tool in the standard library for creating Python bindings. It provides a low-level toolset for loading shared libraries and marshalling data between Python and C.
+- materials : https://github.com/realpython/materials/tree/master/python-bindings
+    - need to export function name :  ``` extern "C" { }```
+    - [ctypes](https://docs.python.org/ko/3/library/ctypes.html)
+
+- [Test Source Code : pre-existing C and C++](https://github.com/realpython/materials/tree/master/python-bindings)
 
 
 
-## 1.14. Object-Oriented Programming (OOP) in Python 3
+## 3.7. Python and REST APIs: Interacting With Web Services (2021.11.28)
+- https://realpython.com/api-integration-in-python/
+
+- REST Architecture
+  - REST stands for representational state transfer and is a software architecture style that defines a pattern for client and server communications over a network. REST provides a set of constraints for software architecture to promote performance, scalability, simplicity, and reliability in the system.
+  - REST defines the following architectural constraints:
+    - Stateless: The server won’t maintain any state between requests from the client.
+    - Client-server: The client and server must be decoupled from each other, allowing each to develop independently.
+    - Cacheable: The data retrieved from the server should be cacheable either by the client or by the server.
+    - Uniform interface: The server will provide a uniform interface for accessing resources without defining their representation.
+    - Layered system: The client may access the resources on the server indirectly through other layers such as a proxy or load balancer.
+    - Code on demand (optional): The server may transfer code to the client that it can run, such as JavaScript for a single-page application.
+
+
+- HTTP Methods
+    | HTTP | method	Description |
+    |---|---|
+    |GET	| Retrieve an existing resource.
+    |POST	| Create a new resource.
+    |PUT	| Update an existing resource.
+    |PATCH	| Partially update an existing resource.
+    |DELETE	| Delete a resource.
+
+- install python package
+    - ```$ python -m pip install requests```
+
+- GET : read-only
+```
+>>> import requests
+>>> api_url = "https://jsonplaceholder.typicode.com/todos/1"
+>>> response = requests.get(api_url)
+>>> response.json()
+{'userId': 1, 'id': 1, 'title': 'delectus aut autem', 'completed': False}
+>>> response.status_code
+200
+
+>>> response.headers["Content-Type"]
+'application/json; charset=utf-8'
+```
+
+- POST : 
+```
+>>> import requests
+>>> import json
+>>> api_url = "https://jsonplaceholder.typicode.com/todos"
+>>> todo = {"userId": 1, "title": "Buy milk", "completed": False}
+>>> headers =  {"Content-Type":"application/json"}
+>>> response = requests.post(api_url, data=json.dumps(todo), headers=headers)
+>>> response.json()
+{'userId': 1, 'title': 'Buy milk', 'completed': False, 'id': 201}
+
+>>> response.status_code
+201
+```
+    > Note: json.dumps() comes from the json package in the standard library. This package provides useful methods for working with JSON in Python.
+
+- Define Your Endpoints
+    | HTTP method	| API endpoint	| Description |
+    |---|---|---|
+    | GET	| /events/<event_id>/guests	| Get a list of guests.
+    | GET	| /events/<event_id>/guests/<guest_id>	| Get a single guest.
+    | POST	| /events/<event_id>/guests	| Create a new guest.
+    | PUT	| /events/<event_id>/guests/<guest_id>	| Update a guest.
+    | PATCH	| /events/<event_id>/guests/<guest_id>	| Partially update a guest.
+    | DELETE	| /events/<event_id>/guests/<guest_id>	| Delete a guest.
+
+    > Note: An endpoint shouldn’t contain verbs. Instead, you should select the appropriate HTTP methods to convey the endpoint’s action. For example, the endpoint below contains an unneeded verb:
+    - GET /getTransactions
+        - Here, get is included in the endpoint when it isn’t needed. The HTTP method GET already provides the semantic meaning for the endpoint by indicating the action. You can remove get from the endpoint:
+    - GET /transactions
+        - This endpoint contains only a plural noun, and the HTTP method GET communicates the action.
+
+
+- REST and Python: Tools of the Trade
+  - flask
+  - django
+  - FastAPI
+
+
+
+
+
+
+
+# 4. advanced python
+
+## 4.1. Object-Oriented Programming (OOP) in Python 3
 - https://realpython.com/python3-object-oriented-programming/
 - Class
     - Conceptually, objects are like the components of a system. Think of a program as a factory assembly line of sorts. At each step of the assembly line a system component processes some material, ultimately transforming raw material into a finished product.
@@ -836,27 +1012,8 @@ class Bulldog(Dog):
     - You can access the parent class from inside a method of a child class by using super():
 
 
-## 1.15. Python Bindings: Calling C or C++ From Python
-- https://realpython.com/python-bindings-overview/
-- Marshalling Data Types
-    - marshalling : The process of transforming the memory representation of an object to a data format suitable for storage or transmission.
-- Understanding Mutable and Immutable Values
-- Managing Memory
 
-- ctypes is  built into the standard library.
-- [python and C binding example : from ctypes import cdll](https://hashcode.co.kr/questions/243/python%EC%97%90%EC%84%9C-cc%EB%B6%80%EB%A5%B4%EA%B8%B0)
-    - cd binding ; make      <- works well
-    - You’ll start with ctypes, which is a tool in the standard library for creating Python bindings. It provides a low-level toolset for loading shared libraries and marshalling data between Python and C.
-- materials : https://github.com/realpython/materials/tree/master/python-bindings
-    - need to export function name :  ``` extern "C" { }```
-    - [ctypes](https://docs.python.org/ko/3/library/ctypes.html)
-
-- [Test Source Code : pre-existing C and C++](https://github.com/realpython/materials/tree/master/python-bindings)
-
-
-
-
-## 1.16. Functional Programming in Python: When and How to Use It
+## 4.2. Functional Programming in Python: When and How to Use It
 - https://realpython.com/python-functional-programming/
 - Functional programming is a programming paradigm in which the primary method of computation is evaluation of functions. In this tutorial, you’ll explore functional programming in Python.
     - What the functional programming paradigm entails
@@ -864,10 +1021,10 @@ class Bulldog(Dog):
     - How to define anonymous functions with the lambda keyword
     - How to implement functional code using map(), filter(), and reduce()
 
-### 1.16.1. What Is Functional Programming?
+### 4.2.1. What Is Functional Programming?
 - In functional programming, a program consists entirely of evaluation of pure functions. Computation proceeds by nested or composed function calls, without changes to state or mutable data.
 
-### 1.16.2. How Well Does Python Support Functional Programming?
+### 4.2.2. How Well Does Python Support Functional Programming?
 - two abilities:
   1. To take another function as an argument
   1. To return another function to its caller
@@ -900,7 +1057,7 @@ class Bulldog(Dog):
     - You can check out [How to Use sorted() and sort() in Python](https://realpython.com/python-sort/) for more information on sorting data in Python.
 
 
-### 1.16.3. Defining an Anonymous Function With lambda
+### 4.2.3. Defining an Anonymous Function With lambda
 - syntax --> lambda <parameter_list>: <expression>
     ```python
     >>> lambda s: s[::-1]
@@ -942,8 +1099,8 @@ class Bulldog(Dog):
 - [How to Use Python Lambda Functions.](https://realpython.com/python-lambda/)
 - Python offers two built-in functions, map() and filter(), that fit the functional programming paradigm.
 
-### 1.16.4. Applying a Function to an Iterable With map()
-#### 1.16.4.1. Calling map() With a Single Iterable
+### 4.2.4. Applying a Function to an Iterable With map()
+#### 4.2.4.1. Calling map() With a Single Iterable
 - syntax --> map(<f>, <iterable>)
 - remember, map() doesn’t return a list. It returns an iterator called a map object. To obtain the values from the iterator, you need to either iterate over it or use list():
     ```python
@@ -984,7 +1141,7 @@ class Bulldog(Dog):
     >>> "+".join(map(str, [1, 2, 3, 4, 5]))
     '1+2+3+4+5'
     ```
-#### 1.16.4.2. Calling map() With Multiple Iterables
+#### 4.2.4.2. Calling map() With Multiple Iterables
 - syntax --> map(<f>, <iterable₁>, <iterable₂>, ..., <iterableₙ>)
     ```python
     >>> def f(a, b, c):
@@ -996,7 +1153,7 @@ class Bulldog(Dog):
     ```
     - ![map with multiple iterables](https://files.realpython.com/media/t.130d7baf2cca.png)
 
-### 1.16.5. Selecting Elements From an Iterable With filter()
+### 4.2.5. Selecting Elements From an Iterable With filter()
 - syntax --> filter(<f>, <iterable>)
   - filter(<f>, <iterable>) applies function <f> to each element of <iterable> and returns an iterator that yields all items for which <f> is truthy. Conversely, it filters out all items for which <f> is falsy.
     ```python
@@ -1023,7 +1180,7 @@ class Bulldog(Dog):
     >>> list(filter(lambda s: s.isupper(), animals))
     ['CAT', 'DOG', 'EMU']
     ```
-### 1.16.6. reduce
+### 4.2.6. reduce
 - syntax --> reduce(<f>, <iterable>)
     ```python
     >>> def f(x, y):
@@ -1063,7 +1220,7 @@ class Bulldog(Dog):
 
 
 
-## 1.17. Primer on Python Decorators
+## 4.3. Primer on Python Decorators
 - https://realpython.com/primer-on-python-decorators/
 - a higher-order function is a function that does at least one of the following:
     - takes one or more functions as arguments (i.e. procedural parameters),
@@ -1204,7 +1361,7 @@ class Bulldog(Dog):
 - registering plugins
 - is the user logged in?
 
-### 1.17.1. [Fancy Decorators](https://realpython.com/primer-on-python-decorators/#fancy-decorators) (later)
+### 4.3.1. [Fancy Decorators](https://realpython.com/primer-on-python-decorators/#fancy-decorators) (later)
 - Decorating Classes
 - Nesting Decorators
 - Decorators With Arguments
@@ -1218,86 +1375,36 @@ class Bulldog(Dog):
 - Validating JSON
 
 
-## 1.18. Python and REST APIs: Interacting With Web Services (2021.11.28)
-- https://realpython.com/api-integration-in-python/
-
-- REST Architecture
-  - REST stands for representational state transfer and is a software architecture style that defines a pattern for client and server communications over a network. REST provides a set of constraints for software architecture to promote performance, scalability, simplicity, and reliability in the system.
-  - REST defines the following architectural constraints:
-    - Stateless: The server won’t maintain any state between requests from the client.
-    - Client-server: The client and server must be decoupled from each other, allowing each to develop independently.
-    - Cacheable: The data retrieved from the server should be cacheable either by the client or by the server.
-    - Uniform interface: The server will provide a uniform interface for accessing resources without defining their representation.
-    - Layered system: The client may access the resources on the server indirectly through other layers such as a proxy or load balancer.
-    - Code on demand (optional): The server may transfer code to the client that it can run, such as JavaScript for a single-page application.
 
 
-- HTTP Methods
-    | HTTP | method	Description |
-    |---|---|
-    |GET	| Retrieve an existing resource.
-    |POST	| Create a new resource.
-    |PUT	| Update an existing resource.
-    |PATCH	| Partially update an existing resource.
-    |DELETE	| Delete a resource.
-
-- install python package
-    - ```$ python -m pip install requests```
-
-- GET : read-only
-```
->>> import requests
->>> api_url = "https://jsonplaceholder.typicode.com/todos/1"
->>> response = requests.get(api_url)
->>> response.json()
-{'userId': 1, 'id': 1, 'title': 'delectus aut autem', 'completed': False}
->>> response.status_code
-200
-
->>> response.headers["Content-Type"]
-'application/json; charset=utf-8'
-```
-
-- POST : 
-```
->>> import requests
->>> import json
->>> api_url = "https://jsonplaceholder.typicode.com/todos"
->>> todo = {"userId": 1, "title": "Buy milk", "completed": False}
->>> headers =  {"Content-Type":"application/json"}
->>> response = requests.post(api_url, data=json.dumps(todo), headers=headers)
->>> response.json()
-{'userId': 1, 'title': 'Buy milk', 'completed': False, 'id': 201}
-
->>> response.status_code
-201
-```
-    > Note: json.dumps() comes from the json package in the standard library. This package provides useful methods for working with JSON in Python.
-
-- Define Your Endpoints
-    | HTTP method	| API endpoint	| Description |
-    |---|---|---|
-    | GET	| /events/<event_id>/guests	| Get a list of guests.
-    | GET	| /events/<event_id>/guests/<guest_id>	| Get a single guest.
-    | POST	| /events/<event_id>/guests	| Create a new guest.
-    | PUT	| /events/<event_id>/guests/<guest_id>	| Update a guest.
-    | PATCH	| /events/<event_id>/guests/<guest_id>	| Partially update a guest.
-    | DELETE	| /events/<event_id>/guests/<guest_id>	| Delete a guest.
-
-    > Note: An endpoint shouldn’t contain verbs. Instead, you should select the appropriate HTTP methods to convey the endpoint’s action. For example, the endpoint below contains an unneeded verb:
-    - GET /getTransactions
-        - Here, get is included in the endpoint when it isn’t needed. The HTTP method GET already provides the semantic meaning for the endpoint by indicating the action. You can remove get from the endpoint:
-    - GET /transactions
-        - This endpoint contains only a plural noun, and the HTTP method GET communicates the action.
 
 
-- REST and Python: Tools of the Trade
-  - flask
-  - django
-  - FastAPI
+# 5. python alternatives
+
+## 5.1. PyPy: Faster Python With Minimal Effort
+- https://realpython.com/pypy-faster-python/
+- PyPy is a very compliant Python interpreter that is a worthy alternative to CPython 2.7, 3.6, and soon 3.7.
+- The Python language specification is used in a number of implementations such as CPython (written in C), Jython (written in Java), IronPython (written for .NET), and PyPy (written in Python). 
+- [CPython](https://realpython.com/products/cpython-internals-book/)
+
+- python is 40 times slower than pypy in case of below example
+- run
+    - ```cd pypy```
+    - ```time perl s.pl```
+    - ```time python3 s.py```
+    - ```time pypy s.py```
 
 
-## 1.19. Python vs JavaScript for Pythonistas (2021.11.28)
+
+### 5.1.1. installation
+- https://www.pypy.org/download.html
+    - tar -xf archive.tar.bz
+
+## 5.2. C for Python Programmers (easy for us : useless)
+- https://realpython.com/c-for-python-programmers/
+- The purpose of this tutorial is to get an experienced Python programmer up to speed with the basics of the C language and how it’s used in the CPython source code. It assumes you already have an intermediate understanding of Python syntax.
+
+## 5.3. Python vs JavaScript for Pythonistas (2021.11.28)
 - https://realpython.com/python-vs-javascript/
 
 - skip javascript description : it emphasize advantages of python. but , it depends on your usage.  if you works on the web , javascript is good also.
@@ -1309,11 +1416,11 @@ class Bulldog(Dog):
   - Both languages take advantage of automatic heap memory management to eliminate human error and to reduce cognitive load. Nevertheless, this doesn’t completely free you from the risk of getting a memory leak, and it adds some performance overhead.
 
 
-## 1.20. Brython: Python in Your Browser (2021.11.25)
+## 5.4. Brython: Python in Your Browser (2021.11.25)
 - https://realpython.com/brython-python-in-browser/
 - Python developers using Flask or Django can also apply the principles of isomorphism to Python, provided that they can run Python in the browser.
 - [Brython console](https://brython.info/tests/console.html)    ///  [interactive editor](https://brython.info/tests/editor.html)
-###  1.20.1. install on linux
+###  5.4.1. install on linux
 ```txt
 $ python3 -m venv .venv --prompt brython
 $ source .venv/bin/activate
@@ -1347,27 +1454,33 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   ![Brower Connect to http.server](https://files.realpython.com/media/brython_index.743c41c96830.png)
     - http://lotto645.lge.com:8000/demo.html
 
-### 1.20.2. Brython Core Components
+### 5.4.2. Brython Core Components
 - The core of Brython is contained in brython.js or in brython.min.js, the minimized version of the Brython engine. Both include the following key components:
   - brython() is the main JavaScript function exposed in the JavaScript global namespace. You can’t execute any Python code without calling this function. This is the only JavaScript function that you should have to call explicitly.
   - `__BRYTHON__` is a JavaScript global object that holds all internal objects needed to run Python scripts. This object isn’t used directly when you write Brython applications. If you look at the Brython code, both JavaScript and Python, then you’ll see regular occurrences of `__BRYTHON__`. You don’t need to use this object, but you should be aware of it when you see an error or when you want to debug your code in the browser console.
   - Built-in types are implementations of the Python built-in types in JavaScript. For example, py_int.js, py_string.js and py_dicts.js are respective implementations of int, str and dict.
   - browser is the browser module that exposes the JavaScript objects commonly used in a front-end web application, like the DOM interfaces using document and the browser window using the window object.
 
-### 1.20.3. Brython Standard Library
+### 5.4.3. Brython Standard Library
 - brython_stdlib.js exposes the Python standard library. As this file is generated, Brython compiles the Python standard library into JavaScript and concatenates the result into the bundle brython_stdlib.js.
 
-### 1.20.4. my opinion
+### 5.4.4. my opinion
 - ok. if you try the examples , it is good.  But , this is like specific web language. because it is different from pure python.  it is brython , but not python.
   - To manipulate the DOM, Brython uses two operators:
     - <= is a new operator, specific to Brython, that adds a child to a node. You can see a few examples of this usage in display_map(), defined on line 22.
     - + is a substitute for Element.insertAdjacentHTML('afterend') and adds sibling nodes.
 
-### 1.20.5. MISC
+### 5.4.5. MISC
 - Creating Google Chrome Extensions
 - Testing and Debugging Brython
 
-## 1.21. Python Code Quality: Tools & Best Practices (2021.11.28) - linter
+
+
+
+
+# 6. python quality & test
+
+## 6.1. Python Code Quality: Tools & Best Practices (2021.11.28) - linter
 - https://realpython.com/python-code-quality/
 
 - Why Does Code Quality Matter?
@@ -1412,7 +1525,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   - ```$ python -m pip install black```
   - ```$ black test.py```
 
-## 1.22. Getting Started With Testing in Python (2021.11.28)
+## 6.2. Getting Started With Testing in Python (2021.11.28)
 - https://realpython.com/python-testing/
 
 - Testing Your Code
@@ -1444,7 +1557,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 
 - Testing in Multiple Environments
   - pip install tox
-### 1.22.1. Writing Your First Test
+### 6.2.1. Writing Your First Test
 - [project](https://github.com/cheoljoo/python-learn/blob/main/project)
   - ```
     project/
@@ -1467,10 +1580,10 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   - discover automatically
 
 
-## 1.23. Effective Python Testing With Pytest (2021.11.28)
+## 6.3. Effective Python Testing With Pytest (2021.11.28)
 - https://realpython.com/pytest-python-testing/
 
-### 1.23.1. What Makes pytest So Useful?
+### 6.3.1. What Makes pytest So Useful?
 - Less Boilerplate
   - Arrange, or set up, the conditions for the test
   - Act by calling some function or method
@@ -1520,7 +1633,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
     - An F means that the test has failed.
     - An E means that the test raised an unexpected exception.
 
-### 1.23.2. Parametrization: Combining Tests 
+### 6.3.2. Parametrization: Combining Tests 
 - pytest.mark.parametrize
   - ```python
     # content of test_expectation.py
@@ -1540,7 +1653,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
   - duration report : --durations
     - run : ```C:\code\python-learn\pytest> pytest -q .\test_expectation.py --durations=1 -vv```
 
-### 1.23.3. coverage : pytest-cov
+### 6.3.3. coverage : pytest-cov
 - [coverage.py](https://coverage.readthedocs.io/en/6.2/)
   - ```$ python -m pip install coverage```
   - ```C:\code\python-learn\pytest> coverage rum -m pytest -q .\test_expectation.py```
@@ -1572,7 +1685,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
       ```
 
 
-## 1.24. Continuous Integration With Python: An Introduction (2021.11.28)
+## 6.4. Continuous Integration With Python: An Introduction (2021.11.28)
 - https://realpython.com/python-continuous-integration/
 
 - Continuous integration (CI) is the practice of frequently building and testing each change done to your code automatically and as early as possible. Prolific developer and author Martin Fowler defines CI as follows
@@ -1631,79 +1744,23 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 
 
 
-# 2. Appendix
+# 7. Appendix
 
-## 2.1. Python virtualenv : new developing environment for me
+## 7.1. Python virtualenv : new developing environment for me
 - when we use the docker , we do not need it. 
 - https://help.dreamhost.com/hc/en-us/articles/115000695551-Installing-and-using-virtualenv-with-Python-3
 - (korean link) https://dgkim5360.tistory.com/entry/python-virtualenv-on-linux-ubuntu-and-windows
 - (korean link) https://joonyon.tistory.com/135
 
-## 2.2. docker basic
+## 7.2. docker basic
 - (korean link) https://junlab.tistory.com/216
 
-## 2.3. docker compose
+## 7.3. docker compose
 - (korean link) https://junlab.tistory.com/219
 - 일반적인 시스템은 단일 애플리케이션으로 구동이 되지 않습니다. 여러 개의 애플리케이션이 서로 의존성 있게 구성되어 시스템이 이뤄져 있습니다. 그렇다면 흔히 하나의 컨테이너가 하나의 애플리케이션을 담당한다고 하면 여러 개의 컨테이너가 필요로 합니다. 이때 필요한 기술이 도커 컴포즈(Docker Compose)입니다. 도커 컴포즈는 yaml 포맷으로 작성되며 여러 개의 컨테이너의 실행을 한 번에 관리를 할 수 있게 해 줍니다.
 
-## 2.4. vscode
-### 2.4.1. markdown TOC
-
-- vscode extension install
-    - markdown TOC ->  markdown all in one
-      - ^+P -> Markdown All in One : create TOC and update TOC
-      - ^+P -> Markdown All in One : add/update section numners
-      - ^+P -> Markdown All in One : Update Table of Contents
-    - markdown preview ->  markdown preview enhanced
-    - markdown lint
-
-### 2.4.2. vscode updates
-- 21.11.26 
-    - Bracket pair guides can be enabled by setting editor.guides.bracketPairs to true (defaults to false). We added a third option "active" to only show a bracket pair guide for the active bracket pair.
-    - Customizable bracket pairs
-      - You can now configure bracket pairs for a specific programming language through settings. editor.language.brackets can be used to configure which bracket characters should be matched. If set, editor.language.colorizedBracketPairs independently configures which bracket pairs are colorized when bracket pair colorization or bracket pair guides are enabled.
-      ```javascript
-"[javascript]": {
-    "editor.language.brackets": [
-        ["[", "]"],
-        ["(", ")"]
-    ],
-    "editor.language.colorizedBracketPairs": [
-        ["[", "]"]
-    ]
-},
-      ```
-
-## 2.5. New
-### 2.5.1. python
-- https://realpython.com/python-testing/
-- https://realpython.com/python-continuous-integration/
-- https://realpython.com/advanced-visual-studio-code-python/
-- https://realpython.com/python-code-quality/      <- linter
-- someip : 
-    - https://github.com/jamores/eth-scapy-someip
-    - https://pypi.org/project/someip/
-
-### 2.5.2. c++
-- https://devblogs.microsoft.com/cppblog/visual-studio-code-c-extension-july-2020-update-doxygen-comments-and-logpoints/
-- https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
-    - https://github.com/cschlosser/doxdocgen       : we can find source code when we visit the URL in vscode extension.
-
-### 2.5.3. browser
-- https://realpython.com/brython-python-in-browser/
-- https://realpython.com/python-vs-javascript
-
-### 2.5.4. interfaces
-- https://realpython.com/python-interface/
-
-### 2.5.5. new on 2021
-- https://realpython.com/python-pass-by-reference/
-- https://realpython.com/django-diary-project-python/
-- https://realpython.com/python-traceback/
-- https://realpython.com/advanced-git-for-pythonistas/
-
-## 2.6. Python 3.10: Cool New Features for You to Try
-### 2.6.1. Structural Pattern Matching
+## 7.4. Python 3.10: Cool New Features for You to Try
+### 7.4.1. Structural Pattern Matching
 - Patterns are at the center of structural pattern matching. In this section, you’ll learn about some of the different kinds of patterns that exist:
     - Mapping patterns match mapping structures like dictionaries.
     - Sequence patterns match sequence structures like tuples and lists.
@@ -1764,7 +1821,7 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
                     return str(number)
         ```
 
-### 2.6.2. Type Unions, Aliases, and Guards
+### 7.4.2. Type Unions, Aliases, and Guards
 - static typing system
     ```python
     def mean(numbers: list[float | int]) -> float:
@@ -1778,8 +1835,38 @@ Serving HTTP on :: port 8000 (http://[::]:8000/) ...
     Deck: TypeAlias = list[Card]
     ```
 
-### 2.6.3. Cool Features
+### 7.4.3. Cool Features
 - Python 3.10, you can activate a warning that will tell you when a text file is opened without a specified encoding.
   - utf-8
+
+
+## 7.5. Reference
+### 7.5.1. python
+- https://realpython.com/python-testing/
+- https://realpython.com/python-continuous-integration/
+- https://realpython.com/advanced-visual-studio-code-python/
+- https://realpython.com/python-code-quality/      <- linter
+- someip : 
+    - https://github.com/jamores/eth-scapy-someip
+    - https://pypi.org/project/someip/
+
+### 7.5.2. c++
+- https://devblogs.microsoft.com/cppblog/visual-studio-code-c-extension-july-2020-update-doxygen-comments-and-logpoints/
+- https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
+    - https://github.com/cschlosser/doxdocgen       : we can find source code when we visit the URL in vscode extension.
+
+### 7.5.3. browser
+- https://realpython.com/brython-python-in-browser/
+- https://realpython.com/python-vs-javascript
+
+### 7.5.4. interfaces
+- https://realpython.com/python-interface/
+
+### 7.5.5. new on 2021
+- https://realpython.com/python-pass-by-reference/
+- https://realpython.com/django-diary-project-python/
+- https://realpython.com/python-traceback/
+- https://realpython.com/advanced-git-for-pythonistas/
+
 
 
