@@ -1,3 +1,4 @@
+
 - [1. IDE](#1-ide)
   - [1.1. vscode my setting](#11-vscode-my-setting)
     - [1.1.1. markdown TOC](#111-markdown-toc)
@@ -11,7 +12,7 @@
     - [1.4.4. Changing History](#144-changing-history)
   - [1.5. python docker setup](#15-python-docker-setup)
   - [1.6. Dockerizing Flask With Compose and Machine – From Localhost to the Cloud](#16-dockerizing-flask-with-compose-and-machine--from-localhost-to-the-cloud)
-- [2. Document](#2-document)
+- [2. python document](#2-python-document)
   - [2.1. Documenting Python Code: A Complete Guide (2021.11.28) - docstring](#21-documenting-python-code-a-complete-guide-20211128---docstring)
     - [2.1.1. Basics of Commenting Code](#211-basics-of-commenting-code)
     - [2.1.2. Documenting Your Python Code Base Using Docstrings](#212-documenting-your-python-code-base-using-docstrings)
@@ -27,20 +28,26 @@
     - [3.3.4. Diving Deeper Into defaultdict  (later)](#334-diving-deeper-into-defaultdict--later)
   - [3.4. Learn IP Address Concepts With Python's ipaddress Module (helpful info)](#34-learn-ip-address-concepts-with-pythons-ipaddress-module-helpful-info)
   - [3.5. Regular Expressions: Regexes in Python (later)](#35-regular-expressions-regexes-in-python-later)
-  - [3.6. Python Bindings: Calling C or C++ From Python](#36-python-bindings-calling-c-or-c-from-python)
-    - [3.6.1. practice : python call C function](#361-practice--python-call-c-function)
-    - [pybind11](#pybind11)
-  - [4.2. Functional Programming in Python: When and How to Use It](#42-functional-programming-in-python-when-and-how-to-use-it)
-    - [4.2.1. What Is Functional Programming?](#421-what-is-functional-programming)
-    - [4.2.2. How Well Does Python Support Functional Programming?](#422-how-well-does-python-support-functional-programming)
-    - [4.2.3. Defining an Anonymous Function With lambda](#423-defining-an-anonymous-function-with-lambda)
-    - [4.2.4. Applying a Function to an Iterable With map()](#424-applying-a-function-to-an-iterable-with-map)
-      - [4.2.4.1. Calling map() With a Single Iterable](#4241-calling-map-with-a-single-iterable)
-      - [4.2.4.2. Calling map() With Multiple Iterables](#4242-calling-map-with-multiple-iterables)
-    - [4.2.5. Selecting Elements From an Iterable With filter()](#425-selecting-elements-from-an-iterable-with-filter)
-    - [4.2.6. reduce](#426-reduce)
-  - [4.3. Primer on Python Decorators](#43-primer-on-python-decorators)
-    - [4.3.1. Fancy Decorators (later)](#431-fancy-decorators-later)
+  - [3.6. Python and REST APIs: Interacting With Web Services (2021.11.28)](#36-python-and-rest-apis-interacting-with-web-services-20211128)
+- [4. enhanced python](#4-enhanced-python)
+  - [4.1. Python Bindings: Calling C or C++ From Python](#41-python-bindings-calling-c-or-c-from-python)
+    - [4.1.1. practice : python call C function](#411-practice--python-call-c-function)
+    - [4.1.2. pybind11](#412-pybind11)
+    - [4.1.3. Setting up a C++/Python project with pybind11 and CMake](#413-setting-up-a-cpython-project-with-pybind11-and-cmake)
+    - [4.1.4. examples](#414-examples)
+  - [4.2. Python Bindings: Calling Python From C or C++](#42-python-bindings-calling-python-from-c-or-c)
+  - [4.3. Object-Oriented Programming (OOP) in Python 3](#43-object-oriented-programming-oop-in-python-3)
+  - [4.4. Functional Programming in Python: When and How to Use It](#44-functional-programming-in-python-when-and-how-to-use-it)
+    - [4.4.1. What Is Functional Programming?](#441-what-is-functional-programming)
+    - [4.4.2. How Well Does Python Support Functional Programming?](#442-how-well-does-python-support-functional-programming)
+    - [4.4.3. Defining an Anonymous Function With lambda](#443-defining-an-anonymous-function-with-lambda)
+    - [4.4.4. Applying a Function to an Iterable With map()](#444-applying-a-function-to-an-iterable-with-map)
+      - [4.4.4.1. Calling map() With a Single Iterable](#4441-calling-map-with-a-single-iterable)
+      - [4.4.4.2. Calling map() With Multiple Iterables](#4442-calling-map-with-multiple-iterables)
+    - [4.4.5. Selecting Elements From an Iterable With filter()](#445-selecting-elements-from-an-iterable-with-filter)
+    - [4.4.6. reduce](#446-reduce)
+  - [4.5. Primer on Python Decorators](#45-primer-on-python-decorators)
+    - [4.5.1. Fancy Decorators (later)](#451-fancy-decorators-later)
 - [5. python alternatives](#5-python-alternatives)
   - [5.1. PyPy: Faster Python With Minimal Effort](#51-pypy-faster-python-with-minimal-effort)
     - [5.1.1. installation](#511-installation)
@@ -76,8 +83,7 @@
     - [7.5.4. interfaces](#754-interfaces)
     - [7.5.5. new on 2021](#755-new-on-2021)
 
-
- -------------------
+-------------------
 
 
 
@@ -345,7 +351,7 @@ WORKDIR "/app"
 
 
 
-# 2. Document
+# 2. python document
 
 ## 2.1. Documenting Python Code: A Complete Guide (2021.11.28) - docstring
 - https://realpython.com/documenting-python-code/
@@ -859,88 +865,8 @@ TypeError: first argument must be callable or None
 - https://realpython.com/regex-python-part-2/
 
 
-## 3.6. Python Bindings: Calling C or C++ From Python
-- https://realpython.com/python-bindings-overview/
-- Marshalling Data Types
-    - marshalling : The process of transforming the memory representation of an object to a data format suitable for storage or transmission.
-- Understanding Mutable and Immutable Values
-- Managing Memory
 
-- ctypes is  built into the standard library.
-- [python and C binding example : from ctypes import cdll](https://hashcode.co.kr/questions/243/python%EC%97%90%EC%84%9C-cc%EB%B6%80%EB%A5%B4%EA%B8%B0)
-    - cd binding ; make      <- works well
-    - You’ll start with ctypes, which is a tool in the standard library for creating Python bindings. It provides a low-level toolset for loading shared libraries and marshalling data between Python and C.
-- materials : https://github.com/realpython/materials/tree/master/python-bindings
-    - need to export function name :  ``` extern "C" { }```
-    - [ctypes](https://docs.python.org/ko/3/library/ctypes.html)
-
-- [Test Source Code : pre-existing C and C++](https://github.com/realpython/materials/tree/master/python-bindings)
-
-### 3.6.1. practice : python call C function
-- [cmult.py](https://github.com/cheoljoo/python-learn/blob/main/binding/cmult.py) : cmult() is C function. it invokes in python.
-```python
-#!/usr/bin/env python
-""" Simple examples of calling C functions through ctypes module. """
-import ctypes
-import sys
-import pathlib
-
-if __name__ == "__main__":
-    libname = pathlib.Path().absolute()
-    print("libname: ", libname)
-
-    # Load the shared library into c types.
-    if sys.platform.startswith("win"):
-        c_lib = ctypes.CDLL(libname/"cmult.dll")
-    else:
-        c_lib = ctypes.CDLL("./libcmult.so")
-
-    # Sample data for our call:
-    x, y = 6, 2.3
-
-    # This will not work:
-    # answer = c_lib.cmult(x, y)
-
-    # This produces a bad answer:
-    answer = c_lib.cmult(x, ctypes.c_float(y))
-    print(f"    In Python: int: {x} * float {y:.1f} return val {answer:.1f}")
-    print()
-```
-- [cmult.c](https://github.com/cheoljoo/python-learn/blob/main/binding/cmult.c)
-```c
-#include <stdio.h>
-#include "cmult.h"
-
-float cmult(int int_param, float float_param) {
-    float return_value = int_param * float_param;
-    printf("    In cmult : int %d float %.1f returning  %.1f\n", int_param,
-            float_param, return_value);
-    return return_value;
-}
-```
-- [Makefile](https://github.com/cheoljoo/python-learn/blob/main/binding/Makefile)
-```Makefile
-all:
-	g++ -c -fPIC cmult.c -o cmult.o
-	g++ -shared -Wl,-soname,libcmult.so -o libcmult.so  cmult.o 
-	python3 cmult.py
-```
-
-### pybind11
-- original URL : https://github.com/pybind/cmake_example
-- ```
-  $ mkdir cmake_example/build
-  $ cd cmake_example/build
-  $ cmake ..
-  $ make
-  $ cp ../test.py .
-  $ python3 test.py
-  3
-  ```
-
-
-
-## 3.7. Python and REST APIs: Interacting With Web Services (2021.11.28)
+## 3.6. Python and REST APIs: Interacting With Web Services (2021.11.28)
 - https://realpython.com/api-integration-in-python/
 
 - REST Architecture
@@ -1024,12 +950,176 @@ all:
 
 
 
-# 4. advanced python
+# 4. enhanced python
 
-## 4.1. Object-Oriented Programming (OOP) in Python 3
+## 4.1. Python Bindings: Calling C or C++ From Python
+- https://realpython.com/python-bindings-overview/
+- Marshalling Data Types
+    - marshalling : The process of transforming the memory representation of an object to a data format suitable for storage or transmission.
+- Understanding Mutable and Immutable Values
+- Managing Memory
+
+- ctypes is  built into the standard library.
+- [python and C binding example : from ctypes import cdll](https://hashcode.co.kr/questions/243/python%EC%97%90%EC%84%9C-cc%EB%B6%80%EB%A5%B4%EA%B8%B0)
+    - cd binding ; make      <- works well
+    - You’ll start with ctypes, which is a tool in the standard library for creating Python bindings. It provides a low-level toolset for loading shared libraries and marshalling data between Python and C.
+- materials : https://github.com/realpython/materials/tree/master/python-bindings
+    - need to export function name :  ``` extern "C" { }```
+    - [ctypes](https://docs.python.org/ko/3/library/ctypes.html)
+
+- [Test Source Code : pre-existing C and C++](https://github.com/realpython/materials/tree/master/python-bindings)
+
+### 4.1.1. practice : python call C function
+- [cmult.py](https://github.com/cheoljoo/python-learn/blob/main/binding/cmult.py) : cmult() is C function. it invokes in python.
+```python
+#!/usr/bin/env python
+""" Simple examples of calling C functions through ctypes module. """
+import ctypes
+import sys
+import pathlib
+
+if __name__ == "__main__":
+    libname = pathlib.Path().absolute()
+    print("libname: ", libname)
+
+    # Load the shared library into c types.
+    if sys.platform.startswith("win"):
+        c_lib = ctypes.CDLL(libname/"cmult.dll")
+    else:
+        c_lib = ctypes.CDLL("./libcmult.so")
+
+    # Sample data for our call:
+    x, y = 6, 2.3
+
+    # This will not work:
+    # answer = c_lib.cmult(x, y)
+
+    # This produces a bad answer:
+    answer = c_lib.cmult(x, ctypes.c_float(y))
+    print(f"    In Python: int: {x} * float {y:.1f} return val {answer:.1f}")
+    print()
+```
+- [cmult.c](https://github.com/cheoljoo/python-learn/blob/main/binding/cmult.c)
+```c
+#include <stdio.h>
+#include "cmult.h"
+
+float cmult(int int_param, float float_param) {
+    float return_value = int_param * float_param;
+    printf("    In cmult : int %d float %.1f returning  %.1f\n", int_param,
+            float_param, return_value);
+    return return_value;
+}
+```
+- [Makefile](https://github.com/cheoljoo/python-learn/blob/main/binding/Makefile)
+```Makefile
+all:
+	g++ -c -fPIC cmult.c -o cmult.o
+	g++ -shared -Wl,-soname,libcmult.so -o libcmult.so  cmult.o 
+	python3 cmult.py
+```
+
+### 4.1.2. pybind11
+- original Example URL : https://github.com/pybind/cmake_example
+- Document : https://pybind11.readthedocs.io/en/stable/index.html
+- python calls C function.
+- execution
+  ```txt
+    $ mkdir cmake_example/build
+    $ cd cmake_example/build
+    $ cmake ..
+    $ make
+    $ cp ../test.py .
+    $ python3 test.py
+    3
+  ```
+
+### 4.1.3. Setting up a C++/Python project with pybind11 and CMake
+- it was not finished yet. 
+- original Example URL : https://github.com/smrfeld/cmake_cpp_pybind11_tutorial
+  - execution
+    ```txt
+      $ mkdir cpp/build
+      $ cd cpp/build
+      $ cmake ..
+      $ make
+      $ mkdir cpp/tests/build
+      $ cp cpp/tests/build
+      $ cmake ..
+      $ make
+      $ cd cpp/tests/bin
+      $ ./test_cpp
+      Made a motorcycle called: Yamaha
+      Zoom Zoom
+    ```
+### 4.1.4. examples
+- https://people.duke.edu/~ccc14/sta-663-2016/18G_C++_Python_pybind11.html
+- https://coderefinery.github.io/mma/03-pybind11/
+
+## 4.2. Python Bindings: Calling Python From C or C++
+- https://docs.python.org/3.9/extending/extending.html -> 1.6. Calling Python Functions from C
+- i can not run this code. so we need more time to run it.
+
+- Calling a Python function is easy. First, the Python program must somehow pass you the Python function object. You should provide a function (or some other interface) to do this. When this function is called, save a pointer to the Python function object (be careful to Py_INCREF() it!) in a global variable — or wherever you see fit. For example, the following function might be part of a module definition:
+  ```c
+  static PyObject *my_callback = NULL;
+
+  static PyObject *
+  my_set_callback(PyObject *dummy, PyObject *args)
+  {
+      PyObject *result = NULL;
+      PyObject *temp;
+
+      if (PyArg_ParseTuple(args, "O:set_callback", &temp)) {
+          if (!PyCallable_Check(temp)) {
+              PyErr_SetString(PyExc_TypeError, "parameter must be callable");
+              return NULL;
+          }
+          Py_XINCREF(temp);         /* Add a reference to new callback */
+          Py_XDECREF(my_callback);  /* Dispose of previous callback */
+          my_callback = temp;       /* Remember new callback */
+          /* Boilerplate to return "None" */
+          Py_INCREF(Py_None);
+          result = Py_None;
+      }
+      return result;
+  }
+  ```
+  - The macros Py_XINCREF() and Py_XDECREF() increment/decrement the reference count of an object and are safe in the presence of NULL pointers (but note that temp will not be NULL in this context). More info on them in section Reference Counts.
+
+- Later, when it is time to call the function, you call the C function PyObject_CallObject(). This function has two arguments, both pointers to arbitrary Python objects: the Python function, and the argument list. The argument list must always be a tuple object, whose length is the number of arguments. To call the Python function with no arguments, pass in NULL, or an empty tuple; to call it with one argument, pass a singleton tuple. Py_BuildValue() returns a tuple when its format string consists of zero or more format codes between parentheses. For example:
+  ```c
+  int arg;
+  PyObject *arglist;
+  PyObject *result;
+  ...
+  arg = 123;
+  ...
+  /* Time to call the callback */
+  arglist = Py_BuildValue("(i)", arg);
+  result = PyObject_CallObject(my_callback, arglist);
+  Py_DECREF(arglist);
+  if (result == NULL)
+      return NULL; /* Pass error back */
+  /* Here maybe use the result */
+  Py_DECREF(result);  
+  ```
+  - PyObject_CallObject() returns a Python object pointer: this is the return value of the Python function. PyObject_CallObject() is “reference-count-neutral” with respect to its arguments. In the example a new tuple was created to serve as the argument list, which is Py_DECREF()-ed immediately after the PyObject_CallObject() call.
+  - we use Py_BuildValue() to construct the dictionary.
+    ```c
+    dict = Py_BuildValue("{s:i}", "name", val);
+    result = PyObject_Call(my_callback, NULL, dict);
+    Py_DECREF(dict);
+    ```
+
+
+
+## 4.3. Object-Oriented Programming (OOP) in Python 3
+
 - https://realpython.com/python3-object-oriented-programming/
 - Class
     - Conceptually, objects are like the components of a system. Think of a program as a factory assembly line of sorts. At each step of the assembly line a system component processes some material, ultimately transforming raw material into a finished product.
+
 ```python
 class Dog:
     # Class attribute
@@ -1051,11 +1141,13 @@ class Dog:
     def __str__(self):
         return f"{self.name} is {self.age} years old"
 ```
+
     - an instance method’s first parameter is always self.
     - Methods like .__init__() and .__str__() are called dunder methods because they begin and end with double underscores.
 
 - Inherit From Other Classes in Python
     - Child classes can override or extend the attributes and methods of parent classes. 
+
 ```python
 class JackRussellTerrier(Dog):
     def speak(self, sound="Arf"):
@@ -1069,12 +1161,13 @@ class Dachshund(Dog):
 class Bulldog(Dog):
     pass
 ```
+
     - What if you want to determine if miles is also an instance of the Dog class? You can do this with the built-in isinstance().
     - You can access the parent class from inside a method of a child class by using super():
 
 
 
-## 4.2. Functional Programming in Python: When and How to Use It
+## 4.4. Functional Programming in Python: When and How to Use It
 - https://realpython.com/python-functional-programming/
 - Functional programming is a programming paradigm in which the primary method of computation is evaluation of functions. In this tutorial, you’ll explore functional programming in Python.
     - What the functional programming paradigm entails
@@ -1082,10 +1175,10 @@ class Bulldog(Dog):
     - How to define anonymous functions with the lambda keyword
     - How to implement functional code using map(), filter(), and reduce()
 
-### 4.2.1. What Is Functional Programming?
+### 4.4.1. What Is Functional Programming?
 - In functional programming, a program consists entirely of evaluation of pure functions. Computation proceeds by nested or composed function calls, without changes to state or mutable data.
 
-### 4.2.2. How Well Does Python Support Functional Programming?
+### 4.4.2. How Well Does Python Support Functional Programming?
 - two abilities:
   1. To take another function as an argument
   1. To return another function to its caller
@@ -1118,7 +1211,7 @@ class Bulldog(Dog):
     - You can check out [How to Use sorted() and sort() in Python](https://realpython.com/python-sort/) for more information on sorting data in Python.
 
 
-### 4.2.3. Defining an Anonymous Function With lambda
+### 4.4.3. Defining an Anonymous Function With lambda
 - syntax --> lambda <parameter_list>: <expression>
     ```python
     >>> lambda s: s[::-1]
@@ -1160,8 +1253,8 @@ class Bulldog(Dog):
 - [How to Use Python Lambda Functions.](https://realpython.com/python-lambda/)
 - Python offers two built-in functions, map() and filter(), that fit the functional programming paradigm.
 
-### 4.2.4. Applying a Function to an Iterable With map()
-#### 4.2.4.1. Calling map() With a Single Iterable
+### 4.4.4. Applying a Function to an Iterable With map()
+#### 4.4.4.1. Calling map() With a Single Iterable
 - syntax --> map(<f>, <iterable>)
 - remember, map() doesn’t return a list. It returns an iterator called a map object. To obtain the values from the iterator, you need to either iterate over it or use list():
     ```python
@@ -1202,7 +1295,7 @@ class Bulldog(Dog):
     >>> "+".join(map(str, [1, 2, 3, 4, 5]))
     '1+2+3+4+5'
     ```
-#### 4.2.4.2. Calling map() With Multiple Iterables
+#### 4.4.4.2. Calling map() With Multiple Iterables
 - syntax --> map(<f>, <iterable₁>, <iterable₂>, ..., <iterableₙ>)
     ```python
     >>> def f(a, b, c):
@@ -1214,7 +1307,7 @@ class Bulldog(Dog):
     ```
     - ![map with multiple iterables](https://files.realpython.com/media/t.130d7baf2cca.png)
 
-### 4.2.5. Selecting Elements From an Iterable With filter()
+### 4.4.5. Selecting Elements From an Iterable With filter()
 - syntax --> filter(<f>, <iterable>)
   - filter(<f>, <iterable>) applies function <f> to each element of <iterable> and returns an iterator that yields all items for which <f> is truthy. Conversely, it filters out all items for which <f> is falsy.
     ```python
@@ -1241,7 +1334,7 @@ class Bulldog(Dog):
     >>> list(filter(lambda s: s.isupper(), animals))
     ['CAT', 'DOG', 'EMU']
     ```
-### 4.2.6. reduce
+### 4.4.6. reduce
 - syntax --> reduce(<f>, <iterable>)
     ```python
     >>> def f(x, y):
@@ -1281,7 +1374,7 @@ class Bulldog(Dog):
 
 
 
-## 4.3. Primer on Python Decorators
+## 4.5. Primer on Python Decorators
 - https://realpython.com/primer-on-python-decorators/
 - a higher-order function is a function that does at least one of the following:
     - takes one or more functions as arguments (i.e. procedural parameters),
@@ -1422,7 +1515,7 @@ class Bulldog(Dog):
 - registering plugins
 - is the user logged in?
 
-### 4.3.1. [Fancy Decorators](https://realpython.com/primer-on-python-decorators/#fancy-decorators) (later)
+### 4.5.1. [Fancy Decorators](https://realpython.com/primer-on-python-decorators/#fancy-decorators) (later)
 - Decorating Classes
 - Nesting Decorators
 - Decorators With Arguments
