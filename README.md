@@ -29,9 +29,7 @@
   - [3.5. Regular Expressions: Regexes in Python (later)](#35-regular-expressions-regexes-in-python-later)
   - [3.6. Python Bindings: Calling C or C++ From Python](#36-python-bindings-calling-c-or-c-from-python)
     - [3.6.1. practice : python call C function](#361-practice--python-call-c-function)
-  - [3.7. Python and REST APIs: Interacting With Web Services (2021.11.28)](#37-python-and-rest-apis-interacting-with-web-services-20211128)
-- [4. advanced python](#4-advanced-python)
-  - [4.1. Object-Oriented Programming (OOP) in Python 3](#41-object-oriented-programming-oop-in-python-3)
+    - [pybind11](#pybind11)
   - [4.2. Functional Programming in Python: When and How to Use It](#42-functional-programming-in-python-when-and-how-to-use-it)
     - [4.2.1. What Is Functional Programming?](#421-what-is-functional-programming)
     - [4.2.2. How Well Does Python Support Functional Programming?](#422-how-well-does-python-support-functional-programming)
@@ -927,6 +925,18 @@ all:
 	g++ -shared -Wl,-soname,libcmult.so -o libcmult.so  cmult.o 
 	python3 cmult.py
 ```
+
+### pybind11
+- original URL : https://github.com/pybind/cmake_example
+- ```
+  $ mkdir cmake_example/build
+  $ cd cmake_example/build
+  $ cmake ..
+  $ make
+  $ cp ../test.py .
+  $ python3 test.py
+  3
+  ```
 
 
 
