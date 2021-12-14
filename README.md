@@ -29,6 +29,7 @@
   - [3.4. Learn IP Address Concepts With Python's ipaddress Module (helpful info)](#34-learn-ip-address-concepts-with-pythons-ipaddress-module-helpful-info)
   - [3.5. Regular Expressions: Regexes in Python (later)](#35-regular-expressions-regexes-in-python-later)
   - [3.6. Python and REST APIs: Interacting With Web Services (2021.11.28)](#36-python-and-rest-apis-interacting-with-web-services-20211128)
+  - [Prettify Your Data Structures With Pretty Print in Python](#prettify-your-data-structures-with-pretty-print-in-python)
 - [4. enhanced python](#4-enhanced-python)
   - [4.1. Python Bindings: Calling C or C++ From Python](#41-python-bindings-calling-c-or-c-from-python)
     - [4.1.1. practice : python call C function](#411-practice--python-call-c-function)
@@ -943,6 +944,59 @@ TypeError: first argument must be callable or None
   - flask
   - django
   - FastAPI
+
+
+## Prettify Your Data Structures With Pretty Print in Python
+- https://realpython.com/python-pretty-print/?__s=7pzrsqx5mmf0aj744uyo
+- ```from pprint import pprint```
+- Exploring Optional Parameters of pprint()
+  - pprint(users, depth=2)
+  - pprint(users[0], depth=1, indent=4)
+  - pprint(users[0], width=160)
+  - pprint(users, depth=1, width=40, compact=True)
+  - pprint(users[0], depth=1, sort_dicts=False)
+  - pprint(number_list, underscore_numbers=True)
+    - ```[123_456_789, 10_000_000_000_000]```
+- Creating a Custom PrettyPrinter Object
+  ```python
+  >>> from pprint import PrettyPrinter
+  >>> custom_printer = PrettyPrinter(
+  ...     indent=4,
+  ...     width=100,
+  ...     depth=2,
+  ...     compact=True,
+  ...     sort_dicts=False,
+  ...     underscore_numbers=True
+  ... )
+  ...
+  >>> custom_printer.pprint(users[0])
+  ```
+- Getting a Pretty String With pformat()
+  ```python
+  >>> from pprint import pformat
+  >>> address = pformat(users[0]["address"])
+  >>> chars_to_remove = ["{", "}", "'"]
+  >>> for char in chars_to_remove:
+  ...     address = address.replace(char, "")
+  ...
+  >>> print(address)
+  city: Gwenborough,
+    geo: lat: -37.3159, lng: 81.1496,
+    street: Kulas Light,
+    suite: Apt. 556,
+    zipcode: 92998-3874
+  ```
+- Handling Recursive Data Structures
+  ```python
+  >>> A = {}
+  >>> B = {"link": A}
+  >>> A["link"] = B
+  >>> print(A)
+  {'link': {'link': {...}}}
+  >>> from pprint import pprint
+  >>> pprint(A)
+  {'link': {'link': <Recursion on dict with id=3032338942464>}}
+  ```
 
 
 
