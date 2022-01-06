@@ -106,10 +106,12 @@ Python Learning
 
 ### 1.1.2. vscode updates
 - 21.11.26 
+    - https://code.visualstudio.com/updates/v1_61
+        - bracket pair :  https://code.visualstudio.com/updates/v1_61#_bracket-pair-guides
     - Bracket pair guides can be enabled by setting editor.guides.bracketPairs to true (defaults to false). We added a third option "active" to only show a bracket pair guide for the active bracket pair.
     - Customizable bracket pairs
       - You can now configure bracket pairs for a specific programming language through settings. editor.language.brackets can be used to configure which bracket characters should be matched. If set, editor.language.colorizedBracketPairs independently configures which bracket pairs are colorized when bracket pair colorization or bracket pair guides are enabled.
-      ```javascript
+```js
 "[javascript]": {
     "editor.language.brackets": [
         ["[", "]"],
@@ -119,7 +121,7 @@ Python Learning
         ["[", "]"]
     ]
 },
-      ```
+```
 
 ## 1.2. Advanced Visual Studio Code for Python Developers (2021.11.28)
 - https://realpython.com/advanced-visual-studio-code-python/
