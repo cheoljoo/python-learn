@@ -105,7 +105,7 @@ Python Learning
     - markdown lint
 
 ### 1.1.2. vscode updates
-- 21.11.26 
+- 21.11.26  (v1.61)
     - https://code.visualstudio.com/updates/v1_61
         - bracket pair :  https://code.visualstudio.com/updates/v1_61#_bracket-pair-guides
     - Bracket pair guides can be enabled by setting editor.guides.bracketPairs to true (defaults to false). We added a third option "active" to only show a bracket pair guide for the active bracket pair.
@@ -122,6 +122,20 @@ Python Learning
     ]
 },
 ```
+
+- 22.01.06 (v1.63.2)
+    - Preview themes before installingPreview themes before installing
+        - You can now preview themes available on the Marketplace before installing them. From the Color Themes dropdown (Ctrl+K Ctrl+T), select Browse Additional Color Themes to list the Marketplace themes. The VS Code UI will preview the Color Theme as you navigate the dropdown.
+    - Markdown Preview incremental updating
+    - Remote Development
+        - Work continues on the Remote Development extensions, which allow you to use a container, remote machine, or the Windows Subsystem for Linux (WSL) as a full-featured development environment.
+        - Feature highlights in 1.63 include:
+            - You can now open a folder in a container when working on an SSH server with the Reopen in Container command.
+            - Improved forwarded port security avoids unsafe ports.
+            - Configurable WSL connection method lets you use wsl.exe or a socket connection to talk to the server.
+            - Advanced container configuration videos covering how to change the default location of your project and improve performance on Windows.
+
+
 
 ## 1.2. Advanced Visual Studio Code for Python Developers (2021.11.28)
 - https://realpython.com/advanced-visual-studio-code-python/
