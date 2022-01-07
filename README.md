@@ -635,9 +635,24 @@ WORKDIR "/app"
 ### 2.1.4. Documentation Tools and Resources
 - [MkDocs](https://www.mkdocs.org/)	: A static site generator to help build project documentation using the Markdown language
 
+### how to make a site for docsting with mkdocs
+- virtualenv a
+- source a/bin/activate
+- pip install numpy
+- pip install memory_profiler
+- pip install mkdocs
+- pip install mkdocstrings
+- pip install mkdocs-material
 
+- command
+    - mkdocs new [yours]
+    - cd [yours]
+    - copy your files and change yml and others
+      [example](https://github.com/cheoljoo/problemSolving/tree/master/2022/docstring)
+    - mkdocs build
 
-
+- [mkdocs example for docstirng](http://lotto645.lge.com:8088/cheoljoo.lee/code/problemSolving/2022/docstring/site/my_page/)
+- [python problem solving in CMU-2022](https://github.com/cheoljoo/problemSolving/tree/master/2022)
 
 
 
