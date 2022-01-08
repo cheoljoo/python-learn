@@ -653,10 +653,36 @@ WORKDIR "/app"
 
 - [mkdocs example for docstirng](http://lotto645.lge.com:8088/cheoljoo.lee/code/problemSolving/2022/docstring/site/my_page/)
 - [python problem solving in CMU-2022](https://github.com/cheoljoo/problemSolving/tree/master/2022)
+- good articles
+    - https://chrieke.medium.com/documenting-a-python-package-with-code-reference-via-mkdocs-material-b4a45197f95b
 
+### pydoc
+- https://minorman.tistory.com/115
 
+- how to run
+```txt
+$ ls
+1.py
+$ pydoc 1
+Help on module 1:
 
+NAME
+    1
 
+CLASSES
+    builtins.object
+▸   CountAntiSet
+
+    class CountAntiSet(builtins.object)
+     |▸ CountAntiSet(n, a, b, debug=0)
+...
+```
+
+- how to make html
+```txt
+$ pydoc -w 1
+1.html
+```
 
 
 # 3. basic python
